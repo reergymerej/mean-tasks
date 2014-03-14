@@ -59,3 +59,13 @@ I uninstalled globally, which requires sudo, and it still thinks it's there.
 Well, it got further, but there was another error.  I finally just tried grunt and it's working.
 
 Whatever.  :|
+
+======
+
+### Where do you change the app name?
+
+Somehow, appName is populated in head.html from /config/env/development.js (app.name).  Apparently, lodash
+doesn't extend recursively, so it's all or nothing.
+
+In /config/express.js it is setting the app name from the config.
+    app.use(helpers(config.app.name));

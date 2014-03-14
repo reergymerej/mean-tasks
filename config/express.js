@@ -81,6 +81,7 @@ module.exports = function(app, passport, db) {
         }));
 
         // Dynamic helpers
+        // This just loads the app name into each response.
         app.use(helpers(config.app.name));
 
         // Use passport session
