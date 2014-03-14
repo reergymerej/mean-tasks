@@ -1,0 +1,24 @@
+<!--
+This view extends another.  This means the content in the view
+is plugged into a template.  Each of the pages have the same outer
+content, it's just this inner part that changes.
+
+GOTO: /app/views/layouts/default.html
+-->
+{% extends 'layouts/default.html' %}
+{% block content %}
+
+    <!-- 
+    The uiView directive is used by AngularUI Router to indicate
+    where the Angular templates will be rendered.
+    REF: http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.directive:ui-view
+     -->
+    <section data-ui-view />
+    <script type="text/javascript">
+
+        // If the user was included in the view,
+        // assign it as a global variable.
+        // REF: http://paularmstrong.github.io/swig/docs/
+        window.user = {{user|safe}};
+    </script>
+{% endblock %}

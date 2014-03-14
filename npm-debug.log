@@ -1,0 +1,393 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.22
+3 info using node@v0.11.11-pre
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/grizzle/code/mean-tasks',
+5 verbose install   [ 'express',
+5 verbose install     'jade',
+5 verbose install     'consolidate',
+5 verbose install     'mongoose',
+5 verbose install     'connect-mongo',
+5 verbose install     'connect-flash',
+5 verbose install     'crypto',
+5 verbose install     'passport',
+5 verbose install     'passport-local',
+5 verbose install     'passport-facebook',
+5 verbose install     'passport-twitter',
+5 verbose install     'passport-github',
+5 verbose install     'passport-google-oauth',
+5 verbose install     'passport-linkedin',
+5 verbose install     'lodash',
+5 verbose install     'view-helpers',
+5 verbose install     'mean-logger',
+5 verbose install     'bower',
+5 verbose install     'grunt',
+5 verbose install     'grunt-cli',
+5 verbose install     'grunt-env',
+5 verbose install     'forever',
+5 verbose install     'karma-script-launcher',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-html2js-preprocessor',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-requirejs',
+5 verbose install     'should',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-karma',
+5 verbose install     'karma-coffee-preprocessor',
+5 verbose install     'supertest',
+5 verbose install     'karma-phantomjs-launcher',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'karma-coverage',
+5 verbose install     'karma',
+5 verbose install     'swig' ] ]
+6 info preinstall mean@0.1.2
+7 warn package.json crypto@0.0.3 crypto is also the name of a node core module.
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping consolidate@~0.10.0 /home/grizzle/code/mean-tasks
+10 verbose already installed skipping mongoose@~3.8.3 /home/grizzle/code/mean-tasks
+11 verbose already installed skipping connect-mongo@~0.4.0 /home/grizzle/code/mean-tasks
+12 verbose already installed skipping connect-flash@~0.1.1 /home/grizzle/code/mean-tasks
+13 verbose already installed skipping crypto@0.0.3 /home/grizzle/code/mean-tasks
+14 verbose already installed skipping passport@~0.1.18 /home/grizzle/code/mean-tasks
+15 verbose already installed skipping passport-local@~0.1.6 /home/grizzle/code/mean-tasks
+16 verbose already installed skipping passport-facebook@~1.0.2 /home/grizzle/code/mean-tasks
+17 verbose already installed skipping passport-twitter@~1.0.2 /home/grizzle/code/mean-tasks
+18 verbose already installed skipping passport-github@~0.1.5 /home/grizzle/code/mean-tasks
+19 verbose already installed skipping passport-google-oauth@~0.1.5 /home/grizzle/code/mean-tasks
+20 verbose already installed skipping passport-linkedin@~0.1.3 /home/grizzle/code/mean-tasks
+21 verbose already installed skipping lodash@~2.4.1 /home/grizzle/code/mean-tasks
+22 verbose already installed skipping view-helpers@~0.1.4 /home/grizzle/code/mean-tasks
+23 verbose already installed skipping mean-logger@0.0.1 /home/grizzle/code/mean-tasks
+24 verbose already installed skipping bower@~1.2.8 /home/grizzle/code/mean-tasks
+25 verbose already installed skipping grunt@~0.4.2 /home/grizzle/code/mean-tasks
+26 verbose already installed skipping grunt-cli@~0.1.11 /home/grizzle/code/mean-tasks
+27 verbose already installed skipping grunt-env@~0.4.1 /home/grizzle/code/mean-tasks
+28 verbose already installed skipping forever@~0.10.11 /home/grizzle/code/mean-tasks
+29 verbose already installed skipping karma-script-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+30 verbose already installed skipping karma-chrome-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+31 verbose already installed skipping karma-firefox-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+32 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/grizzle/code/mean-tasks
+33 verbose already installed skipping karma-jasmine@~0.1.3 /home/grizzle/code/mean-tasks
+34 verbose already installed skipping karma-requirejs@~0.1.0 /home/grizzle/code/mean-tasks
+35 verbose already installed skipping should@2.1.1 /home/grizzle/code/mean-tasks
+36 verbose cache add [ 'grunt-concurrent@latest', null ]
+37 verbose cache add name=undefined spec="grunt-concurrent@latest" args=["grunt-concurrent@latest",null]
+38 verbose parsed url { protocol: null,
+38 verbose parsed url   slashes: null,
+38 verbose parsed url   auth: null,
+38 verbose parsed url   host: null,
+38 verbose parsed url   port: null,
+38 verbose parsed url   hostname: null,
+38 verbose parsed url   hash: null,
+38 verbose parsed url   search: null,
+38 verbose parsed url   query: null,
+38 verbose parsed url   pathname: 'grunt-concurrent@latest',
+38 verbose parsed url   path: 'grunt-concurrent@latest',
+38 verbose parsed url   href: 'grunt-concurrent@latest' }
+39 verbose cache add name="grunt-concurrent" spec="latest" args=["grunt-concurrent","latest"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: 'latest',
+40 verbose parsed url   path: 'latest',
+40 verbose parsed url   href: 'latest' }
+41 verbose addNamed [ 'grunt-concurrent', 'latest' ]
+42 verbose addNamed [ null, null ]
+43 verbose already installed skipping grunt-karma@~0.6.2 /home/grizzle/code/mean-tasks
+44 verbose already installed skipping karma-coffee-preprocessor@~0.1.0 /home/grizzle/code/mean-tasks
+45 verbose already installed skipping supertest@0.8.2 /home/grizzle/code/mean-tasks
+46 silly lockFile 50a8c415-grunt-concurrent-latest grunt-concurrent@latest
+47 verbose lock grunt-concurrent@latest /home/grizzle/.npm/50a8c415-grunt-concurrent-latest.lock
+48 verbose already installed skipping karma-phantomjs-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+49 verbose cache add [ 'grunt-mocha-test@latest', null ]
+50 verbose cache add name=undefined spec="grunt-mocha-test@latest" args=["grunt-mocha-test@latest",null]
+51 verbose parsed url { protocol: null,
+51 verbose parsed url   slashes: null,
+51 verbose parsed url   auth: null,
+51 verbose parsed url   host: null,
+51 verbose parsed url   port: null,
+51 verbose parsed url   hostname: null,
+51 verbose parsed url   hash: null,
+51 verbose parsed url   search: null,
+51 verbose parsed url   query: null,
+51 verbose parsed url   pathname: 'grunt-mocha-test@latest',
+51 verbose parsed url   path: 'grunt-mocha-test@latest',
+51 verbose parsed url   href: 'grunt-mocha-test@latest' }
+52 verbose cache add name="grunt-mocha-test" spec="latest" args=["grunt-mocha-test","latest"]
+53 verbose parsed url { protocol: null,
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: null,
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: null,
+53 verbose parsed url   hash: null,
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: 'latest',
+53 verbose parsed url   path: 'latest',
+53 verbose parsed url   href: 'latest' }
+54 verbose addNamed [ 'grunt-mocha-test', 'latest' ]
+55 verbose addNamed [ null, null ]
+56 silly lockFile 29185e6c-grunt-mocha-test-latest grunt-mocha-test@latest
+57 verbose lock grunt-mocha-test@latest /home/grizzle/.npm/29185e6c-grunt-mocha-test-latest.lock
+58 verbose cache add [ 'grunt-contrib-jshint@latest', null ]
+59 verbose cache add name=undefined spec="grunt-contrib-jshint@latest" args=["grunt-contrib-jshint@latest",null]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: 'grunt-contrib-jshint@latest',
+60 verbose parsed url   path: 'grunt-contrib-jshint@latest',
+60 verbose parsed url   href: 'grunt-contrib-jshint@latest' }
+61 verbose cache add name="grunt-contrib-jshint" spec="latest" args=["grunt-contrib-jshint","latest"]
+62 verbose parsed url { protocol: null,
+62 verbose parsed url   slashes: null,
+62 verbose parsed url   auth: null,
+62 verbose parsed url   host: null,
+62 verbose parsed url   port: null,
+62 verbose parsed url   hostname: null,
+62 verbose parsed url   hash: null,
+62 verbose parsed url   search: null,
+62 verbose parsed url   query: null,
+62 verbose parsed url   pathname: 'latest',
+62 verbose parsed url   path: 'latest',
+62 verbose parsed url   href: 'latest' }
+63 verbose addNamed [ 'grunt-contrib-jshint', 'latest' ]
+64 verbose addNamed [ null, null ]
+65 silly lockFile 23ae4c0c-grunt-contrib-jshint-latest grunt-contrib-jshint@latest
+66 verbose lock grunt-contrib-jshint@latest /home/grizzle/.npm/23ae4c0c-grunt-contrib-jshint-latest.lock
+67 verbose already installed skipping grunt-nodemon@0.2.0 /home/grizzle/code/mean-tasks
+68 verbose cache add [ 'grunt-contrib-watch@latest', null ]
+69 verbose cache add name=undefined spec="grunt-contrib-watch@latest" args=["grunt-contrib-watch@latest",null]
+70 verbose parsed url { protocol: null,
+70 verbose parsed url   slashes: null,
+70 verbose parsed url   auth: null,
+70 verbose parsed url   host: null,
+70 verbose parsed url   port: null,
+70 verbose parsed url   hostname: null,
+70 verbose parsed url   hash: null,
+70 verbose parsed url   search: null,
+70 verbose parsed url   query: null,
+70 verbose parsed url   pathname: 'grunt-contrib-watch@latest',
+70 verbose parsed url   path: 'grunt-contrib-watch@latest',
+70 verbose parsed url   href: 'grunt-contrib-watch@latest' }
+71 verbose cache add name="grunt-contrib-watch" spec="latest" args=["grunt-contrib-watch","latest"]
+72 verbose parsed url { protocol: null,
+72 verbose parsed url   slashes: null,
+72 verbose parsed url   auth: null,
+72 verbose parsed url   host: null,
+72 verbose parsed url   port: null,
+72 verbose parsed url   hostname: null,
+72 verbose parsed url   hash: null,
+72 verbose parsed url   search: null,
+72 verbose parsed url   query: null,
+72 verbose parsed url   pathname: 'latest',
+72 verbose parsed url   path: 'latest',
+72 verbose parsed url   href: 'latest' }
+73 verbose addNamed [ 'grunt-contrib-watch', 'latest' ]
+74 verbose addNamed [ null, null ]
+75 silly lockFile 72016001-grunt-contrib-watch-latest grunt-contrib-watch@latest
+76 verbose lock grunt-contrib-watch@latest /home/grizzle/.npm/72016001-grunt-contrib-watch-latest.lock
+77 verbose already installed skipping karma-coverage@~0.1.0 /home/grizzle/code/mean-tasks
+78 verbose already installed skipping karma@~0.10.4 /home/grizzle/code/mean-tasks
+79 verbose already installed skipping swig@~1.3.2 /home/grizzle/code/mean-tasks
+80 verbose already installed skipping express@~3.4.7 /home/grizzle/code/mean-tasks
+81 verbose already installed skipping jade@~1.0.2 /home/grizzle/code/mean-tasks
+82 info addNameTag [ 'grunt-concurrent', 'latest' ]
+83 info addNameTag [ 'grunt-mocha-test', 'latest' ]
+84 info addNameTag [ 'grunt-contrib-jshint', 'latest' ]
+85 info addNameTag [ 'grunt-contrib-watch', 'latest' ]
+86 verbose url raw grunt-contrib-watch
+87 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-contrib-watch' ]
+88 verbose url resolved http://registry.npmjs.org/grunt-contrib-watch
+89 info trying registry request attempt 1 at 21:18:29
+90 verbose etag "D54HYEZ4TZ7JWUT17TUPRW08D"
+91 http GET http://registry.npmjs.org/grunt-contrib-watch
+92 verbose url raw grunt-concurrent
+93 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-concurrent' ]
+94 verbose url resolved http://registry.npmjs.org/grunt-concurrent
+95 info trying registry request attempt 1 at 21:18:29
+96 verbose etag "7BJ2UXDGEX37VP92QLAGMSINL"
+97 http GET http://registry.npmjs.org/grunt-concurrent
+98 verbose url raw grunt-mocha-test
+99 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-mocha-test' ]
+100 verbose url resolved http://registry.npmjs.org/grunt-mocha-test
+101 info trying registry request attempt 1 at 21:18:29
+102 verbose etag "6ZA9FCUXS4MAVKR1HPN7VW5C2"
+103 http GET http://registry.npmjs.org/grunt-mocha-test
+104 verbose url raw grunt-contrib-jshint
+105 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-contrib-jshint' ]
+106 verbose url resolved http://registry.npmjs.org/grunt-contrib-jshint
+107 info trying registry request attempt 1 at 21:18:29
+108 verbose etag "DUN6AK6PQ6UHBVZGP4OMBHS1P"
+109 http GET http://registry.npmjs.org/grunt-contrib-jshint
+110 http 304 http://registry.npmjs.org/grunt-contrib-jshint
+111 silly registry.get cb [ 304,
+111 silly registry.get   { date: 'Fri, 14 Mar 2014 01:18:29 GMT',
+111 silly registry.get     via: '1.1 varnish',
+111 silly registry.get     'last-modified': 'Fri, 14 Mar 2014 01:18:29 GMT',
+111 silly registry.get     'cache-control': 'max-age=1',
+111 silly registry.get     etag: '"DUN6AK6PQ6UHBVZGP4OMBHS1P"',
+111 silly registry.get     connection: 'close',
+111 silly registry.get     'x-served-by': 'cache-d46-DAL',
+111 silly registry.get     'x-cache': 'MISS',
+111 silly registry.get     'x-cache-hits': '0',
+111 silly registry.get     'x-timer': 'S1394759909.359658957,VS0,VE133',
+111 silly registry.get     vary: 'Accept' } ]
+112 verbose etag grunt-contrib-jshint from cache
+113 http 304 http://registry.npmjs.org/grunt-contrib-watch
+114 silly registry.get cb [ 304,
+114 silly registry.get   { date: 'Fri, 14 Mar 2014 01:18:29 GMT',
+114 silly registry.get     via: '1.1 varnish',
+114 silly registry.get     'last-modified': 'Fri, 14 Mar 2014 01:18:29 GMT',
+114 silly registry.get     'cache-control': 'max-age=1',
+114 silly registry.get     etag: '"D54HYEZ4TZ7JWUT17TUPRW08D"',
+114 silly registry.get     connection: 'close',
+114 silly registry.get     'x-served-by': 'cache-d96-DAL',
+114 silly registry.get     'x-cache': 'HIT',
+114 silly registry.get     'x-cache-hits': '1',
+114 silly registry.get     'x-timer': 'S1394759909.364407301,VS0,VE139',
+114 silly registry.get     vary: 'Accept' } ]
+115 verbose etag grunt-contrib-watch from cache
+116 verbose addNamed [ 'grunt-contrib-jshint', '0.9.2' ]
+117 verbose addNamed [ '0.9.2', '0.9.2' ]
+118 silly lockFile 42d4a20a-grunt-contrib-jshint-0-9-2 grunt-contrib-jshint@0.9.2
+119 verbose lock grunt-contrib-jshint@0.9.2 /home/grizzle/.npm/42d4a20a-grunt-contrib-jshint-0-9-2.lock
+120 silly lockFile 42d4a20a-grunt-contrib-jshint-0-9-2 grunt-contrib-jshint@0.9.2
+121 silly lockFile 42d4a20a-grunt-contrib-jshint-0-9-2 grunt-contrib-jshint@0.9.2
+122 silly lockFile 23ae4c0c-grunt-contrib-jshint-latest grunt-contrib-jshint@latest
+123 silly lockFile 23ae4c0c-grunt-contrib-jshint-latest grunt-contrib-jshint@latest
+124 info already installed grunt-contrib-jshint@0.9.2
+125 http 304 http://registry.npmjs.org/grunt-concurrent
+126 silly registry.get cb [ 304,
+126 silly registry.get   { date: 'Fri, 14 Mar 2014 01:18:29 GMT',
+126 silly registry.get     via: '1.1 varnish',
+126 silly registry.get     'last-modified': 'Fri, 14 Mar 2014 01:18:29 GMT',
+126 silly registry.get     'cache-control': 'max-age=1',
+126 silly registry.get     etag: '"7BJ2UXDGEX37VP92QLAGMSINL"',
+126 silly registry.get     connection: 'close',
+126 silly registry.get     'x-served-by': 'cache-d45-DAL',
+126 silly registry.get     'x-cache': 'HIT',
+126 silly registry.get     'x-cache-hits': '1',
+126 silly registry.get     'x-timer': 'S1394759909.364493132,VS0,VE225',
+126 silly registry.get     vary: 'Accept' } ]
+127 verbose etag grunt-concurrent from cache
+128 verbose addNamed [ 'grunt-contrib-watch', '0.6.0' ]
+129 verbose addNamed [ '0.6.0', '0.6.0' ]
+130 silly lockFile 013d3dfc-grunt-contrib-watch-0-6-0 grunt-contrib-watch@0.6.0
+131 verbose lock grunt-contrib-watch@0.6.0 /home/grizzle/.npm/013d3dfc-grunt-contrib-watch-0-6-0.lock
+132 silly lockFile 013d3dfc-grunt-contrib-watch-0-6-0 grunt-contrib-watch@0.6.0
+133 silly lockFile 013d3dfc-grunt-contrib-watch-0-6-0 grunt-contrib-watch@0.6.0
+134 silly lockFile 72016001-grunt-contrib-watch-latest grunt-contrib-watch@latest
+135 silly lockFile 72016001-grunt-contrib-watch-latest grunt-contrib-watch@latest
+136 info already installed grunt-contrib-watch@0.6.0
+137 verbose addNamed [ 'grunt-concurrent', '0.5.0' ]
+138 verbose addNamed [ '0.5.0', '0.5.0' ]
+139 silly lockFile 32992192-grunt-concurrent-0-5-0 grunt-concurrent@0.5.0
+140 verbose lock grunt-concurrent@0.5.0 /home/grizzle/.npm/32992192-grunt-concurrent-0-5-0.lock
+141 silly lockFile 32992192-grunt-concurrent-0-5-0 grunt-concurrent@0.5.0
+142 silly lockFile 32992192-grunt-concurrent-0-5-0 grunt-concurrent@0.5.0
+143 silly lockFile 50a8c415-grunt-concurrent-latest grunt-concurrent@latest
+144 silly lockFile 50a8c415-grunt-concurrent-latest grunt-concurrent@latest
+145 info already installed grunt-concurrent@0.5.0
+146 http 304 http://registry.npmjs.org/grunt-mocha-test
+147 silly registry.get cb [ 304,
+147 silly registry.get   { date: 'Fri, 14 Mar 2014 01:18:29 GMT',
+147 silly registry.get     via: '1.1 varnish',
+147 silly registry.get     'last-modified': 'Fri, 14 Mar 2014 01:18:29 GMT',
+147 silly registry.get     'cache-control': 'max-age=1',
+147 silly registry.get     etag: '"6ZA9FCUXS4MAVKR1HPN7VW5C2"',
+147 silly registry.get     connection: 'close',
+147 silly registry.get     'x-served-by': 'cache-d96-DAL',
+147 silly registry.get     'x-cache': 'MISS',
+147 silly registry.get     'x-cache-hits': '0',
+147 silly registry.get     'x-timer': 'S1394759909.364407063,VS0,VE323',
+147 silly registry.get     vary: 'Accept' } ]
+148 verbose etag grunt-mocha-test from cache
+149 verbose addNamed [ 'grunt-mocha-test', '0.9.4' ]
+150 verbose addNamed [ '0.9.4', '0.9.4' ]
+151 silly lockFile 92d5b629-grunt-mocha-test-0-9-4 grunt-mocha-test@0.9.4
+152 verbose lock grunt-mocha-test@0.9.4 /home/grizzle/.npm/92d5b629-grunt-mocha-test-0-9-4.lock
+153 silly lockFile 92d5b629-grunt-mocha-test-0-9-4 grunt-mocha-test@0.9.4
+154 silly lockFile 92d5b629-grunt-mocha-test-0-9-4 grunt-mocha-test@0.9.4
+155 silly lockFile 29185e6c-grunt-mocha-test-latest grunt-mocha-test@latest
+156 silly lockFile 29185e6c-grunt-mocha-test-latest grunt-mocha-test@latest
+157 info already installed grunt-mocha-test@0.9.4
+158 silly resolved []
+159 info build /home/grizzle/code/mean-tasks
+160 verbose linkStuff [ false, false, false, '/home/grizzle/code' ]
+161 info linkStuff mean@0.1.2
+162 verbose linkBins mean@0.1.2
+163 verbose linkMans mean@0.1.2
+164 verbose rebuildBundles mean@0.1.2
+165 verbose rebuildBundles [ '.bin',
+165 verbose rebuildBundles   'bower',
+165 verbose rebuildBundles   'connect-flash',
+165 verbose rebuildBundles   'connect-mongo',
+165 verbose rebuildBundles   'consolidate',
+165 verbose rebuildBundles   'crypto',
+165 verbose rebuildBundles   'express',
+165 verbose rebuildBundles   'forever',
+165 verbose rebuildBundles   'grunt',
+165 verbose rebuildBundles   'grunt-cli',
+165 verbose rebuildBundles   'grunt-concurrent',
+165 verbose rebuildBundles   'grunt-contrib-jshint',
+165 verbose rebuildBundles   'grunt-contrib-watch',
+165 verbose rebuildBundles   'grunt-env',
+165 verbose rebuildBundles   'grunt-karma',
+165 verbose rebuildBundles   'grunt-mocha-test',
+165 verbose rebuildBundles   'grunt-nodemon',
+165 verbose rebuildBundles   'jade',
+165 verbose rebuildBundles   'karma',
+165 verbose rebuildBundles   'karma-chrome-launcher',
+165 verbose rebuildBundles   'karma-coffee-preprocessor',
+165 verbose rebuildBundles   'karma-coverage',
+165 verbose rebuildBundles   'karma-firefox-launcher',
+165 verbose rebuildBundles   'karma-html2js-preprocessor',
+165 verbose rebuildBundles   'karma-jasmine',
+165 verbose rebuildBundles   'karma-phantomjs-launcher',
+165 verbose rebuildBundles   'karma-requirejs',
+165 verbose rebuildBundles   'karma-script-launcher',
+165 verbose rebuildBundles   'lodash',
+165 verbose rebuildBundles   'mean-logger',
+165 verbose rebuildBundles   'mongoose',
+165 verbose rebuildBundles   'passport',
+165 verbose rebuildBundles   'passport-facebook',
+165 verbose rebuildBundles   'passport-github',
+165 verbose rebuildBundles   'passport-google-oauth',
+165 verbose rebuildBundles   'passport-linkedin',
+165 verbose rebuildBundles   'passport-local',
+165 verbose rebuildBundles   'passport-twitter',
+165 verbose rebuildBundles   'should',
+165 verbose rebuildBundles   'supertest',
+165 verbose rebuildBundles   'swig',
+165 verbose rebuildBundles   'view-helpers' ]
+166 info install mean@0.1.2
+167 info postinstall mean@0.1.2
+168 verbose unsafe-perm in lifecycle true
+169 info prepublish mean@0.1.2
+170 error peerinvalid The package karma-requirejs does not satisfy its siblings' peerDependencies requirements!
+170 error peerinvalid Peer karma@0.10.10 wants karma-requirejs@~0.2.0
+171 error System Linux 3.8.0-36-generic
+172 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+173 error cwd /home/grizzle/code/mean-tasks
+174 error node -v v0.11.11-pre
+175 error npm -v 1.3.22
+176 error code EPEERINVALID
+177 verbose exit [ 1, true ]
