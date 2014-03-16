@@ -69,3 +69,13 @@ doesn't extend recursively, so it's all or nothing.
 
 In /config/express.js it is setting the app name from the config.
     app.use(helpers(config.app.name));
+
+-----
+
+I'm trying to resume this on my older machine, but nothing seems to be working.
+
+* I have to `sudo` for npm.
+* I'm getting the package errors again.
+* `grunt` is not working
+
+Let's see if we can update this sucker.
