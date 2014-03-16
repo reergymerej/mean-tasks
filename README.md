@@ -70,6 +70,7 @@ doesn't extend recursively, so it's all or nothing.
 In /config/express.js it is setting the app name from the config.
     app.use(helpers(config.app.name));
 
+=======
 
 # More Notes
 
