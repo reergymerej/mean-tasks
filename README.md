@@ -69,3 +69,28 @@ doesn't extend recursively, so it's all or nothing.
 
 In /config/express.js it is setting the app name from the config.
     app.use(helpers(config.app.name));
+
+
+# More Notes
+
+## Make it yours
+Changed db in all /config/env as well as app name
+Changed title in /app/views/includes/head.html
+Changed /public/views/index.html
+
+## Alter model
+
+I don't want to require a full name *and* a user name, so let's alter the user model.
+Attempting to use TDD, let's change the test.  These tests are run with Mocha.
+
+/test/mocha/user/model.js
+
+Delete "name" from test user.
+Delete the 'should show an error when try to save without name' test.
+Run test `grunt mochaTest` -> failure!
+
+Where is the validation happening?  /app/models/user.js
+UserSchema is defined with a required "name".
+Delete it from the schema and the *UserSchema.path('name').validate* validation.
+
+Test again, `grunt mochaTest` -> green!

@@ -13,10 +13,6 @@ var mongoose = require('mongoose'),
 // The schema defines the fields.
 // REF: http://mongoosejs.com/docs/guide.html
 var UserSchema = new Schema({
-    name: {
-        type: String,
-        required: true
-    },
     email: String,
     username: {
         type: String,
@@ -57,12 +53,6 @@ var validatePresenceOf = function(value) {
 // validate takes a validation function, passed the value of the field
 // in question, and an error message to return if the validation fails.
 // REF: http://mongoosejs.com/docs/validation.html
-UserSchema.path('name').validate(function(name) {
-    // if you are authenticating by any of the oauth strategies, don't validate
-    if (!this.provider) return true;
-    return (typeof name === 'string' && name.length > 0);
-}, 'Name cannot be blank');
-
 UserSchema.path('email').validate(function(email) {
     // if you are authenticating by any of the oauth strategies, don't validate
     if (!this.provider) return true;
