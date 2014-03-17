@@ -82,7 +82,6 @@ describe('<Unit Test>', function() {
             // on MongoDB.
             // REF: http://stackoverflow.com/a/10266789/1319850
             Article.remove().exec();
-            // User.remove().exec();
             done();
         });
     });
