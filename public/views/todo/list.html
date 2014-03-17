@@ -1,0 +1,20 @@
+<h2>This is the list of todo tasks.</h2>
+<section data-ng-controller="TodoCtrl" data-ng-init="find()">
+	<ul class="unstyled">
+        <li data-ng-repeat="task in tasks">
+			<span>{{article.created | date:'medium'}}</span> /
+			<span>{{article.user.name}}</span>
+
+            <!-- 
+            ngHref is used instead of href so nothing will break if the user clicks
+            the link before the binding's been updated.
+            QUESTION: Is this needed here?  Learn more about the digest loop to find out.
+            REF: http://docs.angularjs.org/api/ng/directive/ngHref
+
+            GOTO: /public/js/config.js (/articles/:articleId)
+             -->
+			<h2><a data-ng-href="#!/articles/{{article._id}}">{{article.title}}</a></h2>
+			<div>{{article.content}}</div>
+		</li>
+	</ul>
+</section>

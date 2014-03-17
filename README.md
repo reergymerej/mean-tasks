@@ -106,7 +106,9 @@ How do you run the Karma tests?
 How do we write a test to check for the absense of this field?
     All the existing specs are testing the controllers, not the view.  These are unit tests, not [E2E tests](http://docs.angularjs.org/guide/e2e-testing).
 
-    [Year of Moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html#karma) has a very good writeup on testing with Karma.
+    It doesn't look like integration testing is set up in the MEAN stack and I don't want to mess with it right now.
+
+[Year of Moo](http://www.yearofmoo.com/2013/01/full-spectrum-testing-with-angularjs-and-karma.html#karma) has a very good writeup on testing with Karma.
 
 
 Remove the name field from `/app/views/users/signup.html`
