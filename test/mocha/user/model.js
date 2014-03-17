@@ -48,7 +48,11 @@ describe('<Unit Test>', function() {
 
         after(function(done) {
             // User.remove().exec();
-            done();
+            user.remove(function (err, user) {
+                user2.remove(function (err, user) {
+                    done();
+                });
+            });
         });
     });
 });

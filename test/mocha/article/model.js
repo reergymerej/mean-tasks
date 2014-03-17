@@ -70,8 +70,9 @@ describe('<Unit Test>', function() {
         // of the articles and users.
         afterEach(function(done) {
             Article.remove({});
-            User.remove({});
-            done();
+            user.remove(function (err, user) {
+                done();
+            });
         });
         after(function(done) {
             // QUESTION: What's with the exec?

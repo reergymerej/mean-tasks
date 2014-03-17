@@ -64,9 +64,9 @@ describe('<Unit Test>', function() {
         // It appears to errantly remove ALL
         // of the articles and users.
         afterEach(function(done) {
-            // user.remove(function (done) {
+            user.remove(function (err, user) {
                 done();
-            // });
+            });
         });
         after(function(done) {
             // QUESTION: What's with the exec?
