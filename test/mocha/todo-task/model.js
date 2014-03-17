@@ -50,14 +50,22 @@ describe('<Unit Test>', function() {
                 });
             });
 
-            // it('should be able to show an error when try to save without title', function(done) {
-            //     article.title = '';
+            it('should throw an error when saving without a user', function (done) {
+                todoTask.user = undefined;
 
-            //     return article.save(function(err) {
-            //         should.exist(err);
-            //         done();
-            //     });
-            // });
+                return todoTask.save(function (err) {
+                    should.exist(err);
+                    done();
+                });
+            });
+        });
+
+        describe('Setting done', function () {
+            it('should not be done by default', function (done) {
+                todoTask.done.should.be.false;
+                (7).should.be.false;
+                done();
+            });
         });
 
         // This runs after each test.

@@ -13,6 +13,11 @@ var TodoTaskSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    done: {
+        type: Boolean,
+        default: false,
+        required: true
+    },
     foo: {
         type: String,
         default: '',
@@ -25,7 +30,8 @@ var TodoTaskSchema = new Schema({
     },
     user: {
         type: Schema.ObjectId,
-        ref: 'User'
+        ref: 'User',
+        required: true
     }
 });
 
@@ -39,9 +45,9 @@ var TodoTaskSchema = new Schema({
 // There are built-in validations.  This is a custom validation.
 // REF: http://mongoosejs.com/docs/validation.html
 // REF: http://mongoosejs.com/docs/api.html#schematype_SchemaType-validate
-// TodoTaskSchema.path('title').validate(function(title) {
-//     return title.length;
-// }, 'Title cannot be blank');
+TodoTaskSchema.path('user').validate(function (user) {
+    return user && user.length;
+}, 'TodoTasks must have a user.');
 
 /**
  * Statics
