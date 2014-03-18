@@ -31,8 +31,6 @@ describe('<Unit Test>', function() {
 
             user.save(function () {
                 todoTask = new TodoTask({
-                    foo: 'bar',
-                    baz: 'quux',
                     user: user
                 });
 
@@ -60,9 +58,9 @@ describe('<Unit Test>', function() {
             });
         });
 
-        describe('Setting done', function () {
+        describe('fields', function () {
             it('should not be done by default', function (done) {
-                todoTask.done.should.be.false;
+                todoTask.should.have.property('done', false);
                 done();
             });
 
@@ -70,9 +68,14 @@ describe('<Unit Test>', function() {
                 todoTask.end = new Date();
 
                 return todoTask.save(function (err, task) {
-                    task.done.should.be.true;
+                    task.should.have.property('done', true);
                     done();
                 });
+            });
+
+            it('should have a created date', function (done) {
+                todoTask.should.have.property('created');
+                done();
             });
         });
 
@@ -80,7 +83,7 @@ describe('<Unit Test>', function() {
         // It appears to errantly remove ALL
         // of the articles and users.
         afterEach(function(done) {
-            user.remove(function (err, user) {
+            user.remove(function () {
                 done();
             });
         });

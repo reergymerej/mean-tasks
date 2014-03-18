@@ -70,7 +70,7 @@ describe('<Unit Test>', function() {
         // of the articles and users.
         afterEach(function(done) {
             Article.remove({});
-            user.remove(function (err, user) {
+            user.remove(function () {
                 done();
             });
         });

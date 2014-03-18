@@ -22,16 +22,6 @@ var TodoTaskSchema = new Schema({
         default: false,
         required: true
     },
-    foo: {
-        type: String,
-        default: '',
-        trim: true
-    },
-    baz: {
-        type: String,
-        default: '',
-        trim: true
-    },
     user: {
         type: Schema.ObjectId,
         ref: 'User',

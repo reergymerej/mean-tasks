@@ -48,8 +48,8 @@ describe('<Unit Test>', function() {
 
         after(function(done) {
             // User.remove().exec();
-            user.remove(function (err, user) {
-                user2.remove(function (err, user) {
+            user.remove(function () {
+                user2.remove(function () {
                     done();
                 });
             });
