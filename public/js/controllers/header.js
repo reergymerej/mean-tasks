@@ -14,18 +14,6 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         {
             title: 'Todo',
             link: 'todo'
-        },
-        {
-            'title': 'Articles',
-
-            // GOTO: /public/js/config.js (GET /articles)
-            'link': 'articles'
-        },
-        {
-            'title': 'Create New Article',
-
-            // GOTO: /public/js/config.js (GET /articles/create)
-            'link': 'articles/create'
         }
     ];
 
