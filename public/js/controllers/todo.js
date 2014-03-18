@@ -10,6 +10,7 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
     // Give this controller's scope access to the Global values.
     $scope.global = Global;
 
+    $scope.taskDescription = '';
     $scope.tasks = [];
 
     $scope.create = function () {
@@ -23,9 +24,7 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
         var todoTask = new Tasks({
 
             // Load the values into the $resource.
-            foo: 'some foo',
-            bar: 'some bar',
-            description: 'some description'
+            description: $scope.taskDescription
         });
 
         // Save the $resource.
@@ -52,41 +51,25 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
                 console.error(response.errors);
             } else {
                 $scope.tasks.unshift(response);
+                $scope.taskDescription = '';
             }
         }, function (response) {
             console.error('oh, shit', response);
         });
-
-        this.title = '';
-        this.content = '';
     };
 
-    // Delete an article.
-    $scope.remove = function(article) {
+    // Delete a task.
+    $scope.remove = function (task) {
 
-        if (article) {
-            article.$remove();
+        if (task) {
+            task.$remove();
 
-            for (var i in $scope.articles) {
-                if ($scope.articles[i] === article) {
-                    $scope.articles.splice(i, 1);
+            for (var i in $scope.tasks) {
+                if ($scope.tasks[i] === task) {
+                    $scope.tasks.splice(i, 1);
+                    break;
                 }
             }
-        }
-        else {
-
-            // When called from the article view, no article
-            // is specified since we already know we're dealing
-            // with the article in this controller's scope.
-            // Remove the article.
-            // REF: http://docs.angularjs.org/api/ngResource/service/$resource
-            $scope.article.$remove();
-
-            // Redirect back to all articles.
-            // path() gets the path, path('foo') sets the path
-            // REF: http://docs.angularjs.org/api/ng/service/$location
-            // GOTO: /public/js/config.js (GET /articles);
-            $location.path('articles');
         }
     };
 

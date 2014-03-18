@@ -94,12 +94,26 @@ describe('<Unit Test>', function() {
             });
         });
 
+        describe('deleting', function () {
+
+            it('should remove without any problems', function (done) {
+                var _id = todoTask._id;
+
+                todoTask.remove(function () {
+                    TodoTask.find({ _id: _id }, function (err, todoTasks) {
+                        todoTasks.should.have.length(0);
+                        done();
+                    });
+                });
+            });
+        });
+
         // This runs after each test.
-        // It appears to errantly remove ALL
-        // of the articles and users.
         afterEach(function(done) {
-            user.remove(function () {
-                done();
+            todoTask.remove(function () {
+                user.remove(function () {
+                    done();
+                });
             });
         });
         after(function(done) {

@@ -48,6 +48,24 @@ TodoTaskSchema.pre('save', function (next) {
 });
 
 
+TodoTaskSchema.statics.load = function (id, cb) {
+
+    // Get the first MongoDB document that matches
+    // this criteria.
+    // REF: http://docs.mongodb.org/manual/reference/method/db.collection.findOne/
+    this.findOne({
+        _id: id
+    })
+    // This add a couple fields to the document (record).
+    // REF: http://mongoosejs.com/docs/populate.html
+    .populate('user')
+
+    // exec runs after populate has finished.
+    // Remember, node is all about asynchronous code.
+    // http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback
+    .exec(cb);
+};
+
 // Now that the schema is set up, register it with Mongoose
 // so it can be used when needed.
 // REF: http://mongoosejs.com/docs/models.html

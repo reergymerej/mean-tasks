@@ -1,8 +1,17 @@
 <section data-ng-controller="TodoCtrl" data-ng-init="find()">
-    <button ng-click="create()">create</button>
+    <form novalidate data-ng-submit="create()">
+        <input ng-model="taskDescription" placeholder="new task" required />
+        <button>create</button>
+    </form>
 
 	<ul class="unstyled">
         <li data-ng-repeat="task in tasks">
+            <span class="controls">
+                <button class="btn btn-xs btn-danger" data-ng-click="remove(task)">
+                    x
+                </button>
+
+            </span>
 			<small>{{ task.created | date:'medium' }}</small> <span>{{ task.description }}</span>
 		</li>
 	</ul>

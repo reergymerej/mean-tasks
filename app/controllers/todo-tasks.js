@@ -9,14 +9,21 @@ var mongoose = require('mongoose'),
 
 
 /**
- * Find article by id
- */
-exports.article = function(req, res, next, id) {
-    TodoTask.load(id, function(err, article) {
-        if (err) return next(err);
-        if (!article) return next(new Error('Failed to load article ' + id));
-        req.article = article;
-        next();
+* Find task by id
+*/
+exports.task = function(req, res, next, id) {
+
+    TodoTask.load(id, function (err, todoTask) {
+        if (!err) {
+            if (todoTask) {
+                req.todoTask = todoTask;
+                next();
+            } else {
+                return next(new Error('Failed to load todoTask ' + id));
+            }
+        }
+
+        return next(err);
     });
 };
 
@@ -62,19 +69,19 @@ exports.update = function(req, res) {
 };
 
 /**
- * Delete an article
- */
+* Delete a TodoTask
+*/
 exports.destroy = function(req, res) {
-    var article = req.article;
+    var todoTask = req.todoTask;
 
-    article.remove(function(err) {
+    todoTask.remove(function (err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                article: article
+                todoTask: todoTask
             });
         } else {
-            res.jsonp(article);
+            res.jsonp(todoTask);
         }
     });
 };
