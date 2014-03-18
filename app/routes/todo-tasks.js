@@ -1,30 +1,26 @@
 'use strict';
 
-// Articles routes use articles controller
-var articles = require('../controllers/articles');
+// Articles routes use todoTasks controller
+var todoTasks = require('../controllers/todo-tasks');
 var authorization = require('./middlewares/authorization');
 
 // Article authorization helpers
-var hasAuthorization = function(req, res, next) {
-	if (req.article.user.id !== req.user.id) {
-        return res.send(401, 'User is not authorized');
-    }
-    next();
-};
+// var hasAuthorization = function(req, res, next) {
+// if (req.article.user.id !== req.user.id) {
+//         return res.send(401, 'User is not authorized');
+//     }
+//     next();
+// };
 
 module.exports = function(app) {
 
-    app.get('/todo-tasks', function (req, res) {
-        res.end('hello');
-    });
-
-    app.get('/articles', articles.all);
-    app.post('/articles', authorization.requiresLogin, articles.create);
-    app.get('/articles/:articleId', articles.show);
-    app.put('/articles/:articleId', authorization.requiresLogin, hasAuthorization, articles.update);
-    app.del('/articles/:articleId', authorization.requiresLogin, hasAuthorization, articles.destroy);
+    app.get('/todo-tasks', todoTasks.all);
+    app.post('/todo-tasks', authorization.requiresLogin, todoTasks.create);
+    // app.get('/todo-tasks/:articleId', todoTasks.show);
+    // app.put('/todo-tasks/:articleId', authorization.requiresLogin, hasAuthorization, todoTasks.update);
+    // app.del('/todo-tasks/:articleId', authorization.requiresLogin, hasAuthorization, todoTasks.destroy);
 
     // Finish with setting up the articleId param
-    app.param('articleId', articles.article);
+    // app.param('articleId', todoTasks.article);
 
 };

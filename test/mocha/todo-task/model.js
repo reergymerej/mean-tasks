@@ -31,7 +31,8 @@ describe('<Unit Test>', function() {
 
             user.save(function () {
                 todoTask = new TodoTask({
-                    user: user
+                    user: user,
+                    description: 'some description'
                 });
 
                 done();
@@ -50,6 +51,15 @@ describe('<Unit Test>', function() {
 
             it('should throw an error when saving without a user', function (done) {
                 todoTask.user = undefined;
+
+                return todoTask.save(function (err) {
+                    should.exist(err);
+                    done();
+                });
+            });
+
+            it('should throw an error when saving without a description', function (done) {
+                todoTask.description = undefined;
 
                 return todoTask.save(function (err) {
                     should.exist(err);
@@ -75,6 +85,11 @@ describe('<Unit Test>', function() {
 
             it('should have a created date', function (done) {
                 todoTask.should.have.property('created');
+                done();
+            });
+
+            it('should have a description', function (done) {
+                todoTask.should.have.property('description');
                 done();
             });
         });

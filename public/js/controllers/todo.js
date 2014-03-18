@@ -10,7 +10,9 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
     // Give this controller's scope access to the Global values.
     $scope.global = Global;
 
-    $scope.create = function() {
+    $scope.tasks = [];
+
+    $scope.create = function () {
 
         // Create a new instance of the Articles $resource.
         // $resource allows for easy CRUD operations.
@@ -18,34 +20,42 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
         // this === $scope
         // this.title and this.content are added to the scope
         // through ngModel in the view (/public/views/articles/create.html).
-        // var article = new Articles({
+        var todoTask = new Tasks({
 
-        //     // Load the values into the $resource.
-        //     title: this.title,
-        //     content: this.content
-        // });
+            // Load the values into the $resource.
+            foo: 'some foo',
+            bar: 'some bar',
+            description: 'some description'
+        });
 
         // Save the $resource.
         // REF: http://docs.angularjs.org/api/ngResource/service/$resource
         // If the XHR fails, the 2nd callback will run.
-        // article.$save(function(response) {
+        todoTask.$save(function (response) {
 
-        //     // response === article
+            // response === article
 
-        //     // Since the template uses native form validation ("required" attribute), it should
-        //     // not be possible to submit without the required fields.
-        //     // If it were possible, the response would contain response.errors
-        //     // with the validation errors defined in /app/models/article.js.
+            // Since the template uses native form validation ("required" attribute), it should
+            // not be possible to submit without the required fields.
+            // If it were possible, the response would contain response.errors
+            // with the validation errors defined in /app/models/article.js.
 
-        //     // All MongoDB items (AKA documents) have an
-        //     // auto-generated _id field.
-        //     // REF: http://docs.mongodb.org/manual/core/document/
+            // All MongoDB items (AKA documents) have an
+            // auto-generated _id field.
+            // REF: http://docs.mongodb.org/manual/core/document/
 
-        //     // Redirect to view the saved article.
-        //     // REF: http://docs.angularjs.org/api/ng/service/$location
-        //     // GOTO: /public/js/config.js (GET /articles/article_id)
-        //     $location.path('articles/' + response._id);
-        // }/*, function (response) { console.error('oh, shit', response); }*/);
+            // Redirect to view the saved article.
+            // REF: http://docs.angularjs.org/api/ng/service/$location
+            // GOTO: /public/js/config.js (GET /articles/article_id)
+            // $location.path('articles/' + response._id);
+            if (response.errors) {
+                console.error(response.errors);
+            } else {
+                $scope.tasks.unshift(response);
+            }
+        }, function (response) {
+            console.error('oh, shit', response);
+        });
 
         this.title = '';
         this.content = '';

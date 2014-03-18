@@ -22,6 +22,10 @@ var TodoTaskSchema = new Schema({
         default: false,
         required: true
     },
+    description: {
+        type: String,
+        required: true
+    },
     user: {
         type: Schema.ObjectId,
         ref: 'User',
