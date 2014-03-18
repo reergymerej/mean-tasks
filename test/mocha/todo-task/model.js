@@ -63,8 +63,16 @@ describe('<Unit Test>', function() {
         describe('Setting done', function () {
             it('should not be done by default', function (done) {
                 todoTask.done.should.be.false;
-                (7).should.be.false;
                 done();
+            });
+
+            it('should set done to true when setting the end date', function (done) {
+                todoTask.end = new Date();
+
+                return todoTask.save(function (err, task) {
+                    task.done.should.be.true;
+                    done();
+                });
             });
         });
 

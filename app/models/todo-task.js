@@ -13,6 +13,10 @@ var TodoTaskSchema = new Schema({
         type: Date,
         default: Date.now
     },
+    end: {
+        type: Date,
+        default: null
+    },
     done: {
         type: Boolean,
         default: false,
@@ -38,38 +42,17 @@ var TodoTaskSchema = new Schema({
 /**
  * Validations
  */
-// This sets up validation on the "title" field
-// for articles.
-// Schema paths refer to the fields.
-// REF: http://mongoosejs.com/docs/api.html#schema_Schema-path
-// There are built-in validations.  This is a custom validation.
-// REF: http://mongoosejs.com/docs/validation.html
-// REF: http://mongoosejs.com/docs/api.html#schematype_SchemaType-validate
 TodoTaskSchema.path('user').validate(function (user) {
     return user && user.length;
 }, 'TodoTasks must have a user.');
 
-/**
- * Statics
- */
-// QUESTION: Where is this used?
-TodoTaskSchema.statics.load = function(id, cb) {
+TodoTaskSchema.pre('save', function (next) {
+    if (this.end) {
+        this.done = true;
+    }
+    next();
+});
 
-    // Get the first MongoDB document that matches
-    // this criteria.
-    // REF: http://docs.mongodb.org/manual/reference/method/db.collection.findOne/
-    this.findOne({
-        _id: id
-    })
-    // This add a couple fields to the document (record).
-    // REF: http://mongoosejs.com/docs/populate.html
-    .populate('user', 'name username')
-
-    // exec runs after populate has finished.
-    // Remember, node is all about asynchronous code.
-    // http://nodejs.org/api/child_process.html#child_process_child_process_exec_command_options_callback
-    .exec(cb);
-};
 
 // Now that the schema is set up, register it with Mongoose
 // so it can be used when needed.

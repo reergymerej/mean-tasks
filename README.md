@@ -112,3 +112,8 @@ How do we write a test to check for the absense of this field?
 
 
 Remove the name field from `/app/views/users/signup.html`
+
+## Update a field when another field is updated
+
+You can do this by adding a pre hook. 
+http://mongoosejs.com/docs/middleware.html
