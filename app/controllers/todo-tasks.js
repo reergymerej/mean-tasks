@@ -11,7 +11,7 @@ var mongoose = require('mongoose'),
 /**
 * Find task by id
 */
-exports.task = function(req, res, next, id) {
+exports.task = function (req, res, next, id) {
 
     TodoTask.load(id, function (err, todoTask) {
         if (!err) {
@@ -51,7 +51,7 @@ exports.create = function (req, res) {
 /**
 * update a TodoTask
 */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
     var todoTask = req.todoTask;
 
     // merge the body contents with the todoTask
@@ -73,7 +73,7 @@ exports.update = function(req, res) {
 /**
 * Delete a TodoTask
 */
-exports.destroy = function(req, res) {
+exports.destroy = function (req, res) {
     var todoTask = req.todoTask;
 
     todoTask.remove(function (err) {
@@ -96,12 +96,22 @@ exports.show = function(req, res) {
 };
 
 /**
-* Renders all TodoTasks as JSON.
+* Renders a group of TodoTasks as JSON.
 */
-exports.all = function (req, res) {
+exports.list = function (req, res) {
+
+    var query = {};
+
+    console.log('query', req.query);
+    if (req.query.from) {
+        query.created = {
+            $gte: new Date(req.query.from)
+        };
+    }
+
     // REF: http://mongoosejs.com/docs/populate.html
     // REF: http://mongoosejs.com/docs/api.html#query_Query-sort
-    TodoTask.find().sort('-created').populate('user').exec(function (err, todoTasks) {
+    TodoTask.find(query).sort('-created').populate('user').exec(function (err, todoTasks) {
         if (err) {
             res.render('error', {
                 status: 500

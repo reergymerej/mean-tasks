@@ -14,7 +14,7 @@ var hasAuthorization = function (req, res, next) {
 
 module.exports = function(app) {
 
-    app.get('/todo-tasks', todoTasks.all);
+    app.get('/todo-tasks', todoTasks.list);
     app.post('/todo-tasks', authorization.requiresLogin, todoTasks.create);
     // app.get('/todo-tasks/:articleId', todoTasks.show);
     app.put('/todo-tasks/:id', authorization.requiresLogin, hasAuthorization, todoTasks.update);

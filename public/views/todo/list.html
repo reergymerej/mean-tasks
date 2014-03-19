@@ -1,4 +1,9 @@
 <section data-ng-controller="TodoCtrl" data-ng-init="find()">
+    <form data-ng-submit="filter()">
+        <input type="text" placeholder="since" data-ng-model="fromDate" />
+        <button class="btn btn-default">filter</button>
+    </form>
+
     <form name="form" novalidate data-ng-submit="create()">
         <input ng-model="taskDescription" placeholder="new task" required />
         <button class="btn btn-default" data-ng-disabled="form.$invalid">create</button>

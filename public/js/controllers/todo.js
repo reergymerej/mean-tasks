@@ -4,14 +4,23 @@
 // $stateParams This comes from AngularUI Router.
 // $location    http://docs.angularjs.org/guide/dev_guide.services.$location
 // Global       /public/js/services/global.js
-angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '$location', 'Global', 'Tasks',
-    function ($scope, $stateParams, $location, Global, Tasks) {
+angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$filter', '$stateParams', '$location', 'Global', 'Tasks',
+    function ($scope, $filter, $stateParams, $location, Global, Tasks) {
 
     // Give this controller's scope access to the Global values.
     $scope.global = Global;
 
+    $scope.fromDate = '';
     $scope.taskDescription = '';
     $scope.tasks = [];
+
+    $scope.filter = function () {
+        var from = new Date($scope.fromDate);
+
+        if (from.toString() !== 'Invalid Date') {
+            $scope.find(from);
+        }
+    };
 
     $scope.create = function () {
 
@@ -77,7 +86,7 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
     $scope.toggleDone = function (task) {
         task.$update(function () {
             
-            
+
         }, function (http) {
             console.error('unable to update task', http);
         });
@@ -107,13 +116,24 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
     };
 
     // Find all tasks.
-    $scope.find = function() {
+    /**
+    * @param {Date} from
+    */
+    $scope.find = function (from) {
 
-        Tasks.query(function (tasks) {
+        var params = {
+            from: from ? from.getTime() : undefined
+        };
+
+        var success = function (tasks) {
             $scope.tasks = tasks;
-        }, function () {
+        };
+
+        var failure = function () {
             console.error('unable to fetch tasks');
-        });
+        };
+
+        Tasks.query(params, success, failure);
     };
 
     // This finds a specific article by id.
