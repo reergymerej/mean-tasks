@@ -24,7 +24,17 @@ footer p {
     padding:5px 0 12px 10px
 }
 
+/*================================================
+*/
 input.ng-dirty.ng-invalid {
     background-color: #2782C9;
     color: #FFF;
+}
+
+.todo-task {
+    font-size: 1.3em;
+}
+
+.todo-task.done {
+    text-decoration: line-through;
 }

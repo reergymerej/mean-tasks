@@ -21,9 +21,9 @@ exports.task = function(req, res, next, id) {
             } else {
                 return next(new Error('Failed to load todoTask ' + id));
             }
+        } else {
+            return next(err);
         }
-
-        return next(err);
     });
 };
 

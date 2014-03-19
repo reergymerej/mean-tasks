@@ -1,18 +1,19 @@
 <section data-ng-controller="TodoCtrl" data-ng-init="find()">
-    <form novalidate data-ng-submit="create()">
+    <form name="form" novalidate data-ng-submit="create()">
         <input ng-model="taskDescription" placeholder="new task" required />
-        <button>create</button>
+        <button class="btn btn-default" data-ng-disabled="form.$invalid">create</button>
     </form>
 
 	<ul class="unstyled">
         <li data-ng-repeat="task in tasks">
             <span class="controls">
-                <button class="btn btn-xs btn-danger" data-ng-click="remove(task)">
-                    x
-                </button>
-
+                <button class="btn btn-xs btn-danger" data-ng-click="remove(task)">x</button>
+                <input type="checkbox" data-ng-model="task.done" data-ng-change="toggleDone(task)" />
             </span>
-			<small>{{ task.created | date:'medium' }}</small> <span>{{ task.description }}</span>
+            <span>
+			 <small>{{ task.created | date:'medium' }}</small>
+             <span class="todo-task" data-ng-class="{ done: task.done }">{{ task.description }}</span>
+            </span>
 		</li>
 	</ul>
 </section>

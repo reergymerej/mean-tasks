@@ -73,8 +73,15 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
         }
     };
 
+    // Toggle the done state of a task.
+    $scope.toggleDone = function (task) {
+        // task.done = !task.done;
+
+        console.log('send to server');
+    };
+
     // This is called by the edit page. (/public/views/articles/edit.html)
-    $scope.update = function() {
+    $scope.update = function () {
         var article = $scope.article;
 
         // QUESTION: What does this array do?
