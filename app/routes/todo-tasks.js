@@ -17,7 +17,7 @@ module.exports = function(app) {
     app.get('/todo-tasks', todoTasks.all);
     app.post('/todo-tasks', authorization.requiresLogin, todoTasks.create);
     // app.get('/todo-tasks/:articleId', todoTasks.show);
-    // app.put('/todo-tasks/:articleId', authorization.requiresLogin, hasAuthorization, todoTasks.update);
+    app.put('/todo-tasks/:id', authorization.requiresLogin, hasAuthorization, todoTasks.update);
     app.del('/todo-tasks/:id', authorization.requiresLogin, hasAuthorization, todoTasks.destroy);
 
     // Finish with setting up the articleId param

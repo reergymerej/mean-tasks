@@ -49,21 +49,23 @@ exports.create = function (req, res) {
 };
 
 /**
- * Update an article
- */
+* update a TodoTask
+*/
 exports.update = function(req, res) {
-    var article = req.article;
+    var todoTask = req.todoTask;
 
-    article = _.extend(article, req.body);
+    // merge the body contents with the todoTask
+    // added by the helper (persisted task)
+    todoTask = _.extend(todoTask, req.body);
 
-    article.save(function(err) {
+    todoTask.save(function (err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                article: article
+                todoTask: todoTask
             });
         } else {
-            res.jsonp(article);
+            res.jsonp(todoTask);
         }
     });
 };

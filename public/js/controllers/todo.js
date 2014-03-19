@@ -75,9 +75,12 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$stateParams', '
 
     // Toggle the done state of a task.
     $scope.toggleDone = function (task) {
-        // task.done = !task.done;
-
-        console.log('send to server');
+        task.$update(function () {
+            
+            
+        }, function (http) {
+            console.error('unable to update task', http);
+        });
     };
 
     // This is called by the edit page. (/public/views/articles/edit.html)
