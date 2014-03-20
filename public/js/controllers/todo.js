@@ -10,7 +10,7 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$filter', '$stat
     // Give this controller's scope access to the Global values.
     $scope.global = Global;
 
-    $scope.fromDate = '';
+    $scope.fromDate = new Date();
     $scope.taskDescription = '';
     $scope.tasks = [];
 
