@@ -47,7 +47,7 @@
 	<ul class="unstyled">
         <li data-ng-repeat="task in tasks">
             <span class="controls">
-                <button class="btn btn-xs btn-danger" data-ng-click="remove(task)">x</button>
+                <a href="" data-ng-click="remove(task)">delete</a>
                 <input type="checkbox" data-ng-model="task.done" data-ng-change="toggleDone(task)" />
             </span>
             <span>
