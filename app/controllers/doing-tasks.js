@@ -13,13 +13,13 @@ var mongoose = require('mongoose'),
 */
 exports.task = function (req, res, next, id) {
 
-    DoingTask.load(id, function (err, todoTask) {
+    DoingTask.load(id, function (err, doingTask) {
         if (!err) {
-            if (todoTask) {
-                req.todoTask = todoTask;
+            if (doingTask) {
+                req.doingTask = doingTask;
                 next();
             } else {
-                return next(new Error('Failed to load todoTask ' + id));
+                return next(new Error('Failed to load doingTask ' + id));
             }
         } else {
             return next(err);
@@ -31,19 +31,19 @@ exports.task = function (req, res, next, id) {
 * Creates a new DoingTask.
 */
 exports.create = function (req, res) {
-    var todoTask = new DoingTask(req.body);
+    var doingTask = new DoingTask(req.body);
 
     // Really?  We're passing the hashed pw back to the client?!
-    todoTask.user = req.user;
+    doingTask.user = req.user;
 
-    todoTask.save(function (err) {
+    doingTask.save(function (err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                todoTask: todoTask
+                doingTask: doingTask
             });
         } else {
-            res.jsonp(todoTask);
+            res.jsonp(doingTask);
         }
     });
 };
@@ -52,20 +52,20 @@ exports.create = function (req, res) {
 * update a DoingTask
 */
 exports.update = function (req, res) {
-    var todoTask = req.todoTask;
+    var doingTask = req.doingTask;
 
-    // merge the body contents with the todoTask
+    // merge the body contents with the doingTask
     // added by the helper (persisted task)
-    todoTask = _.extend(todoTask, req.body);
+    doingTask = _.extend(doingTask, req.body);
 
-    todoTask.save(function (err) {
+    doingTask.save(function (err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                todoTask: todoTask
+                doingTask: doingTask
             });
         } else {
-            res.jsonp(todoTask);
+            res.jsonp(doingTask);
         }
     });
 };
@@ -74,16 +74,16 @@ exports.update = function (req, res) {
 * Delete a DoingTask
 */
 exports.destroy = function (req, res) {
-    var todoTask = req.todoTask;
+    var doingTask = req.doingTask;
 
-    todoTask.remove(function (err) {
+    doingTask.remove(function (err) {
         if (err) {
             return res.send('users/signup', {
                 errors: err.errors,
-                todoTask: todoTask
+                doingTask: doingTask
             });
         } else {
-            res.jsonp(todoTask);
+            res.jsonp(doingTask);
         }
     });
 };

@@ -15,12 +15,11 @@ var hasAuthorization = function (req, res, next) {
 module.exports = function(app) {
 
     app.get('/doing-tasks', doingTasks.list);
-    // app.post('/todo-tasks', authorization.requiresLogin, doingTasks.create);
-    // app.get('/todo-tasks/:doingTaskId', doingTasks.show);
-    // app.put('/todo-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.update);
-    // app.del('/todo-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.destroy);
+    app.post('/doing-tasks', authorization.requiresLogin, doingTasks.create);
+    // app.get('/doing-tasks/:doingTaskId', doingTasks.show);
+    // app.put('/doing-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.update);
+    app.del('/doing-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.destroy);
 
     // Finish with setting up the articleId param
     app.param('doingTaskId', doingTasks.task);
-
 };
