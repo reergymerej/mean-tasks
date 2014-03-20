@@ -91,9 +91,9 @@ exports.destroy = function (req, res) {
 /**
  * Show an article
  */
-exports.show = function(req, res) {
-    res.jsonp(req.article);
-};
+// exports.show = function(req, res) {
+//     res.jsonp(req.article);
+// };
 
 /**
 * Renders a group of DoingTasks as JSON.
@@ -103,14 +103,15 @@ exports.list = function (req, res) {
     var query = {};
 
     if (req.query.from) {
-        query.created = {
+        query.start = {
             $gte: new Date(parseInt(req.query.from, 10))
         };
     }
 
-    // REF: http://mongoosejs.com/docs/populate.html
-    // REF: http://mongoosejs.com/docs/api.html#query_Query-sort
-    DoingTask.find(query).sort('-created').populate('user').exec(function (err, todoTasks) {
+    DoingTask.find(query)
+    .sort('-start')
+    .populate('user')
+    .exec(function (err, todoTasks) {
         if (err) {
             res.render('error', {
                 status: 500

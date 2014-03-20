@@ -12,31 +12,29 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
 
-    // $scope.fromDate = new Date();
-    // $scope.taskDescription = '';
-    // $scope.tasks = [];
+    $scope.fromDate = new Date();
+    $scope.taskDescription = '';
+    $scope.tasks = [];
 
-    // $scope.filter = function () {
-    //     var from = new Date($scope.fromDate);
+    /**
+    * Filter the list of tasks.
+    */
+    $scope.filter = function () {
+        var from = new Date($scope.fromDate);
 
-    //     if (from.toString() === 'Invalid Date') {
-    //         from = undefined;
-    //     }
+        if (from.toString() === 'Invalid Date') {
+            from = undefined;
+        }
 
-    //     $scope.find(from);
-    // };
+        $scope.find(from);
+    };
 
+    /**
+    * Create a new task.
+    */
     $scope.create = function () {
 
-        // Create a new instance of the Articles $resource.
-        // $resource allows for easy CRUD operations.
-        // 
-        // this === $scope
-        // this.title and this.content are added to the scope
-        // through ngModel in the view (/public/views/articles/create.html).
         var doingTask = new DoingTasks({
-
-            // Load the values into the $resource.
             description: $scope.taskDescription
         });
 
@@ -56,7 +54,9 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
         doingTask.$save(success, failure);
     };
 
-    // Delete a task.
+    /**
+    * Delete a task.
+    */
     $scope.remove = function (task) {
 
         if (task) {
@@ -104,8 +104,8 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     //     });
     // };
 
-    // Find all tasks.
     /**
+    * Find tasks.
     * @param {Date} from
     */
     $scope.find = function (from) {
@@ -126,23 +126,23 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     };
 
     // This finds a specific article by id.
-    $scope.findOne = function() {
+    // $scope.findOne = function() {
 
-        // Use our Articles service.
-        // "get" appears to be used instead of "query"
-        // for fetching a specific record.
-        // Articles.get({
+    //     // Use our Articles service.
+    //     // "get" appears to be used instead of "query"
+    //     // for fetching a specific record.
+    //     // Articles.get({
 
-        //     // Specify the "articleId" the resource should use.
-        //     // Pull the value from $stateParams.  The $stateParams
-        //     // value was set when the route was handled (/public/js/config.js).
-        //     // GOTO: /public/js/services/articles.js to see how the articleId
-        //     // is inserted into the url.
-        //     articleId: $stateParams.articleId
-        // }, function(article) {
+    //     //     // Specify the "articleId" the resource should use.
+    //     //     // Pull the value from $stateParams.  The $stateParams
+    //     //     // value was set when the route was handled (/public/js/config.js).
+    //     //     // GOTO: /public/js/services/articles.js to see how the articleId
+    //     //     // is inserted into the url.
+    //     //     articleId: $stateParams.articleId
+    //     // }, function(article) {
 
-        //     // Assign the article to the controller's scope.
-        //     $scope.article = article;
-        // });
-    };
+    //     //     // Assign the article to the controller's scope.
+    //     //     $scope.article = article;
+    //     // });
+    // };
 }]);
