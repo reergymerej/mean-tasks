@@ -42,8 +42,10 @@
         </div>
 
         <div class="form-group">
-            <select class="form-control">
-                <option ng-repeat="category in categories">{{ category }}</option>
+            <select
+                class="form-control"
+                ng-model="taskCategory"
+                ng-options="category for category in categories">
             </select>
         </div>
       
@@ -56,11 +58,10 @@
                 <a href="" data-ng-click="remove(task)">delete</a>
             </span>
             <span>
-			 <small>{{ task.created | date:'medium' }}</small>
+			 <small>{{ task.start | date:'short' }}</small>
+             <small>{{ task.category }}<small>
              <span class="todo-task" data-ng-class="{ done: task.done }">{{ task.description }}</span>
             </span>
 		</li>
 	</ul>
 </section>
-
-<h3>Finish DoingTask Stack</h3>

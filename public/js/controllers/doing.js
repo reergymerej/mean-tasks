@@ -8,6 +8,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     function ($scope, $filter, $stateParams, $location, Global, DoingTasks) {
 
     $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
+    $scope.taskCategory = undefined;
 
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
@@ -35,7 +36,8 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     $scope.create = function () {
 
         var doingTask = new DoingTasks({
-            description: $scope.taskDescription
+            description: $scope.taskDescription,
+            category: $scope.taskCategory
         });
 
         var success = function (response) {
