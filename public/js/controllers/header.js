@@ -14,6 +14,10 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         {
             title: 'Todo',
             link: 'todo'
+        },
+        {
+            title: 'Doing',
+            link: 'doing'
         }
     ];
 

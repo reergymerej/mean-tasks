@@ -117,3 +117,7 @@ Remove the name field from `/app/views/users/signup.html`
 
 You can do this by adding a pre hook. 
 http://mongoosejs.com/docs/middleware.html
+
+---
+
+When you rename a Heroku app, it's best to do it from the CLI.

@@ -1,0 +1,64 @@
+<section data-ng-controller="DoingCtrl" data-ng-init="find()">
+    <form
+        class="form-inline"
+        role="form"
+        data-ng-submit="filter()">
+
+      <div class="form-group">
+        <input 
+            placeholder="since"
+            data-ng-model="fromDate"
+            type="text"
+            class="form-control"
+            datepicker-popup="M/d/yyyy"
+            show-weeks="false"
+            show-button-bar="false" />
+      </div>
+      
+      <div class="form-group">
+        <timepicker
+            data-ng-model="fromDate"
+            meridians="['am', 'pm']"
+            ></timepicker>
+      </div>
+      
+      <button type="submit" class="btn btn-default">filter</button>
+    </form>
+
+    <form
+        name="form"
+        class="form-inline"
+        role="form"
+        novalidate
+        data-ng-submit="create()">
+
+        <div class="form-group">
+            <input
+                type="text"
+                ng-model="taskDescription"
+                placeholder="new task"
+                class="form-control"
+                required />
+        </div>
+
+        <div class="form-group">
+            <select class="form-control">
+                <option ng-repeat="category in categories">{{ category }}</option>
+            </select>
+        </div>
+      
+        <button type="submit" class="btn btn-default" data-ng-disabled="form.$invalid">create</button>
+    </form>
+
+	<ul class="unstyled">
+        <li data-ng-repeat="task in tasks">
+            <span class="controls">
+                <a href="" data-ng-click="remove(task)">delete</a>
+            </span>
+            <span>
+			 <small>{{ task.created | date:'medium' }}</small>
+             <span class="todo-task" data-ng-class="{ done: task.done }">{{ task.description }}</span>
+            </span>
+		</li>
+	</ul>
+</section>

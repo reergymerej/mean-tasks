@@ -17,6 +17,11 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'views/todo/list.html'
     })
 
+      .state('doing', {
+        url: '/doing',
+        templateUrl: 'views/doing/list.html'
+    })
+
       // The states aren't used anywhere, but they could be.
       // Using state allows for routing by url or a named state 
       // (see the "go" method in the docs).
