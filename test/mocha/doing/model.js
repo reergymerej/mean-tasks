@@ -70,7 +70,7 @@ describe('<Unit Test>', function() {
 
             it('should set "done" to true when setting end', function (done) {
                 doingTask.end = new Date();
-                return doingTask.save(function (err) {
+                return doingTask.save(function () {
                     doingTask.should.have.property('done', true);
                     done();
                 });
