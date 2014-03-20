@@ -17,9 +17,11 @@ angular.module('todo.tasks').controller('TodoCtrl', ['$scope', '$filter', '$stat
     $scope.filter = function () {
         var from = new Date($scope.fromDate);
 
-        if (from.toString() !== 'Invalid Date') {
-            $scope.find(from);
+        if (from.toString() === 'Invalid Date') {
+            from = undefined;
         }
+
+        $scope.find(from);
     };
 
     $scope.create = function () {

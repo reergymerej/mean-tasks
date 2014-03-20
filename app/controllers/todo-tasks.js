@@ -102,10 +102,9 @@ exports.list = function (req, res) {
 
     var query = {};
 
-    console.log('query', req.query);
     if (req.query.from) {
         query.created = {
-            $gte: new Date(req.query.from)
+            $gte: new Date(parseInt(req.query.from, 10))
         };
     }
 
