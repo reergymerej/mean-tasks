@@ -67,6 +67,14 @@ describe('<Unit Test>', function() {
                     done();
                 });
             });
+
+            it('should set "done" to true when setting end', function (done) {
+                doingTask.end = new Date();
+                return doingTask.save(function (err) {
+                    doingTask.should.have.property('done', true);
+                    done();
+                });
+            });
         });
 
         describe('fields', function () {
@@ -78,6 +86,11 @@ describe('<Unit Test>', function() {
 
             it('should have a description', function (done) {
                 doingTask.should.have.property('description');
+                done();
+            });
+
+            it('done should be false by default', function (done) {
+                doingTask.should.have.property('done', false);
                 done();
             });
         });

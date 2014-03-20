@@ -22,6 +22,10 @@ var DoingTaskSchema = new Schema({
         type: Date,
         default: null
     },
+    done: {
+        type: Boolean,
+        default: false
+    },
     description: {
         type: String,
         required: true
@@ -38,6 +42,12 @@ DoingTaskSchema.path('user').validate(function (user) {
     return user && user.length;
 }, 'TodoTasks must have a user.');
 
+DoingTaskSchema.pre('save', function (next) {
+    if (this.end) {
+        this.done = true;
+    }
+    next();
+});
 
 DoingTaskSchema.statics.load = function (id, cb) {
 
