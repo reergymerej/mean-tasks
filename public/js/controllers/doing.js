@@ -73,15 +73,19 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
         }
     };
 
-    // // Toggle the done state of a task.
-    // $scope.toggleDone = function (task) {
-    //     task.$update(function () {
-            
+    /**
+    * Finish a task.
+    * @param {TodoTask} task
+    */
+    $scope.finishTask = function (task) {
+        var success = function () {};
 
-    //     }, function (http) {
-    //         console.error('unable to update task', http);
-    //     });
-    // };
+        var failure = function (http) {
+            console.error('unable to update task', http);
+        };
+        
+        task.$update(success, failure);
+    };
 
     // // This is called by the edit page. (/public/views/articles/edit.html)
     // $scope.update = function () {

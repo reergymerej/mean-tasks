@@ -41,9 +41,13 @@ TodoTaskSchema.path('user').validate(function (user) {
 }, 'TodoTasks must have a user.');
 
 TodoTaskSchema.pre('save', function (next) {
-    if (this.end) {
-        this.done = true;
+    if (this.done && !this.end) {
+        this.end = new Date();
+
+    } else if (!this.done) {
+        this.end = null;
     }
+
     next();
 });
 

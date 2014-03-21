@@ -61,6 +61,9 @@
 			 <small>{{ task.start | date:'short' }}</small>
              <small>{{ task.category }}<small>
              <span class="todo-task" data-ng-class="{ done: task.done }">{{ task.description }}</span>
+             <a
+                class="btn btn-xs btn-default"
+                ng-click="finishTask(task)">done</a>
             </span>
 		</li>
 	</ul>
