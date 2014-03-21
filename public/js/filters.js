@@ -19,7 +19,7 @@ angular.module('doing.filters').
             };
 
             if (end) {
-                minutes = Math.round((end - start) / 6000);
+                minutes = Math.round((end - start) / 60000);
                 if (minutes > 60) {
                     hours = Math.floor(minutes / 60);
                     minutes %= 60;
