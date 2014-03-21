@@ -117,7 +117,11 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     */
     $scope.find = function (from) {
 
-        var params = {
+        var params = {};
+
+        from = $scope.fromDate;
+
+        params = {
             from: from ? from.getTime() : undefined
         };
 
