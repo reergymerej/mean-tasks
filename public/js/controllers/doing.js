@@ -13,7 +13,11 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
 
-    $scope.fromDate = new Date();
+    $scope.fromDate = (function () {
+        var d = new Date();
+        d.setHours(0, 0, 0, 0);
+        return d;
+    }());
     $scope.taskDescription = '';
     $scope.tasks = [];
 
