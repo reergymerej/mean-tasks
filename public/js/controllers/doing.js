@@ -36,13 +36,11 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
 
     /**
     * Create a new task.
+    * @param {DoingTask} [task]
     */
-    $scope.create = function () {
+    $scope.create = function (doingTask) {
 
-        var doingTask = new DoingTasks({
-            description: $scope.taskDescription,
-            category: $scope.taskCategory
-        });
+        
 
         var success = function (response) {
             if (response.errors) {
@@ -56,6 +54,11 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
         var failure = function (response) {
             console.error('oh, shit', response);
         };
+
+        doingTask = doingTask || new DoingTasks({
+            description: $scope.taskDescription,
+            category: $scope.taskCategory
+        });
 
         doingTask.$save(success, failure);
     };
@@ -138,6 +141,30 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
         };
 
         DoingTasks.query(params, success, failure);
+    };
+
+    /**
+    * Resume a task.
+    */
+    $scope.resume = function (task) {
+        var newTask = new DoingTasks({
+            description: task.description,
+            category: task.category
+        });
+
+        $scope.create(newTask);
+    };
+
+    /**
+    * End or resume a task depending on if it is in progress.
+    * @param {DoingTask} task
+    */
+    $scope.toggleTask = function (task) {
+        if (task.end) {
+            $scope.resume(task);
+        } else {
+            $scope.finishTask(task);
+        }
     };
 
     // This finds a specific article by id.

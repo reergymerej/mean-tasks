@@ -55,18 +55,53 @@
 	<ul class="unstyled">
         <li data-ng-repeat="task in tasks">
             <span class="controls">
-                <a href="" data-ng-click="remove(task)">delete</a>
+
+
+                <div class="btn-group">
+                    <button
+                        type="button"
+                        class="btn btn-default btn-xs"
+                        ng-click="toggleTask(task)">
+                        <span
+                            class="glyphicon"
+                            ng-class="{
+                                'glyphicon-play': task.end,
+                                'glyphicon-pause': !task.end
+                            }"
+                            ></span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="btn btn-default btn-xs dropdown-toggle"
+                        data-toggle="dropdown">
+
+                    <span class="caret"></span>
+                  </button>
+
+                  <ul class="dropdown-menu" role="menu">
+                    <!-- <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li> -->
+                    <li class="divider"></li>
+                    <li>
+                        <a href="" ng-click="remove(task)">
+                            <span class="text-danger bg-danger">
+                                <span class="glyphicon glyphicon-remove"></span> delete
+                            </span>
+                        </a>
+                    </li>
+                  </ul>
+                </div>
+
+
             </span>
             <span>
              <small>
                 {{ task | timesummary }}
              </small>
-             <small>{{ task.category }}</small>
              <span class="doing-task">{{ task.description }}</span>
-             <a
-                class="btn btn-xs btn-default"
-                ng-hide="task.done"
-                ng-click="finishTask(task)">done</a>
+             <small>{{ task.category }}</small>
             </span>
 		</li>
 	</ul>
