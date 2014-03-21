@@ -6,10 +6,26 @@ angular.module('doing.filters').
 
             var result,
                 start = task.start && new Date(task.start).getTime(),
-                end = task.end && new Date(task.end).getTime();
+                end = task.end && new Date(task.end).getTime(),
+                minutes,
+                hours = 0;
+
+            var pad = function (x) {
+                x = x + '';
+                while (x.length < 2) {
+                    x = '0' + x;
+                }
+                return x;
+            };
 
             if (end) {
-                result = Math.round((end - start) / 6000) + ' minutes';
+                minutes = Math.round((end - start) / 6000);
+                if (minutes > 60) {
+                    hours = Math.floor(minutes / 60);
+                    minutes %= 60;
+                }
+
+                result = pad(hours) + ':' + pad(minutes);
             } else {
                 result = $filter('date')(start, 'HHmm');
             }
