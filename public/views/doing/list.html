@@ -58,11 +58,14 @@
                 <a href="" data-ng-click="remove(task)">delete</a>
             </span>
             <span>
-			 <small>{{ task.start | date:'short' }}</small>
-             <small>{{ task.category }}<small>
-             <span class="todo-task" data-ng-class="{ done: task.done }">{{ task.description }}</span>
+             <small>
+                {{ task | timesummary }}
+             </small>
+             <small>{{ task.category }}</small>
+             <span class="doing-task">{{ task.description }}</span>
              <a
                 class="btn btn-xs btn-default"
+                ng-hide="task.done"
                 ng-click="finishTask(task)">done</a>
             </span>
 		</li>

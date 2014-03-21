@@ -54,7 +54,6 @@ exports.create = function (req, res) {
 exports.update = function (req, res) {
     var doingTask = req.doingTask;
 
-    console.log('update task', doingTask);
     // merge the body contents with the doingTask
     // added by the helper (persisted task)
     doingTask = _.extend(doingTask, req.body);
