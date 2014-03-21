@@ -68,10 +68,20 @@ describe('<Unit Test>', function() {
                 });
             });
 
-            it('should set "done" to true when setting end', function (done) {
-                doingTask.end = new Date();
+            it('should set the end date when setting done to true', function (done) {
+                doingTask.done = true;
+
                 return doingTask.save(function () {
-                    doingTask.should.have.property('done', true);
+                    should.exist(doingTask.end);
+                    done();
+                });
+            });
+
+            it('should clear the end date when setting done to false', function (done) {
+                doingTask.done = false;
+
+                return doingTask.save(function () {
+                    should.not.exist(doingTask.end);
                     done();
                 });
             });
