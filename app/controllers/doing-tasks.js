@@ -7,7 +7,6 @@ var mongoose = require('mongoose'),
     DoingTask = mongoose.model('DoingTask'),
     _ = require('lodash');
 
-
 /**
 * Find task by id
 */
@@ -105,6 +104,18 @@ exports.list = function (req, res) {
     if (req.query.from) {
         query.start = {
             $gte: new Date(parseInt(req.query.from, 10))
+        };
+    }
+
+    if (req.query.start) {
+        query.start = {
+            $gte: new Date(parseInt(req.query.start, 10))
+        };
+    }
+
+    if (req.query.end) {
+        query.end = {
+            $lte: new Date(parseInt(req.query.end, 10))
         };
     }
 
