@@ -18,6 +18,10 @@ angular.module('mean.system').controller('HeaderController', ['$scope', 'Global'
         {
             title: 'Doing',
             link: 'doing'
+        },
+        {
+            title: 'Done',
+            link: 'done'
         }
     ];
 

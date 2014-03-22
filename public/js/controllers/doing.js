@@ -40,8 +40,6 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     */
     $scope.create = function (doingTask) {
 
-        
-
         var success = function (response) {
             if (response.errors) {
                 console.error(response.errors);
