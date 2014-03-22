@@ -121,3 +121,34 @@ http://mongoosejs.com/docs/middleware.html
 ---
 
 When you rename a Heroku app, it's best to do it from the CLI.
+
+### What's the RESTful way to deal with collections?
+[REST collections](https://restful-api-design.readthedocs.org/en/latest/resources.html)
+For now, I'm just going to add an optional "group by" param to the resource.
+[mongo group](http://docs.mongodb.org/manual/reference/method/db.collection.group/)
+
+console.log() doesn't work in MongoDB shell.  Use printjson.
+
+### Group Example
+
+    // given
+    { "_id" : ObjectId("532d99ffb9c3d11b8d1a400a"), "a" : 1, "b" : 2 }
+    { "_id" : ObjectId("532d9a0ab9c3d11b8d1a400b"), "a" : 7, "b" : 8 }
+    { "_id" : ObjectId("532d9d74b9c3d11b8d1a400c"), "a" : 1, "b" : 99 }
+
+
+    db.foo.group({
+        key: {
+            a: 1
+        },
+        reduce: function (currentDoc, aggregatedDoc) {
+            aggregatedDoc.totalB += currentDoc.b;
+        },
+        initial: { totalB: 0 }
+    });
+
+    // produces
+    [ { "a" : 1, "totalB" : 101 }, { "a" : 7, "totalB" : 8 } ]
+
+    
+

@@ -32,19 +32,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     $scope.tasks = [];
 
     /**
-    * Filter the list of tasks.
-    */
-    $scope.filter = function () {
-        var from = new Date($scope.fromDate);
-
-        if (from.toString() === 'Invalid Date') {
-            from = undefined;
-        }
-
-        $scope.find(from);
-    };
-
-    /**
     * Find tasks.
     */
     $scope.find = function () {
