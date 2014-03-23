@@ -228,5 +228,47 @@ Maybe it's already running.  Try with the server.
 
 ================================================
 
+db.doingtasks.aggregate({
+    $group: {
+        _id: 'category',
+        count: {
+            $sum: 1
+        }   
+    }
+});
+
+
+{ "result" : [ { "_id" : "category", "count" : 5 } ], "ok" : 1 }
+
+
+db.doingtasks.aggregate({
+    $group: {
+        _id: '$category',
+        duration: {
+            $sum: '$duration'
+        },
+        count: {
+            $sum: 1
+        }   
+    }
+});
+
+{
+    "result" : [
+        {
+            "_id" : "admin",
+            "duration" : 314256,
+            "count" : 2
+        },
+        {
+            "_id" : "dev",
+            "duration" : 310633,
+            "count" : 4
+        }
+    ],
+    "ok" : 1
+}
+
+
 TODO: 
 # Explain the pieces of the aggregate function.

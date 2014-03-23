@@ -77,11 +77,11 @@ describe('<Unit Test>', function() {
                 });
             });
 
-            it('should clear the end date when setting done to false', function (done) {
-                doingTask.done = false;
+            it('should set the duration when setting done to true', function (done) {
+                doingTask.done = true;
 
                 return doingTask.save(function () {
-                    should.not.exist(doingTask.end);
+                    should.exist(doingTask.duration);
                     done();
                 });
             });
