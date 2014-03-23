@@ -150,5 +150,83 @@ console.log() doesn't work in MongoDB shell.  Use printjson.
     // produces
     [ { "a" : 1, "totalB" : 101 }, { "a" : 7, "totalB" : 8 } ]
 
-    
 
+
+    db.doingtasks.group({
+        key: {
+            category: 1,
+            description: 1
+        },
+        cond: {
+            done: {
+                $ne: false
+            }
+        },
+        reduce: function (currentDoc, aggregatedDoc) {
+            var start = (new Date(currentDoc.start)).getTime(),
+                end = (new Date(currentDoc.end)).getTime(),
+                duration = end - start;
+
+            aggregatedDoc.duration += duration;
+
+        },
+        initial: { duration: 0 }
+    });
+
+===
+
+* I'm trying to get Mongoose to run the group operation and it's failing.  If I try "group", I get
+
+    TypeError: Object function model(doc, fields, skipId) {
+        if (!(this instanceof model))
+          return new model(doc, fields, skipId);
+        Model.call(this, doc, fields, skipId);
+      } has no method 'group'
+
+If I try, "aggregate", I get
+
+    { [MongoError: no such cmd: aggregate]
+      name: 'MongoError',
+      errmsg: 'no such cmd: aggregate',
+      'bad cmd': { aggregate: 'doingtasks', pipeline: [ [Object] ] },
+      ok: 0 }
+
+[Mongo Aggregation Intro](http://docs.mongodb.org/manual/aggregation/)
+
+# Figuring out Group By
+
+* Does the model have aggregate? - yes
+* Find an example of it being used and adapt it.
+** http://mongoosejs.com/docs/3.2.x/docs/api.html#model_Model-aggregate
+* Does it work? - The function works and executes the callback, but an error is still thrown; MongoError: no such cmd: aggregate
+* It's not a Mongoose error, since Mongoose is handling it correctly.
+* What version of MongoDB did aggregate come from? - MongoDB 2.2 introduced a new aggregation framework,
+* What version of MongoDB am I using?
+** How do you find the version of MongoDB? - From the console, use db.version();
+** I'm using 2.0.4.
+* How can I upgrade to 2.2?
+** http://docs.mongodb.org/manual/tutorial/upgrade-revision/
+** http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/
+** http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version
+
+It looks like the problem is the MongoDB that comes with Ubuntu is old.  I fumbled through installing MongoDB the first time, so who knows what's going on with the system now.  Lesson: Don't fumble around.
+
+I purged everything using the directions [here](http://askubuntu.com/questions/147135/how-can-i-uninstall-mongodb-and-reinstall-the-latest-version) and reinstalled using the directions [here](http://docs.mongodb.org/manual/tutorial/install-mongodb-on-ubuntu/).  Now we're on version 2.4.9.
+
+mongo worked, but mongod died.  Exit out of all terminals and try again.  No dice.
+
+Unable to create/open lock file: /data/db/mongod.lock
+
+http://askubuntu.com/a/295576
+* sudo rm /var/lib/mongodb/mongod.lock
+
+That cleared the lock, but now I'm getting this, even after rebooting.
+    Address already in use for socket: 0.0.0.0:27017
+
+Maybe it's already running.  Try with the server.
+- Sweet, looks like it *was* already running.
+
+================================================
+
+TODO: 
+# Explain the pieces of the aggregate function.

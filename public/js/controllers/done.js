@@ -42,7 +42,8 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
 
         params = {
             start: start ? start.getTime() : undefined,
-            end: end ? end.getTime() : undefined
+            end: end ? end.getTime() : undefined,
+            group: 'yeah'
         };
 
         var success = function (tasks) {

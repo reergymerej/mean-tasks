@@ -119,16 +119,81 @@ exports.list = function (req, res) {
         };
     }
 
-    DoingTask.find(query)
-    .sort('-start')
-    .populate('user')
-    .exec(function (err, todoTasks) {
-        if (err) {
-            res.render('error', {
-                status: 500
-            });
-        } else {
-            res.jsonp(todoTasks);
-        }
-    });
+    if (req.query.group) {
+
+        DoingTask.aggregate(
+            {
+                $group: {
+                    _id: null,
+                    maxAge: {
+                        $max: '$age'
+                    }
+                }
+            },
+            {
+                $project: {
+                    _id: 0,
+                    maxAge: 1
+                }
+            },
+            function (err) {
+                if (err) {
+                    console.log(err);
+                    res.end('it didn\'t work');
+                } else {
+                    res.end('it worked');
+                }
+            }
+        );
+
+        // DoingTask.aggregate({
+        //     $group: {
+        //         _id: 'category',
+        //         count: { $sum: 1 }
+        //     }
+        // })
+        // .exec(function (err, doingTasks) {
+        //     if (err) {
+
+        //         console.log(err);
+        //         res.render('error', {
+        //             status: 500
+        //         });
+        //     } else {
+        //         res.jsonp(doingTasks);
+        //     }
+        // });
+
+
+        // DoingTask.groupBy(function (err, doingTasks) {
+        //     console.log(err, doingTasks);
+        //     if (err) {
+        //         res.render('error', {
+        //             status: 500
+        //         });
+        //     } else {
+        //         res.jsonp(doingTasks);
+        //     }
+        // });
+
+        
+
+
+
+    } else {
+
+        DoingTask.find(query)
+        .sort('-start')
+        .populate('user')
+        .exec(function (err, doingTasks) {
+            if (err) {
+                res.render('error', {
+                    status: 500
+                });
+            } else {
+                res.jsonp(doingTasks);
+            }
+        });
+    }
+
 };

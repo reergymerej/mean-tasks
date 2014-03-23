@@ -69,6 +69,31 @@ DoingTaskSchema.statics.load = function (id, cb) {
     .exec(cb);
 };
 
+// DoingTaskSchema.statics.groupBy = function (cb) {
+//     this.group({
+//         key: {
+//             category: 1,
+//             description: 1
+//         },
+//         cond: {
+//             done: {
+//                 $ne: false
+//             }
+//         },
+//         reduce: function (currentDoc, aggregatedDoc) {
+//             var start = (new Date(currentDoc.start)).getTime(),
+//                 end = (new Date(currentDoc.end)).getTime(),
+//                 duration = end - start;
+
+//             aggregatedDoc.duration += duration;
+
+//         },
+//         initial: { duration: 0 }
+//     })
+
+//     .exec(cb);
+// };
+
 // Now that the schema is set up, register it with Mongoose
 // so it can be used when needed.
 // REF: http://mongoosejs.com/docs/models.html
