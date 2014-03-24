@@ -30,11 +30,8 @@
 	<ul class="unstyled">
         <li data-ng-repeat="task in tasks">
             <span>
-             <small>
-                {{ task | timesummary }}
-             </small>
-             <span class="doing-task">{{ task.description }}</span>
-             <small>{{ task.category }}</small>
+                {{ task._id}}
+                {{ task.duration | timespan }}
             </span>
 		</li>
 	</ul>

@@ -125,9 +125,14 @@ exports.list = function (req, res) {
         DoingTask.aggregate(
             {
                 $group: {
-                    _id: 'category',
-                    count: { $sum: 1 }
-                },
+                    _id: '$category',
+                    duration: {
+                        $sum: '$duration'
+                    },
+                    count: {
+                        $sum: 1
+                    }
+                }
             },
             function (err, tasks) {
                 console.log(err, tasks);
