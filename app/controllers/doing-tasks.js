@@ -87,18 +87,7 @@ exports.destroy = function (req, res) {
     });
 };
 
-/**
- * Show an article
- */
-// exports.show = function(req, res) {
-//     res.jsonp(req.article);
-// };
-
-/**
-* Renders a group of DoingTasks as JSON.
-*/
-exports.list = function (req, res) {
-
+var buildQuery = function (req) {
     var query = {};
 
     if (req.query.from) {
@@ -119,48 +108,60 @@ exports.list = function (req, res) {
         };
     }
 
+    return query;
+};
+
+/**
+* Renders a group of DoingTasks as JSON.
+*/
+exports.list = function (req, res) {
+
+    var query = buildQuery(req);
+
+    var callback = function (err, doingTasks) {
+        if (err) {
+            res.render('error', {
+                status: 500
+            });
+        } else {
+            res.jsonp(doingTasks);
+        }
+    };
+
     if (req.query.group) {
 
-
+        // run aggregation
         DoingTask.aggregate(
             {
+                $match: query
+            },
+            {
                 $group: {
-                    _id: '$category',
+                    _id: {
+                        category: '$category',
+                        description: '$description'
+                    },
                     duration: {
                         $sum: '$duration'
-                    },
-                    count: {
-                        $sum: 1
                     }
                 }
             },
-            function (err, tasks) {
-                console.log(err, tasks);
-
-                if (err) {
-                    res.render('error', {
-                        status: 500
-                    });
-                } else {
-                    res.jsonp(tasks);
+            {
+                $sort: {
+                    duration: -1,
+                    category: 1,
+                    description: 1
                 }
-            }
+            },
+            callback
         );
 
     } else {
 
+        // normal query
         DoingTask.find(query)
         .sort('-start')
         .populate('user')
-        .exec(function (err, doingTasks) {
-            if (err) {
-                res.render('error', {
-                    status: 500
-                });
-            } else {
-                res.jsonp(doingTasks);
-            }
-        });
+        .exec(callback);
     }
-
 };
