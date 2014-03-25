@@ -27,28 +27,12 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'views/done/list.html'
     })
 
-      // The states aren't used anywhere, but they could be.
-      // Using state allows for routing by url or a named state 
-      // (see the "go" method in the docs).
-      // REF: http://angular-ui.github.io/ui-router/site/#/api/ui.router.state.$state
-      .state('all articles', {
-        url: '/articles',
+      .state('categories', {
+        url: '/categories',
+        templateUrl: 'views/categories/manage.html'
+    })
 
-        // When the url is matched, render the template.
-        // GOTO: /public/views/articles/list.html
-        templateUrl: 'views/articles/list.html'
-    })
-      .state('create article', {
-        url: '/articles/create',
-        // GOTO: /public/views/articles/create.html
-        templateUrl: 'views/articles/create.html'
-    })
-      .state('edit article', {
-        url: '/articles/:articleId/edit',
-
-        // GOTO: /public/views/articles/edit.html
-        templateUrl: 'views/articles/edit.html'
-    })
+      
 
       // This is called when viewing an article.
       .state('article by id', {

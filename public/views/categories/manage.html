@@ -1,0 +1,14 @@
+<h2>Categories</h2>
+<section data-ng-controller="" data-ng-init="">
+    list categories here
+
+	<ul class="unstyled">
+        <li data-ng-repeat="">
+            <span>
+                {{ task.category }}
+                {{ task.description }}
+                {{ task.duration | timespan }}
+            </span>
+		</li>
+	</ul>
+</section>
