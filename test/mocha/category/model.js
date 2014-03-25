@@ -52,7 +52,7 @@ describe('<Unit Test>', function() {
                         name: category.name
                     });
 
-                    dupe.save(function (err, dupe) {
+                    dupe.save(function (err) {
                         err.should.have.property('code', 11000);
                         done();
                     });

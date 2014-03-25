@@ -1,14 +1,10 @@
 <h2>Categories</h2>
-<section data-ng-controller="" data-ng-init="">
+<section data-ng-controller="CategoriesCtrl" data-ng-init="init()">
     list categories here
 
 	<ul class="unstyled">
-        <li data-ng-repeat="">
-            <span>
-                {{ task.category }}
-                {{ task.description }}
-                {{ task.duration | timespan }}
-            </span>
+        <li data-ng-repeat="category in categories">
+            {{ category | json }}
 		</li>
 	</ul>
 </section>

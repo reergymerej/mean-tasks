@@ -10,7 +10,8 @@ angular.module('mean', [
     'todo.tasks',
     'doing.tasks',
     'doing.filters',
-    'done.tasks'
+    'done.tasks',
+    'doing.categories'
 ]);
 
 angular.module('mean.system', []);
@@ -19,3 +20,4 @@ angular.module('todo.tasks', []);
 angular.module('doing.tasks', []);
 angular.module('doing.filters', []);
 angular.module('done.tasks', []);
+angular.module('doing.categories', []);
