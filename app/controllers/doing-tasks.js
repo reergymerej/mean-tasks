@@ -147,10 +147,18 @@ exports.list = function (req, res) {
                 }
             },
             {
+                $project: {
+                    _id: 1,
+                    category: '$_id.category',
+                    description: '$_id.description',
+                    duration: 1
+                }
+            },
+            {
                 $sort: {
+                    '_id.category': 1,
                     duration: -1,
-                    category: 1,
-                    description: 1
+                    '_id.description': 1
                 }
             },
             callback
