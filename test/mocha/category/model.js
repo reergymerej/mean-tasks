@@ -44,6 +44,20 @@ describe('<Unit Test>', function() {
                     done();
                 });
             });
+
+            it('should fail when trying to save a duplicate', function (done) {
+
+                category.save(function (err, category) {
+                    var dupe = new Category({
+                        name: category.name
+                    });
+
+                    dupe.save(function (err, dupe) {
+                        err.should.have.property('code', 11000);
+                        done();
+                    });
+                });
+            });
         });
 
         after(function(done) {
