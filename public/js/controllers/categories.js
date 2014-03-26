@@ -6,19 +6,6 @@ angular.module('doing.categories').controller('CategoriesCtrl',
     $scope.categoryName = '';
     $scope.categories = [];
 
-    $scope.init = function () {
-
-        var success = function (categories) {
-            $scope.categories = categories;
-        };
-
-        var failure = function () {
-            console.error('unable to fetch tasks');
-        };
-
-        DoingCategories.query(success, failure);
-    };
-
     $scope.create = function () {
         var doingCategory = new DoingCategories({
             name: $scope.categoryName
@@ -40,4 +27,38 @@ angular.module('doing.categories').controller('CategoriesCtrl',
         doingCategory.$save(success, failure);
     };
 
+    $scope.read = function () {
+        var success = function (categories) {
+            $scope.categories = categories;
+        };
+
+        var failure = function () {
+            console.error('unable to fetch categories');
+        };
+
+        DoingCategories.query(success, failure);
+    };
+
+    $scope.delete = function (category) {
+
+        var success = function (categories) {
+            var i;
+            
+            $scope.categories = categories;
+            
+            for (i in $scope.categories) {
+                if ($scope.categories[i] === category) {
+                    $scope.categories.splice(i, 1);
+                    break;
+                }
+            }
+        };
+
+        var failure = function () {
+            console.error('unable to delete category');
+        };
+        
+        category.$remove(success, failure);
+
+    };
 }]);

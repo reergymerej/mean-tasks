@@ -11,4 +11,10 @@ var CategorySchema = new Schema({
     }
 });
 
+CategorySchema.statics.load = function (_id, callback) {
+  this.findOne({
+    _id: _id
+  }).exec(callback);
+};
+
 mongoose.model('Category', CategorySchema);

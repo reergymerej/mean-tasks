@@ -60,6 +60,21 @@ describe('<Unit Test>', function() {
             });
         });
 
+        describe('utility methods', function () {
+            it('should be able to find an instance by id', function (done) {
+                var _id = category._id;
+
+                Category.load(_id, function (err, category) {
+                    should.not.exist(err);
+
+                    // console.log(_id);
+                    // console.log(category._id);
+                    category.should.have.property('_id', _id);
+                    done();
+                });
+            });
+        });
+
         after(function(done) {
             category.remove(function () {
                 done();
