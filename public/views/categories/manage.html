@@ -1,10 +1,20 @@
 <h2>Categories</h2>
 <section data-ng-controller="CategoriesCtrl" data-ng-init="init()">
-    list categories here
+  <form
+    name="form"
+    ng-submit="create()"
+    novalidate>
+    <input
+        type="text"
+        ng-model="categoryName"
+        placeholder="new category"
+        required />
+    <button ng-disabled="form.$invalid">create</button>
+  </form>
 
-	<ul class="unstyled">
-        <li data-ng-repeat="category in categories">
-            {{ category | json }}
-		</li>
-	</ul>
+  <ul class="unstyled">
+    <li data-ng-repeat="category in categories">
+      {{ category | json }}
+    </li>
+  </ul>
 </section>
