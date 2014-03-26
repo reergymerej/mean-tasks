@@ -4,16 +4,10 @@
 // $stateParams This comes from AngularUI Router.
 // $location    http://docs.angularjs.org/guide/dev_guide.services.$location
 // Global       /public/js/services/global.js
-angular.module('doing.tasks').controller('DoingCtrl',
-    ['$scope',
-    '$filter',
-    '$stateParams',
-    '$location',
-    'Global',
-    'DoingTasks',
-    function ($scope, $filter, $stateParams, $location, Global, DoingTasks) {
+angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$stateParams', '$location', 'Global', 'DoingTasks', 'DoingCategories',
+    function ($scope, $filter, $stateParams, $location, Global, DoingTasks, DoingCategories) {
 
-    $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
+    $scope.categories = [];
     $scope.taskCategory = undefined;
 
     // Give this controller's scope access to the Global values.
@@ -26,6 +20,36 @@ angular.module('doing.tasks').controller('DoingCtrl',
     }());
     $scope.taskDescription = '';
     $scope.tasks = [];
+
+    $scope.init = function () {
+        loadCategories();
+        this.find();
+    };
+
+    var loadCategories = function () {
+        var success = function (categories) {
+
+            categories.sort(function (a, b) {
+                var result = 0;
+                if (a.name < b.name) {
+                    result = -1;
+                } else if (b.name < a.name) {
+                    result = 1;
+                }
+                return result;
+            });
+
+            angular.forEach(categories, function (category) {
+                $scope.categories.push(category.name);
+            });
+        };
+
+        var failure = function () {
+            console.error('unable to fetch categories');
+        };
+
+        DoingCategories.query(success, failure);
+    };
 
     /**
     * Filter the list of tasks.
