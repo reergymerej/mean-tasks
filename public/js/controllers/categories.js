@@ -42,7 +42,7 @@ angular.module('doing.categories').controller('CategoriesCtrl',
 
     $scope.delete = function (category) {
 
-        var success = function (categories) {
+        var success = function () {
             var i;
             
             for (i in $scope.categories) {

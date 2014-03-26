@@ -4,7 +4,13 @@
 // $stateParams This comes from AngularUI Router.
 // $location    http://docs.angularjs.org/guide/dev_guide.services.$location
 // Global       /public/js/services/global.js
-angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$stateParams', '$location', 'Global', 'DoingTasks',
+angular.module('doing.tasks').controller('DoingCtrl',
+    ['$scope',
+    '$filter',
+    '$stateParams',
+    '$location',
+    'Global',
+    'DoingTasks',
     function ($scope, $filter, $stateParams, $location, Global, DoingTasks) {
 
     $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
@@ -93,29 +99,6 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
         task.$update(success, failure);
     };
 
-    // // This is called by the edit page. (/public/views/articles/edit.html)
-    // $scope.update = function () {
-    //     var article = $scope.article;
-
-    //     // QUESTION: What does this array do?
-    //     // The updated array is sent to the server, but the model
-    //     // doesn't have an updated field.  "updated" is not referenced
-    //     // anywhere else on the client-side.
-    //     if (!article.updated) {
-    //         article.updated = [];
-    //     }
-    //     article.updated.push(new Date().getTime());
-
-    //     // PUT the updates.
-    //     // REF: http://docs.angularjs.org/api/ngResource/service/$resource
-    //     article.$update(function() {
-
-    //         // Once updated, redirect to view the article.
-    //         // GOTO: /public/js/config.js (GET /articles/articleId)
-    //         $location.path('articles/' + article._id);
-    //     });
-    // };
-
     /**
     * Find tasks.
     * @param {Date} from
@@ -164,25 +147,4 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             $scope.finishTask(task);
         }
     };
-
-    // This finds a specific article by id.
-    // $scope.findOne = function() {
-
-    //     // Use our Articles service.
-    //     // "get" appears to be used instead of "query"
-    //     // for fetching a specific record.
-    //     // Articles.get({
-
-    //     //     // Specify the "articleId" the resource should use.
-    //     //     // Pull the value from $stateParams.  The $stateParams
-    //     //     // value was set when the route was handled (/public/js/config.js).
-    //     //     // GOTO: /public/js/services/articles.js to see how the articleId
-    //     //     // is inserted into the url.
-    //     //     articleId: $stateParams.articleId
-    //     // }, function(article) {
-
-    //     //     // Assign the article to the controller's scope.
-    //     //     $scope.article = article;
-    //     // });
-    // };
 }]);
