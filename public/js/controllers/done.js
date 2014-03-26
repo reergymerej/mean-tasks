@@ -48,7 +48,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
 
         var success = function (tasks) {
             $scope.tasks = tasks;
-            console.log($scope.tasks);
         };
 
         var failure = function () {

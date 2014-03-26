@@ -18,8 +18,12 @@ GOTO: /public/js/controllers/header.js
 
         ng-class adds "active" to the li if the route matches the link
          -->
-        <li data-ng-repeat="item in menu" data-ng-show="global.user" ui-route="/{{item.link}}" ng-class="{active: $uiRoute}">
-
+        <li
+            data-ng-repeat="item in menu"
+            data-ng-show="global.user"
+            ui-route="/{{item.link}}"
+            ng-class="{active: $uiRoute}">
+        
             <!-- 
             The href and text come from the menu items in the controller.
             GOTO: /public/js/controllers/header.js
