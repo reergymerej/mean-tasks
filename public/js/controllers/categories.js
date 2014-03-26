@@ -15,7 +15,8 @@ angular.module('doing.categories').controller('CategoriesCtrl',
             if (doingCategory.errors) {
                 console.error(doingCategory.errors);
             } else {
-                $scope.categories.unshift(doingCategory);
+                $scope.categories.push(doingCategory);
+                $scope.categories = sortCategories($scope.categories);
                 $scope.categoryName = '';
             }
         };
@@ -29,7 +30,7 @@ angular.module('doing.categories').controller('CategoriesCtrl',
 
     $scope.read = function () {
         var success = function (categories) {
-            $scope.categories = categories;
+            $scope.categories = sortCategories(categories);
         };
 
         var failure = function () {
@@ -44,8 +45,6 @@ angular.module('doing.categories').controller('CategoriesCtrl',
         var success = function (categories) {
             var i;
             
-            $scope.categories = categories;
-            
             for (i in $scope.categories) {
                 if ($scope.categories[i] === category) {
                     $scope.categories.splice(i, 1);
@@ -59,6 +58,17 @@ angular.module('doing.categories').controller('CategoriesCtrl',
         };
         
         category.$remove(success, failure);
+    };
 
+    var sortCategories = function (categories) {
+        return categories.sort(function (a, b) {
+            var result = 0;
+            if (a.name < b.name) {
+                result = -1;
+            } else if (b.name < a.name) {
+                result = 1;
+            }
+            return result;
+        });
     };
 }]);
