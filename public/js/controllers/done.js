@@ -61,5 +61,4 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         setDefaultDates();
         this.find();
     };
-
 }]);

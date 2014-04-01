@@ -4,12 +4,52 @@
 		"selected_items":
 		[
 			[
-				"ti",
-				"tildeResult"
+				"cate",
+				"category"
 			],
 			[
-				"cate",
+				"pro",
+				"property"
+			],
+			[
+				"categor",
 				"categories"
+			],
+			[
+				"doing",
+				"doingCategory"
+			],
+			[
+				"er",
+				"errors"
+			],
+			[
+				"doingT",
+				"doingTasks"
+			],
+			[
+				"Doin",
+				"DoingTaskSchema"
+			],
+			[
+				"Ta",
+				"TodoTask"
+			],
+			[
+				"desc",
+				"describe"
+			],
+			[
+				"descr",
+				"description"
+			],
+			[
+				"TodoT",
+				"TodoTaskSchema"
+			],
+			[
+				"ti",
+				"tildeResult"
 			],
 			[
 				"ca",
@@ -210,10 +250,6 @@
 			[
 				"s",
 				"scope"
-			],
-			[
-				"pro",
-				"providerServiceTest"
 			],
 			[
 				"done",
@@ -478,68 +514,56 @@
 			[
 				"tod",
 				"todoTaskHighlight"
-			],
-			[
-				"downstre",
-				"downstreamTaskId"
-			],
-			[
-				"downS",
-				"downstream"
-			],
-			[
-				"drop",
-				"droppedTaskId"
-			],
-			[
-				"dropT",
-				"droppedTaskModel"
-			],
-			[
-				"downST",
-				"downstreamTasks"
-			],
-			[
-				"todoC",
-				"todoCollection"
-			],
-			[
-				"sor",
-				"sorted"
-			],
-			[
-				"todoli",
-				"todoListCollectionView"
-			],
-			[
-				"todoList",
-				"todoListCollectionView"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"file": "README.md",
+			"file": "public/views/doing/list.html",
 			"settings":
 			{
-				"buffer_size": 1997,
+				"buffer_size": 3315,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/express.js",
+			"file": "public/js/controllers/header.js",
 			"settings":
 			{
-				"buffer_size": 3978,
+				"buffer_size": 799,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "node_modules/view-helpers/index.js",
+			"file": "public/views/header.html",
 			"settings":
 			{
-				"buffer_size": 3276,
+				"buffer_size": 2274,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/controllers/done.js",
+			"settings":
+			{
+				"buffer_size": 1691,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/controllers/doing.js",
+			"settings":
+			{
+				"buffer_size": 4236,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/controllers/categories.js",
+			"settings":
+			{
+				"buffer_size": 1979,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,15 +571,23 @@
 			"file": "config/env/development.js",
 			"settings":
 			{
-				"buffer_size": 898,
+				"buffer_size": 976,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/includes/head.html",
+			"file": "public/js/config.js",
 			"settings":
 			{
-				"buffer_size": 1646,
+				"buffer_size": 1658,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/app.js",
+			"settings":
+			{
+				"buffer_size": 507,
 				"line_ending": "Unix"
 			}
 		}
@@ -563,9 +595,13 @@
 	"build_system": "Packages/JSLint/JSLint.sublime-build",
 	"command_palette":
 	{
-		"height": 392.0,
+		"height": 138.0,
 		"selected_items":
 		[
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
 			[
 				"html",
 				"Set Syntax: HTML"
@@ -585,10 +621,6 @@
 			[
 				"instal",
 				"Package Control: Install Package"
-			],
-			[
-				"javas",
-				"Set Syntax: JavaScript"
 			],
 			[
 				"synthtml",
@@ -675,7 +707,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 467.0
+		"width": 511.0
 	},
 	"console":
 	{
@@ -697,38 +729,116 @@
 	},
 	"file_history":
 	[
+		"/home/grizzle/code/mean-tasks/app/views/includes/foot.html",
+		"/home/grizzle/code/mean-tasks/package.json",
+		"/home/grizzle/code/mean-tasks/public/js/services/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/categories.js",
+		"/home/grizzle/code/mean-tasks/app/models/category.js",
+		"/home/grizzle/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/grizzle/code/mean-tasks/config/env/development.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/todo.js",
+		"/home/grizzle/code/mean-tasks/public/views/categories/manage.html",
+		"/home/grizzle/code/mean-tasks/app/models/todo-task.js",
+		"/home/grizzle/code/mean-tasks/test/mocha/category/model.js",
+		"/home/grizzle/code/mean-tasks/test/mocha/doing/model.js",
+		"/home/grizzle/code/mean-tasks/app/routes/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/todo-tasks.js",
+		"/home/grizzle/code/mean-tasks/app/routes/todo-tasks.js",
+		"/home/grizzle/code/mean-tasks/public/views/todo/list.html",
+		"/home/grizzle/code/mean-tasks/public/js/app.js",
+		"/home/grizzle/code/mean-tasks/public/js/services/articles.js",
+		"/home/grizzle/code/mean-tasks/README.md",
+		"/home/grizzle/code/mean-tasks/app/controllers/users.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/done.js",
+		"/home/grizzle/code/mean-tasks/public/js/filters.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/doing.js",
+		"/home/grizzle/code/mean-tasks/test/mocha/user/model.js",
+		"/home/grizzle/code/mean-tasks/app/models/user.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/header.js",
+		"/home/grizzle/code/mean-tasks/public/js/config.js",
+		"/home/grizzle/code/mean-tasks/public/views/header.html",
+		"/home/grizzle/code/mean-tasks/app/models/doing-task.js",
+		"/home/grizzle/code/mean-tasks/app/routes/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/test/mocha/todo-task/model.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/articles.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/public/js/services/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/config/env/production.js",
+		"/home/grizzle/code/mean-tasks/public/js/services/todo-tasks.js",
+		"/home/grizzle/code/mean-tasks/.git/COMMIT_EDITMSG",
+		"/home/grizzle/code/mean-tasks/public/css/common.css",
+		"/home/grizzle/code/mean-tasks/app/views/includes/head.html",
+		"/home/grizzle/code/mean-tasks/app/models/article.js",
+		"/home/grizzle/code/mean-tasks/mean-tasks.sublime-project",
+		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/pkginfo/examples/all-properties.js",
+		"/home/grizzle/code/mean-tasks/app/views/users/auth.html",
+		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/bower.json",
+		"/home/grizzle/code/mean-tasks/public/lib/angular-bootstrap/ui-bootstrap.js",
+		"/home/grizzle/code/mean-tasks/node_modules/swig/node_modules/uglify-js/node_modules/source-map/build/prefix-utils.jsm",
+		"/home/grizzle/code/mean-tasks/public/views/articles/create.html",
+		"/home/grizzle/code/mean-tasks/public/views/articles/edit.html",
+		"/home/grizzle/code/mean-tasks/app/routes/middlewares/authorization.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-env/tasks/env.js",
+		"/home/grizzle/code/mean-tasks/config/express.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/index.js",
+		"/home/grizzle/code/mean-tasks/app/routes/users.js",
+		"/home/grizzle/code/mean-tasks/app/routes/articles.js",
+		"/home/grizzle/code/mean-tasks/test/mocha/article/model.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/Readme.md",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/.bin/mocha",
+		"/home/grizzle/code/mean-tasks/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/glob/test/mark.js",
+		"/home/grizzle/code/mean-tasks/config/env/test.js",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/request/tests/test-errors.js",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/request/node_modules/hawk/node_modules/hoek/test/modules/test1.js",
+		"/home/grizzle/code/mean-tasks/node_modules/supertest/node_modules/superagent/node_modules/formidable/tool/record.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/fs-extra/node_modules/mkdirp/test/chmod.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/fs-extra/lib/output.js",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/request/node_modules/http-signature/node_modules/ctype/README.old",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/mout/array/toLookup.js",
+		"/home/grizzle/code/mean-tasks/node_modules/jade/LICENSE",
+		"/home/grizzle/code/mean-tasks/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/examples/movies.coffee",
+		"/home/grizzle/code/mean-tasks/gruntfile.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/lib/browser/events.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/node_modules/jade/testing/user.jade",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/fs-extra/node_modules/mkdirp/test/umask_sync.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/node_modules/glob/examples/usr-local.js",
+		"/home/grizzle/code/mean-tasks/node_modules/karma/node_modules/socket.io/node_modules/socket.io-client/components/visionmedia-debug/component.json",
+		"/home/grizzle/code/mean-tasks/public/lib/bootstrap/js/modal.js",
+		"/home/grizzle/code/mean-tasks/node_modules/grunt-nodemon/node_modules/nodemon/tmp/express-boilerplate/app/server/index.coffee",
+		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/optimist/node_modules/wordwrap/index.js",
+		"/home/grizzle/code/mean-tasks/app/views/index.html",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/archy/package.json",
+		"/home/grizzle/code/mean-tasks/public/lib/bootstrap/js/tooltip.js",
+		"/home/grizzle/code/mean-tasks/public/lib/bootstrap/js/tab.js",
+		"/home/grizzle/code/mean-tasks/app/views/users/signup.html",
+		"/home/grizzle/code/mean-tasks/public/css/views/articles.css",
+		"/home/grizzle/code/mean-tasks/node_modules/view-helpers/index.js",
+		"/home/grizzle/code/mean-tasks/node_modules/express/lib/view.js",
+		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/mout/collection/filter.js",
+		"/home/grizzle/code/mean-tasks/config/config.js",
+		"/home/grizzle/code/mean-tasks/test/karma/karma.conf.js",
+		"/home/grizzle/code/mean-tasks/public/views/index.html",
+		"/home/grizzle/code/mean-tasks/node_modules/passport-github/lib/passport-github/index.js",
+		"/home/grizzle/code/mean-tasks/public/js/init.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/articles.js",
+		"/home/grizzle/code/mean-tasks/node_modules/karma/node_modules/http-proxy/node_modules/utile/node_modules/i/lib/inflect.js",
 		"/home/grizzle/code/mean-tasks/config/env/all.js",
+		"/home/grizzle/code/mean-tasks/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/examples/printenv.coffee",
+		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/flatiron/test/fixtures/sample-app/app/new-york/controller.js",
+		"/home/grizzle/code/mean-tasks/node_modules/karma-coverage/node_modules/istanbul/test/cli/sample-project/vendor/dummy_vendor_lib.js",
+		"/home/grizzle/code/mean-tasks/app/views/layouts/default.html",
+		"/home/grizzle/code/mean-tasks/public/lib/jquery/src/css.js",
+		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/src/viewScroll.js",
+		"/home/grizzle/code/mean-tasks/public/lib/jquery/src/var/indexOf.js",
+		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/flatiron/node_modules/broadway/test/fixtures/sample-app/app/index.js",
 		"/home/grizzle/code/mean-tasks/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/node_modules/npmconf/node_modules/config-chain/test/env.js",
 		"/home/grizzle/code/mean-tasks/node_modules/express/node_modules/connect/node_modules/multiparty/test/fixture/js/encoding.js",
 		"/home/grizzle/code/mean-tasks/node_modules/express/node_modules/connect/node_modules/multiparty/test/fixture/multi_video.upload",
-		"/home/grizzle/code/mean-tasks/config/config.js",
-		"/home/grizzle/code/mean-tasks/app/views/includes/foot.html",
-		"/home/grizzle/code/mean-tasks/app/views/index.html",
-		"/home/grizzle/code/mean-tasks/app/views/includes/head.html",
-		"/home/grizzle/code/mean-tasks/app/models/user.js",
-		"/home/grizzle/code/mean-tasks/public/js/app.js",
-		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/pkginfo/examples/all-properties.js",
-		"/home/grizzle/code/mean-tasks/app/views/users/auth.html",
-		"/home/grizzle/code/mean-tasks/public/views/header.html",
-		"/home/grizzle/code/mean-tasks/node_modules/view-helpers/index.js",
-		"/home/grizzle/code/mean-tasks/node_modules/express/lib/view.js",
-		"/home/grizzle/code/mean-tasks/config/env/development.js",
-		"/home/grizzle/code/mean-tasks/app/routes/users.js",
-		"/home/grizzle/code/mean-tasks/app/controllers/index.js",
 		"/home/grizzle/code/mean-tasks/app/routes/index.js",
-		"/home/grizzle/code/mean-tasks/public/js/config.js",
-		"/home/grizzle/code/mean-tasks/app/views/layouts/default.html",
-		"/home/grizzle/code/mean-tasks/app/controllers/articles.js",
-		"/home/grizzle/code/mean-tasks/public/lib/angular-bootstrap/ui-bootstrap.js",
-		"/home/grizzle/code/mean-tasks/node_modules/swig/node_modules/uglify-js/node_modules/source-map/build/prefix-utils.jsm",
-		"/home/grizzle/code/mean-tasks/package.json",
-		"/home/grizzle/code/mean-tasks/config/env/test.js",
 		"/home/grizzle/code/mean-tasks/bower.json",
-		"/home/grizzle/code/mean-tasks/gruntfile.js",
 		"/home/grizzle/code/mean-tasks/server.js",
-		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/bower.json",
-		"/home/grizzle/code/mean-tasks/config/express.js",
-		"/home/grizzle/code/mean-tasks/README.md",
 		"/home/grizzle/code/mean-tasks/npm-debug.log",
 		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/flatiron/node_modules/prompt/examples/nested-properties-prompt.js",
 		"/home/grizzle/code/mean-tasks/node_modules/mongoose/node_modules/mpromise/test/promises.Aplus.js",
@@ -746,85 +856,7 @@
 		"/home/grizzle/code/nice-mean/config/config.js",
 		"/home/grizzle/code/nice-mean/node_modules/view-helpers/index.js",
 		"/home/grizzle/code/nice-mean/config/passport.js",
-		"/home/grizzle/code/nice-mean/app/models/user.js",
-		"/home/grizzle/code/nice-mean/.git/COMMIT_EDITMSG",
-		"/home/grizzle/code/nice-mean/app/models/article.js",
-		"/home/grizzle/code/nice-mean/config/env/development.js",
-		"/home/grizzle/code/nice-mean/app/views/users/signin.html",
-		"/home/grizzle/code/nice-mean/app/routes/users.js",
-		"/home/grizzle/code/nice-mean/app/controllers/users.js",
-		"/home/grizzle/code/nice-mean/package.json",
-		"/home/grizzle/code/nice-mean/README.md",
-		"/home/grizzle/code/nice-mean/node_modules/grunt-contrib-jshint/node_modules/jshint/node_modules/shelljs/README.md",
-		"/home/grizzle/code/nice-mean/app/views/users/auth.html",
-		"/home/grizzle/code/nice-mean/app/routes/index.js",
-		"/home/grizzle/code/nice-mean/public/js/controllers/header.js",
-		"/home/grizzle/code/nice-mean/public/js/filters.js",
-		"/home/grizzle/code/nice-mean/public/js/directives.js",
-		"/home/grizzle/code/nice-mean/public/js/app.js",
-		"/home/grizzle/code/nice-mean/public/js/config.js",
-		"/home/grizzle/code/nice-mean/public/js/init.js",
-		"/home/grizzle/code/nice-mean/node_modules/karma/node_modules/http-proxy/node_modules/utile/test/fixtures/read-json-file/config.json",
-		"/home/grizzle/code/nice-mean/public/views/header.html",
-		"/home/grizzle/code/nice-mean/public/views/articles/create.html",
-		"/home/grizzle/code/nice-mean/public/js/services/articles.js",
-		"/home/grizzle/code/nice-mean/public/js/controllers/articles.js",
-		"/home/grizzle/code/nice-mean/public/views/index.html",
-		"/home/grizzle/code/nice-mean/public/js/controllers/index.js",
-		"/home/grizzle/code/nice-mean/public/views/articles/edit.html",
-		"/home/grizzle/code/nice-mean/public/views/articles/list.html",
-		"/home/grizzle/code/nice-mean/public/views/articles/view.html",
-		"/home/grizzle/code/nice-mean/public/js/services/global.js",
-		"/home/grizzle/code/nice-mean/app/views/index.html",
-		"/home/grizzle/code/nice-mean/app/views/includes/foot.html",
-		"/home/grizzle/code/nice-mean/app/controllers/index.js",
-		"/home/grizzle/code/nice-mean/app/views/users/signup.html",
-		"/home/grizzle/code/nice-mean/app/views/layouts/default.html",
-		"/home/grizzle/code/nice-mean/app/views/includes/head.html",
-		"/home/grizzle/code/nice-mean/.bowerrc",
-		"/home/grizzle/node_projects/mean-notes/todo.txt",
-		"/home/grizzle/test-projects/pull-test/README.md",
-		"/home/grizzle/test-projects/jeremygreer/pull-test/README.md",
-		"/home/grizzle/Documents/MEAN notes/How pull requests work.md",
-		"/home/grizzle/test-projects/jeremygreer/pull-test/.git/COMMIT_EDITMSG",
-		"/home/grizzle/node_projects/mean-notes/public/views/articles/list.html",
-		"/home/grizzle/node_projects/mean-notes/public/views/notes/list.html",
-		"/home/grizzle/node_projects/mean-notes/public/views/articles/create.html",
-		"/home/grizzle/node_projects/mean-notes/public/views/articles/view.html",
-		"/home/grizzle/node_projects/mean-notes/public/js/app.js",
-		"/home/grizzle/node_projects/mean-notes/public/lib/angular-bootstrap/ui-bootstrap.js",
-		"/home/grizzle/node_projects/mean-notes/node_modules/swig/node_modules/uglify-js/node_modules/source-map/build/prefix-utils.jsm",
-		"/home/grizzle/node_projects/mean-notes/Procfile",
-		"/home/grizzle/node_projects/mean-notes/public/views/categories/list.html",
-		"/home/grizzle/node_projects/mean-notes/public/views/notes/view.html",
-		"/home/grizzle/node_projects/mean-notes/app/controllers/articles.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/controllers/notes.js",
-		"/home/grizzle/node_projects/mean-notes/app/routes/notes.js",
-		"/home/grizzle/node_projects/mean-notes/app/controllers/notes.js",
-		"/home/grizzle/node_projects/mean-notes/app/controllers/categories.js",
-		"/home/grizzle/node_projects/mean-notes/app/routes/articles.js",
-		"/home/grizzle/node_projects/mean-notes/node_modules/forever/node_modules/pkginfo/examples/all-properties.js",
-		"/home/grizzle/node_projects/mean-notes/app/routes/categories.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/config.js",
-		"/home/grizzle/node_projects/mean-notes/public/lib/angular-ui-router/bower.json",
-		"/home/grizzle/node_projects/mean-notes/public/js/controllers/articles.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/services/notes.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/services/articles.js",
-		"/home/grizzle/node_projects/mean-notes/public/lib/bootstrap/js/modal.js",
-		"/home/grizzle/node_projects/mean-notes/.bower-cache/76825ba06db421bbfbda0853e440b3f5/3.0.3/less/progress-bars.less",
-		"/home/grizzle/node_projects/mean-notes/public/lib/bootstrap/js/button.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/services/global.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/services/categories.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/controllers/index.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/controllers/header.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/controllers/categories.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/init.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/filters.js",
-		"/home/grizzle/node_projects/mean-notes/public/js/directives.js",
-		"/home/grizzle/node_projects/mean-notes/public/views/notes/create.html",
-		"/home/grizzle/node_projects/mean-notes/public/views/articles/edit.html",
-		"/home/grizzle/node_projects/mean-notes/public/css/views/articles.css",
-		"/home/grizzle/node_projects/mean-notes/public/lib/jquery/src/outro.js"
+		"/home/grizzle/code/nice-mean/app/models/user.js"
 	],
 	"find":
 	{
@@ -835,6 +867,8 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"/home/grizzle/code/mean-tasks/app",
+			"/home/grizzle/code/mean-tasks/public",
 			"/home/grizzle/code/mean-tasks/app",
 			"/home/grizzle/code/mean-tasks/config",
 			"/home/grizzle/code/mean-tasks/",
@@ -874,6 +908,77 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"console",
+			"$uiRoute",
+			"ui",
+			",",
+			"doingCategory",
+			"todoTask",
+			"todoTaskId",
+			"id",
+			"tasks",
+			"task",
+			"    ",
+			"todo-tasks",
+			"doingTasks",
+			"queryError",
+			"doingTask",
+			"DoingTask",
+			"todoCategories",
+			"todoTasks",
+			"tasks",
+			"Categories",
+			"username",
+			"index",
+			"UserSchema",
+			"username",
+			"unique",
+			"username",
+			"already exists",
+			"username",
+			"DoingTaskSchema",
+			"users",
+			"user",
+			"user2",
+			"User",
+			"tasks",
+			"mongo",
+			"todoTasks",
+			"filter",
+			"start",
+			"today",
+			"start",
+			"taskDescription",
+			"todoTask",
+			"todo-tasks",
+			"todoTasks",
+			"todoTask",
+			"Tasks",
+			"TodoTask",
+			"todoTask",
+			"todoTasks",
+			"todoTask",
+			"TodoTaskSchema",
+			"TodoTask",
+			"article",
+			"articles",
+			"article",
+			"todoDescription",
+			"article",
+			"p>",
+			"p",
+			"span",
+			"article",
+			"articles",
+			"'/articles",
+			"articles",
+			"Article",
+			"foo",
+			"title",
+			"ArticleSchema",
+			"name",
+			"validatePresenceOf",
+			"username",
 			"config",
 			"helpers",
 			"config",
@@ -930,85 +1035,39 @@
 			"\\/signup",
 			" \n",
 			"&",
-			"h2",
-			"stateParams",
-			"Note",
-			"title",
-			"articleId",
-			"categories",
-			"Article",
-			"title",
-			"ArticleSchema",
-			"categories",
-			"arr",
-			".title",
-			"How do we get",
-			"how do we get",
-			"\\t",
-			"  ",
-			"article",
-			"tab",
-			"article",
-			"em",
-			"articles",
-			"Article",
-			"ArticleSchema",
-			"article",
-			"Article",
-			"$stateParams",
-			"\\t",
-			"code",
-			"h2",
-			"code",
-			"p>",
-			"h2",
-			"partials",
-			"categories.html",
-			"HeaderController",
-			"angular.min.js",
-			"templateUrl: 'partials",
-			"<code>",
-			"code>",
-			"li>",
-			"<li",
-			"<code>",
-			"zip",
-			"li>",
-			"li",
-			"}}",
-			": {",
-			"{",
-			"    ",
-			"-xs",
-			"\\n",
-			"api",
-			"'/api/categories'",
-			"api",
-			"'/api/notes'",
-			"console.time",
-			"url",
-			"postNote",
-			"DEFAULTS",
-			"matchesCriteria",
-			"x",
-			"(\\w)+@(\\w)+.com",
-			"};\n",
-			"saveNotes",
-			"saveCollection",
-			"loadCategories",
-			"loadCollection",
-			"saveCollection",
-			"loadCollection",
-			"number",
-			"div",
-			"x"
+			"h2"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
+			"  ",
+			"doingCategories",
+			"catchError",
+			"doingCategory",
+			"DoingCategory",
+			"doingCategories",
+			"todoCategories",
+			"CategorySchema",
+			"categories",
+			"category",
+			"Category",
+			"doingTask",
+			"DoingTasks",
+			"DoingTask",
+			"doingTask",
+			"doingTasks",
+			"doingTask",
+			"DoingTaskSchema",
+			"DoingTask",
+			"taskDescription",
+			"todoTasks",
+			"'/todo-tasks",
+			"todo-tasks",
+			"TodoTask",
+			"TodoTaskSchema",
 			"  ",
 			"\\n",
 			"\\t",
@@ -1111,37 +1170,12 @@
 			"homeTemplate",
 			"/",
 			"TaskCollectionView",
-			"taskCollectionTemplate",
-			"taskAdderTemplate",
-			"",
-			") {",
-			"function (",
-			"",
-			"\\n",
-			"TaskReviewerView",
-			"showTaskAdder",
-			"TaskAdderView",
-			"getContainer",
-			"getError",
-			"getEditValue",
-			"",
-			") {",
-			"function \\1(",
-			")",
-			"(",
-			"\\n",
-			"function (",
-			") {",
-			"function (",
-			") {",
-			"taskTemplate",
-			"views",
-			"  "
+			"taskCollectionTemplate"
 		],
 		"reverse": false,
 		"show_context": false,
 		"use_buffer2": true,
-		"whole_word": true,
+		"whole_word": false,
 		"wrap": true
 	},
 	"groups":
@@ -1152,139 +1186,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "README.md",
+					"file": "public/views/doing/list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1997,
+						"buffer_size": 3315,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1997,
-								1997
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 284.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/express.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3978,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2710,
-								2710
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 694.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "node_modules/view-helpers/index.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3276,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								308,
-								308
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": -0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "config/env/development.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 898,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								119,
-								119
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "app/views/includes/head.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1646,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								176,
-								176
+								296,
+								296
 							]
 						],
 						"settings":
@@ -1297,7 +1211,244 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "public/js/controllers/header.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 799,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								799,
+								799
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 28.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/views/header.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2274,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								525,
+								525
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/js/controllers/done.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1691,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1426,
+								1426
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 338.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 4,
+					"file": "public/js/controllers/doing.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4236,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								509,
+								509
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 3.0,
+						"translation.y": 39.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "public/js/controllers/categories.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1973,
+								1973
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "config/env/development.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								79,
+								79
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "public/js/config.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1658,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								49,
+								49
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "public/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 507,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								100,
+								100
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"type": "text"
 				}
 			]
@@ -1320,11 +1471,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1345,7 +1503,7 @@
 	"project": "mean-tasks.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -1353,6 +1511,486 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"pub/js/don",
+				"public/js/controllers/done.js"
+			],
+			[
+				"pub/js/",
+				"public/js/app.js"
+			],
+			[
+				"pub/js/con",
+				"public/js/config.js"
+			],
+			[
+				"app/view/incl/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"pub/view/he",
+				"public/views/header.html"
+			],
+			[
+				"hea",
+				"public/js/controllers/header.js"
+			],
+			[
+				"env/",
+				"config/env/development.js"
+			],
+			[
+				"pub/js/ser/doin",
+				"public/js/services/doing-categories.js"
+			],
+			[
+				"pub/js/contr/cate",
+				"public/js/controllers/categories.js"
+			],
+			[
+				"pub/view/doing",
+				"public/views/doing/list.html"
+			],
+			[
+				"pub/con/cate",
+				"public/js/controllers/categories.js"
+			],
+			[
+				"app/model/cate",
+				"app/models/category.js"
+			],
+			[
+				"pub/js/cont/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"env/de",
+				"config/env/development.js"
+			],
+			[
+				"app/model/todo",
+				"app/models/todo-task.js"
+			],
+			[
+				"app/model/ca",
+				"app/models/category.js"
+			],
+			[
+				"test/moch/cate",
+				"test/mocha/category/model.js"
+			],
+			[
+				"app/contr/todo",
+				"app/controllers/todo-tasks.js"
+			],
+			[
+				"app/rout/",
+				"app/routes/todo-tasks.js"
+			],
+			[
+				"pub/js/contr/todo",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"pub/js/con/ca",
+				"public/js/controllers/categories.js"
+			],
+			[
+				"pub/view/todo",
+				"public/views/todo/list.html"
+			],
+			[
+				"app/contr/doin",
+				"app/controllers/doing-tasks.js"
+			],
+			[
+				"pub/js/ser/ca",
+				"public/js/services/doing-categories.js"
+			],
+			[
+				"pub/js/cont/to",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"app/view/inc/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"pub/js/a",
+				"public/js/app.js"
+			],
+			[
+				"pub/js/serv/todo",
+				"public/js/services/todo-tasks.js"
+			],
+			[
+				"pub/js/ser",
+				"public/js/services/articles.js"
+			],
+			[
+				"test/mocha/cate",
+				"test/mocha/category/model.js"
+			],
+			[
+				"pub/js/cont/",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"app/model/user",
+				"app/models/user.js"
+			],
+			[
+				"app/contr/user",
+				"app/controllers/users.js"
+			],
+			[
+				"test/moch/user/mod",
+				"test/mocha/user/model.js"
+			],
+			[
+				"app/model/doin",
+				"app/models/doing-task.js"
+			],
+			[
+				"pub/js/cont/doing",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"test/mocha",
+				"test/mocha/user/model.js"
+			],
+			[
+				"views/done/list.html",
+				"public/views/done/list.html"
+			],
+			[
+				"pub/js/conf",
+				"public/js/config.js"
+			],
+			[
+				"pub/view/hea",
+				"public/views/header.html"
+			],
+			[
+				"header",
+				"public/js/controllers/header.js"
+			],
+			[
+				"env/dev",
+				"config/env/development.js"
+			],
+			[
+				"filter",
+				"public/js/filters.js"
+			],
+			[
+				"test/moch/doin/mo",
+				"test/mocha/doing/model.js"
+			],
+			[
+				"pub/js/con/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"views/doing/list.html",
+				"public/views/doing/list.html"
+			],
+			[
+				"pub/js/cont/hea",
+				"public/js/controllers/header.js"
+			],
+			[
+				"publi/js/contr/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"pub/js/fi",
+				"public/js/filters.js"
+			],
+			[
+				"pub/js/ap",
+				"public/js/app.js"
+			],
+			[
+				"pub/view/doing/",
+				"public/views/doing/list.html"
+			],
+			[
+				"app/model/don",
+				"app/models/doing-task.js"
+			],
+			[
+				"test/moch/todo/mod",
+				"test/mocha/todo-task/model.js"
+			],
+			[
+				"test/moch/doing/mo",
+				"test/mocha/doing/model.js"
+			],
+			[
+				"app/mode/todo",
+				"app/models/todo-task.js"
+			],
+			[
+				"test/moch/todo/m",
+				"test/mocha/todo-task/model.js"
+			],
+			[
+				"pub/js/ser/ar",
+				"public/js/services/articles.js"
+			],
+			[
+				"pub/js/con/art",
+				"public/js/controllers/articles.js"
+			],
+			[
+				"app/con/doin",
+				"app/controllers/doing-tasks.js"
+			],
+			[
+				"pub/js/con/todo",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"moch/doing/mod",
+				"test/mocha/doing/model.js"
+			],
+			[
+				"pub/js/ser/do",
+				"public/js/services/doing-tasks.js"
+			],
+			[
+				"app/mode/doing",
+				"app/models/doing-task.js"
+			],
+			[
+				"model/todo",
+				"app/models/todo-task.js"
+			],
+			[
+				"app/cont/to",
+				"app/controllers/todo-tasks.js"
+			],
+			[
+				"app/rout/tod",
+				"app/routes/todo-tasks.js"
+			],
+			[
+				"app/model/tod",
+				"app/models/todo-task.js"
+			],
+			[
+				"test/todo/mod",
+				"test/mocha/todo-task/model.js"
+			],
+			[
+				"app/view/inc/f",
+				"app/views/includes/foot.html"
+			],
+			[
+				"pub/js/ser/to",
+				"public/js/services/todo-tasks.js"
+			],
+			[
+				"app/vie/inc/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"pub/js/con/tod",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"views/todo/list.html",
+				"public/views/todo/list.html"
+			],
+			[
+				"pub/con/he",
+				"public/js/controllers/header.js"
+			],
+			[
+				"routes/todo",
+				"app/routes/todo-tasks.js"
+			],
+			[
+				"env/pdo",
+				"config/env/production.js"
+			],
+			[
+				"pub/css",
+				"public/css/common.css"
+			],
+			[
+				"ap/vie/in/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"app/view/inclhe",
+				"app/views/includes/head.html"
+			],
+			[
+				"app/con/u",
+				"app/controllers/users.js"
+			],
+			[
+				"app/route/to",
+				"app/routes/todo-tasks.js"
+			],
+			[
+				"model/art",
+				"app/models/article.js"
+			],
+			[
+				"test/mocha/user",
+				"test/mocha/user/model.js"
+			],
+			[
+				"test/moch/tod",
+				"test/mocha/todo-task/model.js"
+			],
+			[
+				"pub/js/head",
+				"public/js/controllers/header.js"
+			],
+			[
+				"model/user",
+				"app/models/user.js"
+			],
+			[
+				"pub/view/c",
+				"public/views/articles/create.html"
+			],
+			[
+				"app/model/to",
+				"app/models/todo-task.js"
+			],
+			[
+				"app/contr/ar",
+				"app/controllers/articles.js"
+			],
+			[
+				"app/rout/to",
+				"app/routes/todo-tasks.js"
+			],
+			[
+				"mocha/user/model",
+				"test/mocha/user/model.js"
+			],
+			[
+				"test/moch/ar",
+				"test/mocha/article/model.js"
+			],
+			[
+				"readm",
+				"README.md"
+			],
+			[
+				"test/mocha/todo",
+				"test/mocha/todo-task/model.js"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"app/mode/to",
+				"app/models/todo-task.js"
+			],
+			[
+				"model/article",
+				"app/models/article.js"
+			],
+			[
+				"test/moch/art/m",
+				"test/mocha/article/model.js"
+			],
+			[
+				"grunt",
+				"gruntfile.js"
+			],
+			[
+				"test/mocha/um",
+				"test/mocha/user/model.js"
+			],
+			[
+				"env/d",
+				"config/env/development.js"
+			],
+			[
+				"env/pro",
+				"config/env/production.js"
+			],
+			[
+				"app/rou",
+				"app/routes/articles.js"
+			],
+			[
+				"ap/inc/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"app/inc/he",
+				"app/views/includes/head.html"
+			],
+			[
+				"pub/js/tod",
+				"public/js/services/todo-tasks.js"
+			],
+			[
+				"app/inc/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"app/inc/f",
+				"app/views/includes/foot.html"
+			],
+			[
+				"pub/js/con/ar",
+				"public/js/controllers/articles.js"
+			],
+			[
+				"view/art/li",
+				"public/views/articles/list.html"
+			],
+			[
+				"pub/js/he",
+				"public/js/controllers/header.js"
+			],
+			[
+				"conf/env/de",
+				"config/env/development.js"
+			],
+			[
+				"gruntfi",
+				"gruntfile.js"
+			],
+			[
+				"pub/view/ind",
+				"public/views/index.html"
+			],
+			[
+				"app/incl/he",
+				"app/views/includes/head.html"
+			],
+			[
+				"pub/css/",
+				"public/css/common.css"
+			],
+			[
+				"env/all",
+				"config/env/all.js"
+			],
+			[
+				"app/incl/hea",
+				"app/views/includes/head.html"
+			],
+			[
+				"env/te",
+				"config/env/test.js"
+			],
 			[
 				"conf/env/d",
 				"config/env/development.js"
@@ -1374,10 +2012,6 @@
 				"app/controllers/index.js"
 			],
 			[
-				"app/rou",
-				"app/routes/users.js"
-			],
-			[
 				"app/view/h",
 				"app/views/includes/head.html"
 			],
@@ -1386,484 +2020,8 @@
 				"public/js/config.js"
 			],
 			[
-				"readme",
-				"README.md"
-			],
-			[
 				"npmd",
 				"npm-debug.log"
-			],
-			[
-				"packa",
-				"package.json"
-			],
-			[
-				"rea",
-				"README.md"
-			],
-			[
-				"test/mocha/article/model.js",
-				"test/mocha/article/model.js"
-			],
-			[
-				"grun",
-				"gruntfile.js"
-			],
-			[
-				"config/express",
-				"config/express.js"
-			],
-			[
-				"config/passport.js",
-				"config/passport.js"
-			],
-			[
-				"config/passport",
-				"config/passport.js"
-			],
-			[
-				"app/models/user.js",
-				"app/models/user.js"
-			],
-			[
-				"app/models/article.js",
-				"app/models/article.js"
-			],
-			[
-				"config/env/all.js",
-				"config/env/all.js"
-			],
-			[
-				"config/env/development.js",
-				"config/env/development.js"
-			],
-			[
-				"config/config.js",
-				"config/config.js"
-			],
-			[
-				"confi/env/all",
-				"config/env/all.js"
-			],
-			[
-				"config/config",
-				"config/config.js"
-			],
-			[
-				"server.js",
-				"server.js"
-			],
-			[
-				"app/controllers/users.js",
-				"app/controllers/users.js"
-			],
-			[
-				"app/routes/users.js",
-				"app/routes/users.js"
-			],
-			[
-				"app/view/sign",
-				"app/views/users/signin.html"
-			],
-			[
-				"app/views/users/signin.html",
-				"app/views/users/signin.html"
-			],
-			[
-				"app/rout/",
-				"app/routes/users.js"
-			],
-			[
-				"controller/user",
-				"app/controllers/users.js"
-			],
-			[
-				"pub/js/cont/he",
-				"public/js/controllers/header.js"
-			],
-			[
-				"readme.md",
-				"README.md"
-			],
-			[
-				"pub/js/ap",
-				"public/js/app.js"
-			],
-			[
-				"public/js/config.js",
-				"public/js/config.js"
-			],
-			[
-				"app/js/config.js",
-				"node_modules/karma/node_modules/http-proxy/node_modules/utile/test/fixtures/read-json-file/config.json"
-			],
-			[
-				"view/hea",
-				"public/views/header.html"
-			],
-			[
-				"pub/cont/",
-				"public/js/controllers/header.js"
-			],
-			[
-				"pub/js/ser",
-				"public/js/services/articles.js"
-			],
-			[
-				"app/mod/a",
-				"app/models/article.js"
-			],
-			[
-				"js/config.js",
-				"public/js/config.js"
-			],
-			[
-				"public/js/controllers/articles.js",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"public/views/articles/create.html",
-				"public/views/articles/create.html"
-			],
-			[
-				"pub/js/con/hea",
-				"public/js/controllers/header.js"
-			],
-			[
-				"pub/view/ind",
-				"public/views/index.html"
-			],
-			[
-				"pu/view/ind",
-				"public/views/index.html"
-			],
-			[
-				"pub/js/cont/in",
-				"public/js/controllers/index.js"
-			],
-			[
-				"pub/vie/ind",
-				"public/views/index.html"
-			],
-			[
-				"public/js/controllers/index.js",
-				"public/js/controllers/index.js"
-			],
-			[
-				"public/views/index.html",
-				"public/views/index.html"
-			],
-			[
-				"public/views/articles/edit.html",
-				"public/views/articles/edit.html"
-			],
-			[
-				"pub/view/arti/edi",
-				"public/views/articles/edit.html"
-			],
-			[
-				"public/views/articles/view.html",
-				"public/views/articles/view.html"
-			],
-			[
-				"public/views/articles/list.html",
-				"public/views/articles/list.html"
-			],
-			[
-				"pub/js/con",
-				"public/js/config.js"
-			],
-			[
-				"publ/js/servi/glo",
-				"public/js/services/global.js"
-			],
-			[
-				"publ/js/cont/ar",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"pub/js/servi",
-				"public/js/services/articles.js"
-			],
-			[
-				"pub/js/contr/art",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"publ/js/conf",
-				"public/js/config.js"
-			],
-			[
-				"pub/js/ser/g",
-				"public/js/services/global.js"
-			],
-			[
-				"pub/js/ser/ar",
-				"public/js/services/articles.js"
-			],
-			[
-				"pub/js/cont/ar",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"app/view/ind",
-				"app/views/index.html"
-			],
-			[
-				"app/view/in/fo",
-				"app/views/includes/foot.html"
-			],
-			[
-				"pub/js/",
-				"public/js/app.js"
-			],
-			[
-				"public/js/controllers/header.js",
-				"public/js/controllers/header.js"
-			],
-			[
-				"publ/view/hea",
-				"public/views/header.html"
-			],
-			[
-				"conf/expre",
-				"config/express.js"
-			],
-			[
-				"app/controllers/index",
-				"app/controllers/index.js"
-			],
-			[
-				"app/route/inde",
-				"app/routes/index.js"
-			],
-			[
-				"app/contr/user",
-				"app/controllers/users.js"
-			],
-			[
-				"app/route/user.js",
-				"app/routes/users.js"
-			],
-			[
-				"app/route/user",
-				"app/routes/users.js"
-			],
-			[
-				"app/view/auth",
-				"app/views/users/auth.html"
-			],
-			[
-				"config/express.js",
-				"config/express.js"
-			],
-			[
-				"app/views/use/si",
-				"app/views/users/signin.html"
-			],
-			[
-				"publview/he",
-				"public/views/header.html"
-			],
-			[
-				"app/",
-				"app/models/user.js"
-			],
-			[
-				"app/route/",
-				"app/routes/index.js"
-			],
-			[
-				"app/route/u",
-				"app/routes/users.js"
-			],
-			[
-				"global",
-				"public/js/services/global.js"
-			],
-			[
-				"/includes/head.html",
-				"app/views/includes/head.html"
-			],
-			[
-				"views/header.html",
-				"public/views/header.html"
-			],
-			[
-				"layouts/default.html",
-				"app/views/layouts/default.html"
-			],
-			[
-				"app/views/users/auth.html",
-				"app/views/users/auth.html"
-			],
-			[
-				"app/views/users/signup.html",
-				"app/views/users/signup.html"
-			],
-			[
-				"pub/cont/hea",
-				"public/js/controllers/header.js"
-			],
-			[
-				"auth.h",
-				"app/views/users/auth.html"
-			],
-			[
-				"app/models/user",
-				"app/models/user.js"
-			],
-			[
-				"app/model/user",
-				"app/models/user.js"
-			],
-			[
-				"app/view/users/si",
-				"app/views/users/signup.html"
-			],
-			[
-				"app/cont/user",
-				"app/controllers/users.js"
-			],
-			[
-				"public/views/header.html",
-				"public/views/header.html"
-			],
-			[
-				"pub/js/cont/hea",
-				"public/js/controllers/header.js"
-			],
-			[
-				"publ/js/servi",
-				"public/js/services/global.js"
-			],
-			[
-				"public/js/app.js",
-				"public/js/app.js"
-			],
-			[
-				"pub/js/a",
-				"public/js/app.js"
-			],
-			[
-				"publ/js/con/hea",
-				"public/js/controllers/header.js"
-			],
-			[
-				"app/views/includes/foot.html",
-				"app/views/includes/foot.html"
-			],
-			[
-				"app/views/layouts/default.html",
-				"app/views/layouts/default.html"
-			],
-			[
-				"app/views/includes/head.html",
-				"app/views/includes/head.html"
-			],
-			[
-				"app/views/index",
-				"app/views/index.html"
-			],
-			[
-				"app/contro/inde",
-				"app/controllers/index.js"
-			],
-			[
-				"read",
-				"README.md"
-			],
-			[
-				"publ/view/art/lis",
-				"public/views/articles/list.html"
-			],
-			[
-				"publ/view/cate/li",
-				"public/views/categories/list.html"
-			],
-			[
-				"publ/view/notes/li",
-				"public/views/notes/list.html"
-			],
-			[
-				"app/con/art",
-				"app/controllers/articles.js"
-			],
-			[
-				"app/cont/art",
-				"app/controllers/articles.js"
-			],
-			[
-				"app/con/",
-				"app/controllers/categories.js"
-			],
-			[
-				"app/cont/note",
-				"app/controllers/notes.js"
-			],
-			[
-				"app/route/ar",
-				"app/routes/articles.js"
-			],
-			[
-				"app/routes/on",
-				"app/routes/notes.js"
-			],
-			[
-				"pub/js/conf",
-				"public/js/config.js"
-			],
-			[
-				"publ/js/serv",
-				"public/js/services/global.js"
-			],
-			[
-				"pub/js/con/ar",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"pub/js/cont/note",
-				"public/js/controllers/notes.js"
-			],
-			[
-				"publ/view/notes/view",
-				"public/views/notes/view.html"
-			],
-			[
-				"publ/view/artic/",
-				"public/views/articles/view.html"
-			],
-			[
-				"app/route/note",
-				"app/routes/notes.js"
-			],
-			[
-				"publ/js/con/",
-				"public/js/controllers/articles.js"
-			],
-			[
-				"publ/view/ar/cre",
-				"public/views/articles/create.html"
-			],
-			[
-				"pub/view/note/c",
-				"public/views/notes/create.html"
-			],
-			[
-				"publ/js/con/head",
-				"public/js/controllers/header.js"
-			],
-			[
-				"publ/js/con/note",
-				"public/js/controllers/notes.js"
-			],
-			[
-				"pub/view/ar/cre",
-				"public/views/articles/create.html"
-			],
-			[
-				"pub/view/note",
-				"public/views/notes/list.html"
 			]
 		],
 		"width": 0.0
@@ -1873,6 +2031,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"mean",
+				"~/code/mean.sublime-project"
+			],
 			[
 				"",
 				"~/code/mocha-tests.sublime-project"
@@ -1898,7 +2060,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 190.0,
 	"status_bar_visible": true,
 	"template_settings":
