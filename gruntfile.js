@@ -45,7 +45,15 @@ module.exports = function(grunt) {
         // example: grunt jshint
         jshint: {
             all: {
-                src: ['gruntfile.js', 'server.js', 'app/**/*.js', 'public/js/**', 'test/**/*.js', '!test/coverage/**/*.js'],
+                src: [
+                    'gruntfile.js',
+                    'server.js',
+                    'app/**/*.js',
+                    '!public/js/highcharts.js',
+                    'public/js/**',
+                    'test/**/*.js',
+                    '!test/coverage/**/*.js'
+                ],
                 options: {
                     jshintrc: true
                 }

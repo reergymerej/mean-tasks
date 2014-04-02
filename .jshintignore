@@ -1,1 +1,3 @@
 test/coverage/**
+public/lib/**
+public/js/highcharts.js
