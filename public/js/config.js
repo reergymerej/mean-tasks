@@ -22,6 +22,11 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'views/doing/list.html'
     })
 
+      .state('edit doing task', {
+        url: '/doing/:doingTaskId',
+        templateUrl: 'views/doing/edit.html'
+    })
+
       .state('done', {
         url: '/done',
         templateUrl: 'views/done/list.html'
