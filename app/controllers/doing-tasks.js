@@ -173,3 +173,10 @@ exports.list = function (req, res) {
         .exec(callback);
     }
 };
+
+/**
+* Show a single DoingTask
+*/
+exports.show = function (req, res) {
+    res.jsonp(req.doingTask);
+};

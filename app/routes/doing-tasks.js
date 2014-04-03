@@ -16,7 +16,7 @@ module.exports = function(app) {
 
     app.get('/doing-tasks', doingTasks.list);
     app.post('/doing-tasks', authorization.requiresLogin, doingTasks.create);
-    // app.get('/doing-tasks/:doingTaskId', doingTasks.show);
+    app.get('/doing-tasks/:doingTaskId', doingTasks.show);
     app.put('/doing-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.update);
     app.del('/doing-tasks/:doingTaskId', authorization.requiresLogin, hasAuthorization, doingTasks.destroy);
 
