@@ -171,4 +171,22 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             $scope.finishTask(task);
         }
     };
+
+    $scope.findOne = function () {
+        console.log($stateParams);
+        var params = {
+            doingTaskId: $stateParams.doingTaskId
+        };
+
+        var success = function (task) {
+            $scope.task = task;
+            console.log(task);
+        };
+
+        var failure = function () {
+            console.error('unable to fetch tasks');
+        };
+
+        DoingTasks.query(params, success, failure);
+    };
 }]);
