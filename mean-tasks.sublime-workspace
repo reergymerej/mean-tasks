@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"doingT",
+				"doingTask"
+			],
+			[
 				"cate",
 				"category"
 			],
@@ -22,10 +26,6 @@
 			[
 				"er",
 				"errors"
-			],
-			[
-				"doingT",
-				"doingTasks"
 			],
 			[
 				"Doin",
@@ -520,26 +520,42 @@
 	"buffers":
 	[
 		{
-			"file": "public/views/doing/list.html",
+			"file": "public/views/done/list.html",
 			"settings":
 			{
-				"buffer_size": 3315,
+				"buffer_size": 1082,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/js/controllers/header.js",
+			"file": "app/routes/doing-tasks.js",
 			"settings":
 			{
-				"buffer_size": 799,
+				"buffer_size": 914,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/views/header.html",
+			"file": "app/controllers/doing-tasks.js",
 			"settings":
 			{
-				"buffer_size": 2274,
+				"buffer_size": 3886,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/views/doing/edit.html",
+			"settings":
+			{
+				"buffer_size": 67,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "public/js/config.js",
+			"settings":
+			{
+				"buffer_size": 1781,
 				"line_ending": "Unix"
 			}
 		},
@@ -547,23 +563,7 @@
 			"file": "public/js/controllers/done.js",
 			"settings":
 			{
-				"buffer_size": 1691,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/controllers/doing.js",
-			"settings":
-			{
-				"buffer_size": 4236,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/controllers/categories.js",
-			"settings":
-			{
-				"buffer_size": 1979,
+				"buffer_size": 5024,
 				"line_ending": "Unix"
 			}
 		},
@@ -576,18 +576,18 @@
 			}
 		},
 		{
-			"file": "public/js/config.js",
+			"file": "public/js/controllers/doing.js",
 			"settings":
 			{
-				"buffer_size": 1658,
+				"buffer_size": 4666,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "public/js/app.js",
+			"file": "public/js/controllers/articles.js",
 			"settings":
 			{
-				"buffer_size": 507,
+				"buffer_size": 5226,
 				"line_ending": "Unix"
 			}
 		}
@@ -595,16 +595,20 @@
 	"build_system": "Packages/JSLint/JSLint.sublime-build",
 	"command_palette":
 	{
-		"height": 138.0,
+		"height": 327.0,
 		"selected_items":
 		[
 			[
-				"javas",
-				"Set Syntax: JavaScript"
-			],
-			[
 				"html",
 				"Set Syntax: HTML"
+			],
+			[
+				"refre",
+				"Project: Refresh Folders"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
 			],
 			[
 				"java",
@@ -707,7 +711,7 @@
 				"Preferences: Browse Packages"
 			]
 		],
-		"width": 511.0
+		"width": 512.0
 	},
 	"console":
 	{
@@ -729,14 +733,26 @@
 	},
 	"file_history":
 	[
+		"/home/grizzle/code/mean-tasks/public/views/header.html",
+		"/home/grizzle/code/mean-tasks/gruntfile.js",
 		"/home/grizzle/code/mean-tasks/app/views/includes/foot.html",
+		"/home/grizzle/code/mean-tasks/app/views/layouts/default.html",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/header.js",
+		"/home/grizzle/code/mean-tasks/.jshintignore",
+		"/home/grizzle/code/mean-tasks/app/views/includes/head.html",
+		"/home/grizzle/code/mean-tasks/.jshintrc",
+		"/home/grizzle/code/mean-tasks/public/views/doing/list.html",
+		"/home/grizzle/code/mean-tasks/.gitignore",
+		"/home/grizzle/code/mean-tasks/public/js/app.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/doing.js",
+		"/home/grizzle/code/mean-tasks/public/js/config.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/categories.js",
+		"/home/grizzle/code/mean-tasks/config/env/development.js",
 		"/home/grizzle/code/mean-tasks/package.json",
 		"/home/grizzle/code/mean-tasks/public/js/services/doing-categories.js",
 		"/home/grizzle/code/mean-tasks/app/controllers/doing-categories.js",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/categories.js",
 		"/home/grizzle/code/mean-tasks/app/models/category.js",
 		"/home/grizzle/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/grizzle/code/mean-tasks/config/env/development.js",
 		"/home/grizzle/code/mean-tasks/public/js/controllers/todo.js",
 		"/home/grizzle/code/mean-tasks/public/views/categories/manage.html",
 		"/home/grizzle/code/mean-tasks/app/models/todo-task.js",
@@ -746,18 +762,13 @@
 		"/home/grizzle/code/mean-tasks/app/controllers/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/app/routes/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/public/views/todo/list.html",
-		"/home/grizzle/code/mean-tasks/public/js/app.js",
 		"/home/grizzle/code/mean-tasks/public/js/services/articles.js",
 		"/home/grizzle/code/mean-tasks/README.md",
 		"/home/grizzle/code/mean-tasks/app/controllers/users.js",
 		"/home/grizzle/code/mean-tasks/public/js/controllers/done.js",
 		"/home/grizzle/code/mean-tasks/public/js/filters.js",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/doing.js",
 		"/home/grizzle/code/mean-tasks/test/mocha/user/model.js",
 		"/home/grizzle/code/mean-tasks/app/models/user.js",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/header.js",
-		"/home/grizzle/code/mean-tasks/public/js/config.js",
-		"/home/grizzle/code/mean-tasks/public/views/header.html",
 		"/home/grizzle/code/mean-tasks/app/models/doing-task.js",
 		"/home/grizzle/code/mean-tasks/app/routes/doing-tasks.js",
 		"/home/grizzle/code/mean-tasks/test/mocha/todo-task/model.js",
@@ -768,7 +779,6 @@
 		"/home/grizzle/code/mean-tasks/public/js/services/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/.git/COMMIT_EDITMSG",
 		"/home/grizzle/code/mean-tasks/public/css/common.css",
-		"/home/grizzle/code/mean-tasks/app/views/includes/head.html",
 		"/home/grizzle/code/mean-tasks/app/models/article.js",
 		"/home/grizzle/code/mean-tasks/mean-tasks.sublime-project",
 		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/pkginfo/examples/all-properties.js",
@@ -799,7 +809,6 @@
 		"/home/grizzle/code/mean-tasks/node_modules/bower/node_modules/mout/array/toLookup.js",
 		"/home/grizzle/code/mean-tasks/node_modules/jade/LICENSE",
 		"/home/grizzle/code/mean-tasks/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/examples/movies.coffee",
-		"/home/grizzle/code/mean-tasks/gruntfile.js",
 		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/lib/browser/events.js",
 		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/mocha/node_modules/jade/testing/user.jade",
 		"/home/grizzle/code/mean-tasks/node_modules/grunt-mocha-test/node_modules/fs-extra/node_modules/mkdirp/test/umask_sync.js",
@@ -828,7 +837,6 @@
 		"/home/grizzle/code/mean-tasks/node_modules/karma-phantomjs-launcher/node_modules/phantomjs/lib/phantom/examples/printenv.coffee",
 		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/flatiron/test/fixtures/sample-app/app/new-york/controller.js",
 		"/home/grizzle/code/mean-tasks/node_modules/karma-coverage/node_modules/istanbul/test/cli/sample-project/vendor/dummy_vendor_lib.js",
-		"/home/grizzle/code/mean-tasks/app/views/layouts/default.html",
 		"/home/grizzle/code/mean-tasks/public/lib/jquery/src/css.js",
 		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/src/viewScroll.js",
 		"/home/grizzle/code/mean-tasks/public/lib/jquery/src/var/indexOf.js",
@@ -852,11 +860,7 @@
 		"/home/grizzle/code/nice-mean/server.js",
 		"/home/grizzle/code/nice-mean/config/express.js",
 		"/home/grizzle/code/nice-mean/config/env/all.js",
-		"/home/grizzle/code/nice-mean/gruntfile.js",
-		"/home/grizzle/code/nice-mean/config/config.js",
-		"/home/grizzle/code/nice-mean/node_modules/view-helpers/index.js",
-		"/home/grizzle/code/nice-mean/config/passport.js",
-		"/home/grizzle/code/nice-mean/app/models/user.js"
+		"/home/grizzle/code/nice-mean/gruntfile.js"
 	],
 	"find":
 	{
@@ -908,6 +912,7 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"default",
 			"console",
 			"$uiRoute",
 			"ui",
@@ -1034,8 +1039,7 @@
 			"user",
 			"\\/signup",
 			" \n",
-			"&",
-			"h2"
+			"&"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1186,19 +1190,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "public/views/doing/list.html",
+					"file": "public/views/done/list.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3315,
+						"buffer_size": 1082,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								296,
-								296
+								294,
+								294
 							]
 						],
 						"settings":
@@ -1215,19 +1219,19 @@
 				},
 				{
 					"buffer": 1,
-					"file": "public/js/controllers/header.js",
+					"file": "app/routes/doing-tasks.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 799,
+						"buffer_size": 914,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								799,
-								799
+								596,
+								596
 							]
 						],
 						"settings":
@@ -1236,7 +1240,7 @@
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 28.0,
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -1244,19 +1248,48 @@
 				},
 				{
 					"buffer": 2,
-					"file": "public/views/header.html",
+					"file": "app/controllers/doing-tasks.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2274,
+						"buffer_size": 3886,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								525,
-								525
+								552,
+								552
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "public/views/doing/edit.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 67,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								56,
+								56
 							]
 						],
 						"settings":
@@ -1272,30 +1305,30 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "public/js/controllers/done.js",
+					"buffer": 4,
+					"file": "public/js/config.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1691,
+						"buffer_size": 1781,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1426,
-								1426
+								797,
+								797
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
+							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 338.0,
+						"translation.y": 104.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1303,53 +1336,24 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "public/js/controllers/doing.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4236,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								509,
-								509
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 3.0,
-						"translation.y": 39.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
 					"buffer": 5,
-					"file": "public/js/controllers/categories.js",
+					"file": "public/js/controllers/done.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1979,
+						"buffer_size": 5024,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1973,
-								1973
+								3702,
+								3702
 							]
 						],
 						"settings":
@@ -1359,7 +1363,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 741.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1395,48 +1399,48 @@
 				},
 				{
 					"buffer": 7,
-					"file": "public/js/config.js",
+					"file": "public/js/controllers/doing.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1658,
+						"buffer_size": 4666,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								49,
-								49
+								4324,
+								4324
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 927.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 8,
-					"file": "public/js/app.js",
+					"file": "public/js/controllers/articles.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 507,
+						"buffer_size": 5226,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								100,
-								100
+								5078,
+								5078
 							]
 						],
 						"settings":
@@ -1512,16 +1516,84 @@
 		"selected_items":
 		[
 			[
+				"pub/js/contr/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"pub/vie/he",
+				"public/views/header.html"
+			],
+			[
+				"pub/js/con",
+				"public/js/config.js"
+			],
+			[
+				"pub/view/doing",
+				"public/views/doing/list.html"
+			],
+			[
+				"app/contr/doing",
+				"app/controllers/doing-tasks.js"
+			],
+			[
+				"app/route/doin",
+				"app/routes/doing-tasks.js"
+			],
+			[
+				"env/de",
+				"config/env/development.js"
+			],
+			[
+				"contro/head",
+				"public/js/controllers/header.js"
+			],
+			[
+				"view/header",
+				"public/views/header.html"
+			],
+			[
+				"app/view/",
+				"app/views/layouts/default.html"
+			],
+			[
+				"app/view/hea",
+				"app/views/includes/head.html"
+			],
+			[
+				"pub/view/hea",
+				"public/views/header.html"
+			],
+			[
+				"grunt",
+				"gruntfile.js"
+			],
+			[
+				"app/view/inc/fo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"",
+				".jshintrc"
+			],
+			[
+				"app/view/incl/foo",
+				"app/views/includes/foot.html"
+			],
+			[
+				"gruntfi",
+				"gruntfile.js"
+			],
+			[
+				"pub/view/done",
+				"public/views/done/list.html"
+			],
+			[
 				"pub/js/don",
 				"public/js/controllers/done.js"
 			],
 			[
 				"pub/js/",
 				"public/js/app.js"
-			],
-			[
-				"pub/js/con",
-				"public/js/config.js"
 			],
 			[
 				"app/view/incl/fo",
@@ -1552,10 +1624,6 @@
 				"public/js/controllers/categories.js"
 			],
 			[
-				"pub/view/doing",
-				"public/views/doing/list.html"
-			],
-			[
 				"pub/con/cate",
 				"public/js/controllers/categories.js"
 			],
@@ -1566,10 +1634,6 @@
 			[
 				"pub/js/cont/doin",
 				"public/js/controllers/doing.js"
-			],
-			[
-				"env/de",
-				"config/env/development.js"
 			],
 			[
 				"app/model/todo",
@@ -1614,10 +1678,6 @@
 			[
 				"pub/js/cont/to",
 				"public/js/controllers/todo.js"
-			],
-			[
-				"app/view/inc/fo",
-				"app/views/includes/foot.html"
 			],
 			[
 				"pub/js/a",
@@ -1670,10 +1730,6 @@
 			[
 				"pub/js/conf",
 				"public/js/config.js"
-			],
-			[
-				"pub/view/hea",
-				"public/views/header.html"
 			],
 			[
 				"header",
@@ -1908,10 +1964,6 @@
 				"test/mocha/article/model.js"
 			],
 			[
-				"grunt",
-				"gruntfile.js"
-			],
-			[
 				"test/mocha/um",
 				"test/mocha/user/model.js"
 			],
@@ -1964,10 +2016,6 @@
 				"config/env/development.js"
 			],
 			[
-				"gruntfi",
-				"gruntfile.js"
-			],
-			[
 				"pub/view/ind",
 				"public/views/index.html"
 			],
@@ -1978,50 +2026,6 @@
 			[
 				"pub/css/",
 				"public/css/common.css"
-			],
-			[
-				"env/all",
-				"config/env/all.js"
-			],
-			[
-				"app/incl/hea",
-				"app/views/includes/head.html"
-			],
-			[
-				"env/te",
-				"config/env/test.js"
-			],
-			[
-				"conf/env/d",
-				"config/env/development.js"
-			],
-			[
-				"app/view/in/he",
-				"app/views/includes/head.html"
-			],
-			[
-				"view-helpers",
-				"node_modules/view-helpers/index.js"
-			],
-			[
-				"app/views/index.html",
-				"app/views/index.html"
-			],
-			[
-				"app/con/inde",
-				"app/controllers/index.js"
-			],
-			[
-				"app/view/h",
-				"app/views/includes/head.html"
-			],
-			[
-				"publ/js/con",
-				"public/js/config.js"
-			],
-			[
-				"npmd",
-				"npm-debug.log"
 			]
 		],
 		"width": 0.0
@@ -2060,8 +2064,8 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 190.0,
+	"side_bar_visible": true,
+	"side_bar_width": 256.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

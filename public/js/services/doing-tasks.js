@@ -14,9 +14,9 @@ angular.module('doing.tasks').factory('DoingTasks', ['$resource', function ($res
     // 3rd arg: custom actions
     // The default actions for $resources are get, save, query, remove, and delete.
     // "update" is added for PUT operations.  "save" is for POSTs.
-    return $resource('doing-tasks/:id',
+    return $resource('doing-tasks/:doingTaskId',
         {
-            id: '@_id'
+            doingTaskId: '@_id'
         },
         {
             update: {

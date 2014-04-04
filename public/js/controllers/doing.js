@@ -187,6 +187,6 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             console.error('unable to fetch tasks');
         };
 
-        DoingTasks.query(params, success, failure);
+        DoingTasks.get(params, success, failure);
     };
 }]);
