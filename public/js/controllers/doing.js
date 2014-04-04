@@ -9,6 +9,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
 
     $scope.categories = [];
     $scope.taskCategory = undefined;
+    $scope.task;
 
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
@@ -173,14 +174,12 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     };
 
     $scope.findOne = function () {
-        console.log($stateParams);
         var params = {
             doingTaskId: $stateParams.doingTaskId
         };
 
         var success = function (task) {
             $scope.task = task;
-            console.log(task);
         };
 
         var failure = function () {

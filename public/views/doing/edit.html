@@ -1,3 +1,29 @@
 <section ng-controller="DoingCtrl" ng-init="findOne()">
 
+    <form ng-submit="finishTask(task)">
+        <div>
+            <label>Category</label>
+            <input ng-model="task.category" class="form-control" />
+        </div>
+        <div>
+            <label>Description</label>
+            <input ng-model="task.description" class="form-control" />
+        </div>
+        <div>
+            <label>Start</label>
+            <timepicker
+                ng-model="task.start"
+                meridians="['am', 'pm']"
+                ></timepicker>
+        </div>
+        <div>
+            <label>End</label>
+            <timepicker
+                ng-show="task.end"
+                ng-model="task.end"
+                meridians="['am', 'pm']"
+                ></timepicker>
+        </div>
+        <button class="btn btn-default">Save</button>
+    </form>
 </section>
