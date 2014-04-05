@@ -9,7 +9,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
 
     $scope.categories = [];
     $scope.taskCategory = undefined;
-    $scope.task;
+    $scope.task = undefined;
 
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
