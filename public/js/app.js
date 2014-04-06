@@ -20,4 +20,6 @@ angular.module('todo.tasks', []);
 angular.module('doing.tasks', []);
 angular.module('doing.filters', []);
 angular.module('done.tasks', []);
-angular.module('doing.categories', []);
+angular.module('doing.categories', [
+    'doing.directives'
+]);
