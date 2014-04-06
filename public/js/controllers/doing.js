@@ -125,6 +125,22 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
     };
 
     /**
+    * Finish a task.
+    * @param {TodoTask} task
+    */
+    $scope.editTask = function (task) {
+        var success = function () {
+            $location.path('doing');
+        };
+
+        var failure = function (http) {
+            console.error('unable to update task', http);
+        };
+        
+        task.$update(success, failure);
+    };
+
+    /**
     * Find tasks.
     * @param {Date} from
     */
