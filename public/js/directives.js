@@ -47,7 +47,26 @@ angular.module('directives', [])
             // innerFoo: '@',
 
             // the directive's outerFoo attribute
-            innerFoo: '@outerFoo'
+            innerFoo: '@outerFoo',
+
+            innerFooWithInterpolation: '@outerFooWithInterpolation',
+
+            // = gets values from outer scope
+
+            // binds to outer scope value defined
+            // in inner-bar attribute of directive
+            innerBar: '=',
+
+            // binds to outer scope value defined
+            // in outer-bar attribute of directive
+            innerBarTwo: '=outerBar',
+
+            missingValueOne: '=',
+
+            missingValueTwo: '=wtf',
+
+            // inc-from-outer-scope
+            incFromOuterScope: '&'
         }
     };
 });

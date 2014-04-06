@@ -3,10 +3,23 @@
     <div simple-template-url></div>
     <simple-template-url-element></simple-template-url-element>
     <template-url-with-scope></template-url-with-scope>
-    <isolate-scope></isolate-scope>
 
     <isolate-scope
         inner-foo="directive's inner-foo"
         outer-foo="directive's outer-foo"
+        outer-foo-with-interpolation="from outer scope: {{ foo }}"
+
+        inner-bar="funkyDoodle"
+        outer-bar="donkeyTown"
+        missing-value-one="iDoNotExist"
+        inc-from-outer-scope="outerScopeA + 1 "
         ></isolate-scope>
+
+    outerScopeA: {{ outerScopeA }}
+    outerScopeA+: {{ outerScopeA + 1 }}
+    <hr />
+
+    <button ng-click="rando('foo')">change foo</button>
+    <button ng-click="rando('funkyDoodle')">change funkyDoodle</button>
+    <button ng-click="rando('donkeyTown')">change donkeyTown</button>
 </section>

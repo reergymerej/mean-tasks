@@ -22,6 +22,15 @@ angular.module('tests.directives').controller('DirectiveCtrl', [
 
         $scope.foo = 'the foo';
 
+        $scope.funkyDoodle = 123;
+        $scope.donkeyTown = 987;
+
         $scope.theFoos = makeFoos(7);
+
+        $scope.rando = function (val) {
+            $scope[val] = Math.random();
+        }
+
+        $scope.outerScopeA = 111;
     }
 ]);

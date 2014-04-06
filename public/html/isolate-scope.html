@@ -8,4 +8,27 @@
     <li>
         innerFoo: {{ innerFoo }}
     </li>
+    <li>
+        innerFooWithInterpolation: {{ innerFooWithInterpolation }}
+    </li>
+    <li>
+        funkyDoodle: {{ funkyDoodle }}
+    </li>
+    <li>
+        innerBar: {{ innerBar }}
+    </li>
+    <li>
+        innerBarTwo: {{ innerBarTwo }}
+    </li>
+    <li>
+        missingValueOne: {{ missingValueOne }}
+    </li>
+    <li>
+        missingValueTwo: {{ missingValueTwo }}
+    </li>
+    <li>
+        outerScopeA: {{ outerScopeA }}
+        outerScopeA+: {{ outerScopeA + 1}}
+    </li>
 </ul>
+<button ngClick="outerScopeA++;"> do exp</button>
