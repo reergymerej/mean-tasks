@@ -11,7 +11,8 @@ angular.module('mean', [
     'doing.tasks',
     'doing.filters',
     'done.tasks',
-    'doing.categories'
+    'doing.categories',
+    'tests.directives'
 ]);
 
 angular.module('mean.system', []);
@@ -20,6 +21,7 @@ angular.module('todo.tasks', []);
 angular.module('doing.tasks', []);
 angular.module('doing.filters', []);
 angular.module('done.tasks', []);
-angular.module('doing.categories', [
-    'doing.directives'
+angular.module('doing.categories', []);
+angular.module('tests.directives', [
+    'directives'
 ]);

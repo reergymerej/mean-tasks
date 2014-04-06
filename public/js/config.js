@@ -37,6 +37,11 @@ angular.module('mean').config(['$stateProvider', '$urlRouterProvider',
         templateUrl: 'views/categories/manage.html'
     })
 
+      .state('directives', {
+        url: '/directives',
+        templateUrl: 'views/directives/main.html'
+    })
+
       
 
       // This is called when viewing an article.
