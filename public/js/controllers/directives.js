@@ -20,6 +20,10 @@ angular.module('tests.directives').controller('DirectiveCtrl', [
             return foos;
         };
 
+        $scope.init = function () {
+            this.foos = makeFoos(3);
+        };
+
         $scope.foo = 'the foo';
 
         $scope.funkyDoodle = 123;

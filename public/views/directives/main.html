@@ -1,4 +1,18 @@
-<section ng-controller="DirectiveCtrl">
+<section ng-controller="DirectiveCtrl" ng-init="init()">
+
+    <h4>Show the details for each foo in their own directive.</h4>
+    <ul>
+        <li ng-repeat="f in foos">
+            <foo
+                the-foo="f"
+                rand="rando"
+                ></foo>
+        </li>
+    </ul>
+
+    {{ foos | json }}
+
+    <hr />
     <div super-simple></div>
     <div simple-template-url></div>
     <simple-template-url-element></simple-template-url-element>

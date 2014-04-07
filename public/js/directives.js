@@ -69,4 +69,23 @@ angular.module('directives', [])
             incFromOuterScope: '&'
         }
     };
+})
+
+.directive('foo', function () {
+    return {
+        restrict: 'E',
+
+        templateUrl: 'html/foo.html',
+
+        scope: {
+            foo: '=theFoo'
+        }
+    };
+})
+
+.directive('categorySelector', function () {
+    return {
+        restrict: 'E',
+        templateUrl: 'html/category-selector.html'
+    };
 });
