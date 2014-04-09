@@ -1,0 +1,571 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.3.22
+3 info using node@v0.11.11-pre
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/home/grizzle/code/mean-tasks',
+5 verbose install   [ 'express',
+5 verbose install     'jade',
+5 verbose install     'consolidate',
+5 verbose install     'mongoose',
+5 verbose install     'connect-mongo',
+5 verbose install     'connect-flash',
+5 verbose install     'crypto',
+5 verbose install     'passport',
+5 verbose install     'passport-local',
+5 verbose install     'passport-facebook',
+5 verbose install     'passport-twitter',
+5 verbose install     'passport-github',
+5 verbose install     'passport-google-oauth',
+5 verbose install     'passport-linkedin',
+5 verbose install     'lodash',
+5 verbose install     'view-helpers',
+5 verbose install     'mean-logger',
+5 verbose install     'bower',
+5 verbose install     'grunt',
+5 verbose install     'grunt-cli',
+5 verbose install     'grunt-env',
+5 verbose install     'forever',
+5 verbose install     'karma-script-launcher',
+5 verbose install     'karma-chrome-launcher',
+5 verbose install     'karma-firefox-launcher',
+5 verbose install     'karma-html2js-preprocessor',
+5 verbose install     'karma-jasmine',
+5 verbose install     'karma-requirejs',
+5 verbose install     'should',
+5 verbose install     'grunt-concurrent',
+5 verbose install     'grunt-karma',
+5 verbose install     'karma-coffee-preprocessor',
+5 verbose install     'supertest',
+5 verbose install     'karma-phantomjs-launcher',
+5 verbose install     'grunt-mocha-test',
+5 verbose install     'grunt-contrib-jshint',
+5 verbose install     'grunt-nodemon',
+5 verbose install     'grunt-contrib-watch',
+5 verbose install     'karma-coverage',
+5 verbose install     'karma',
+5 verbose install     'swig',
+5 verbose install     'angular',
+5 verbose install     'angular-resource',
+5 verbose install     'angular-cookies',
+5 verbose install     'angular-mocks',
+5 verbose install     'angular-route',
+5 verbose install     'bootstrap',
+5 verbose install     'angular-bootstrap',
+5 verbose install     'angular-ui-router' ] ]
+6 info preinstall mean@0.1.2
+7 warn package.json crypto@0.0.3 crypto is also the name of a node core module.
+8 verbose readDependencies using package.json deps
+9 verbose already installed skipping express@~3.4.7 /home/grizzle/code/mean-tasks
+10 verbose already installed skipping jade@~1.0.2 /home/grizzle/code/mean-tasks
+11 verbose already installed skipping consolidate@~0.10.0 /home/grizzle/code/mean-tasks
+12 verbose already installed skipping mongoose@~3.8.3 /home/grizzle/code/mean-tasks
+13 verbose already installed skipping connect-mongo@~0.4.0 /home/grizzle/code/mean-tasks
+14 verbose already installed skipping connect-flash@~0.1.1 /home/grizzle/code/mean-tasks
+15 verbose already installed skipping crypto@0.0.3 /home/grizzle/code/mean-tasks
+16 verbose already installed skipping passport@~0.1.18 /home/grizzle/code/mean-tasks
+17 verbose already installed skipping passport-local@~0.1.6 /home/grizzle/code/mean-tasks
+18 verbose already installed skipping passport-facebook@~1.0.2 /home/grizzle/code/mean-tasks
+19 verbose already installed skipping passport-twitter@~1.0.2 /home/grizzle/code/mean-tasks
+20 verbose already installed skipping passport-github@~0.1.5 /home/grizzle/code/mean-tasks
+21 verbose already installed skipping passport-google-oauth@~0.1.5 /home/grizzle/code/mean-tasks
+22 verbose already installed skipping passport-linkedin@~0.1.3 /home/grizzle/code/mean-tasks
+23 verbose already installed skipping lodash@~2.4.1 /home/grizzle/code/mean-tasks
+24 verbose already installed skipping view-helpers@~0.1.4 /home/grizzle/code/mean-tasks
+25 verbose already installed skipping mean-logger@0.0.1 /home/grizzle/code/mean-tasks
+26 verbose already installed skipping bower@~1.2.8 /home/grizzle/code/mean-tasks
+27 verbose already installed skipping grunt@~0.4.2 /home/grizzle/code/mean-tasks
+28 verbose already installed skipping grunt-cli@~0.1.11 /home/grizzle/code/mean-tasks
+29 verbose already installed skipping grunt-env@~0.4.1 /home/grizzle/code/mean-tasks
+30 verbose already installed skipping forever@~0.10.11 /home/grizzle/code/mean-tasks
+31 verbose already installed skipping karma-script-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+32 verbose already installed skipping karma-chrome-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+33 verbose already installed skipping karma-firefox-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+34 verbose already installed skipping karma-html2js-preprocessor@~0.1.0 /home/grizzle/code/mean-tasks
+35 verbose already installed skipping karma-jasmine@~0.1.3 /home/grizzle/code/mean-tasks
+36 verbose already installed skipping karma-requirejs@~0.1.0 /home/grizzle/code/mean-tasks
+37 verbose already installed skipping should@2.1.1 /home/grizzle/code/mean-tasks
+38 verbose cache add [ 'grunt-concurrent@latest', null ]
+39 verbose cache add name=undefined spec="grunt-concurrent@latest" args=["grunt-concurrent@latest",null]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: 'grunt-concurrent@latest',
+40 verbose parsed url   path: 'grunt-concurrent@latest',
+40 verbose parsed url   href: 'grunt-concurrent@latest' }
+41 verbose cache add name="grunt-concurrent" spec="latest" args=["grunt-concurrent","latest"]
+42 verbose parsed url { protocol: null,
+42 verbose parsed url   slashes: null,
+42 verbose parsed url   auth: null,
+42 verbose parsed url   host: null,
+42 verbose parsed url   port: null,
+42 verbose parsed url   hostname: null,
+42 verbose parsed url   hash: null,
+42 verbose parsed url   search: null,
+42 verbose parsed url   query: null,
+42 verbose parsed url   pathname: 'latest',
+42 verbose parsed url   path: 'latest',
+42 verbose parsed url   href: 'latest' }
+43 verbose addNamed [ 'grunt-concurrent', 'latest' ]
+44 verbose addNamed [ null, null ]
+45 verbose already installed skipping grunt-karma@~0.6.2 /home/grizzle/code/mean-tasks
+46 verbose already installed skipping karma-coffee-preprocessor@~0.1.0 /home/grizzle/code/mean-tasks
+47 verbose already installed skipping supertest@0.8.2 /home/grizzle/code/mean-tasks
+48 verbose already installed skipping karma-phantomjs-launcher@~0.1.0 /home/grizzle/code/mean-tasks
+49 verbose cache add [ 'grunt-mocha-test@latest', null ]
+50 verbose cache add name=undefined spec="grunt-mocha-test@latest" args=["grunt-mocha-test@latest",null]
+51 verbose parsed url { protocol: null,
+51 verbose parsed url   slashes: null,
+51 verbose parsed url   auth: null,
+51 verbose parsed url   host: null,
+51 verbose parsed url   port: null,
+51 verbose parsed url   hostname: null,
+51 verbose parsed url   hash: null,
+51 verbose parsed url   search: null,
+51 verbose parsed url   query: null,
+51 verbose parsed url   pathname: 'grunt-mocha-test@latest',
+51 verbose parsed url   path: 'grunt-mocha-test@latest',
+51 verbose parsed url   href: 'grunt-mocha-test@latest' }
+52 verbose cache add name="grunt-mocha-test" spec="latest" args=["grunt-mocha-test","latest"]
+53 verbose parsed url { protocol: null,
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: null,
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: null,
+53 verbose parsed url   hash: null,
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: 'latest',
+53 verbose parsed url   path: 'latest',
+53 verbose parsed url   href: 'latest' }
+54 verbose addNamed [ 'grunt-mocha-test', 'latest' ]
+55 verbose addNamed [ null, null ]
+56 verbose cache add [ 'grunt-contrib-jshint@latest', null ]
+57 verbose cache add name=undefined spec="grunt-contrib-jshint@latest" args=["grunt-contrib-jshint@latest",null]
+58 verbose parsed url { protocol: null,
+58 verbose parsed url   slashes: null,
+58 verbose parsed url   auth: null,
+58 verbose parsed url   host: null,
+58 verbose parsed url   port: null,
+58 verbose parsed url   hostname: null,
+58 verbose parsed url   hash: null,
+58 verbose parsed url   search: null,
+58 verbose parsed url   query: null,
+58 verbose parsed url   pathname: 'grunt-contrib-jshint@latest',
+58 verbose parsed url   path: 'grunt-contrib-jshint@latest',
+58 verbose parsed url   href: 'grunt-contrib-jshint@latest' }
+59 verbose cache add name="grunt-contrib-jshint" spec="latest" args=["grunt-contrib-jshint","latest"]
+60 verbose parsed url { protocol: null,
+60 verbose parsed url   slashes: null,
+60 verbose parsed url   auth: null,
+60 verbose parsed url   host: null,
+60 verbose parsed url   port: null,
+60 verbose parsed url   hostname: null,
+60 verbose parsed url   hash: null,
+60 verbose parsed url   search: null,
+60 verbose parsed url   query: null,
+60 verbose parsed url   pathname: 'latest',
+60 verbose parsed url   path: 'latest',
+60 verbose parsed url   href: 'latest' }
+61 verbose addNamed [ 'grunt-contrib-jshint', 'latest' ]
+62 verbose addNamed [ null, null ]
+63 verbose already installed skipping grunt-nodemon@0.2.0 /home/grizzle/code/mean-tasks
+64 verbose cache add [ 'grunt-contrib-watch@latest', null ]
+65 verbose cache add name=undefined spec="grunt-contrib-watch@latest" args=["grunt-contrib-watch@latest",null]
+66 verbose parsed url { protocol: null,
+66 verbose parsed url   slashes: null,
+66 verbose parsed url   auth: null,
+66 verbose parsed url   host: null,
+66 verbose parsed url   port: null,
+66 verbose parsed url   hostname: null,
+66 verbose parsed url   hash: null,
+66 verbose parsed url   search: null,
+66 verbose parsed url   query: null,
+66 verbose parsed url   pathname: 'grunt-contrib-watch@latest',
+66 verbose parsed url   path: 'grunt-contrib-watch@latest',
+66 verbose parsed url   href: 'grunt-contrib-watch@latest' }
+67 verbose cache add name="grunt-contrib-watch" spec="latest" args=["grunt-contrib-watch","latest"]
+68 verbose parsed url { protocol: null,
+68 verbose parsed url   slashes: null,
+68 verbose parsed url   auth: null,
+68 verbose parsed url   host: null,
+68 verbose parsed url   port: null,
+68 verbose parsed url   hostname: null,
+68 verbose parsed url   hash: null,
+68 verbose parsed url   search: null,
+68 verbose parsed url   query: null,
+68 verbose parsed url   pathname: 'latest',
+68 verbose parsed url   path: 'latest',
+68 verbose parsed url   href: 'latest' }
+69 verbose addNamed [ 'grunt-contrib-watch', 'latest' ]
+70 verbose addNamed [ null, null ]
+71 verbose already installed skipping karma-coverage@~0.1.0 /home/grizzle/code/mean-tasks
+72 verbose already installed skipping karma@~0.10.4 /home/grizzle/code/mean-tasks
+73 verbose already installed skipping swig@~1.3.2 /home/grizzle/code/mean-tasks
+74 verbose cache add [ 'angular@latest', null ]
+75 verbose cache add name=undefined spec="angular@latest" args=["angular@latest",null]
+76 verbose parsed url { protocol: null,
+76 verbose parsed url   slashes: null,
+76 verbose parsed url   auth: null,
+76 verbose parsed url   host: null,
+76 verbose parsed url   port: null,
+76 verbose parsed url   hostname: null,
+76 verbose parsed url   hash: null,
+76 verbose parsed url   search: null,
+76 verbose parsed url   query: null,
+76 verbose parsed url   pathname: 'angular@latest',
+76 verbose parsed url   path: 'angular@latest',
+76 verbose parsed url   href: 'angular@latest' }
+77 verbose cache add name="angular" spec="latest" args=["angular","latest"]
+78 verbose parsed url { protocol: null,
+78 verbose parsed url   slashes: null,
+78 verbose parsed url   auth: null,
+78 verbose parsed url   host: null,
+78 verbose parsed url   port: null,
+78 verbose parsed url   hostname: null,
+78 verbose parsed url   hash: null,
+78 verbose parsed url   search: null,
+78 verbose parsed url   query: null,
+78 verbose parsed url   pathname: 'latest',
+78 verbose parsed url   path: 'latest',
+78 verbose parsed url   href: 'latest' }
+79 verbose addNamed [ 'angular', 'latest' ]
+80 verbose addNamed [ null, null ]
+81 verbose cache add [ 'angular-resource@latest', null ]
+82 verbose cache add name=undefined spec="angular-resource@latest" args=["angular-resource@latest",null]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: 'angular-resource@latest',
+83 verbose parsed url   path: 'angular-resource@latest',
+83 verbose parsed url   href: 'angular-resource@latest' }
+84 verbose cache add name="angular-resource" spec="latest" args=["angular-resource","latest"]
+85 verbose parsed url { protocol: null,
+85 verbose parsed url   slashes: null,
+85 verbose parsed url   auth: null,
+85 verbose parsed url   host: null,
+85 verbose parsed url   port: null,
+85 verbose parsed url   hostname: null,
+85 verbose parsed url   hash: null,
+85 verbose parsed url   search: null,
+85 verbose parsed url   query: null,
+85 verbose parsed url   pathname: 'latest',
+85 verbose parsed url   path: 'latest',
+85 verbose parsed url   href: 'latest' }
+86 verbose addNamed [ 'angular-resource', 'latest' ]
+87 verbose addNamed [ null, null ]
+88 verbose cache add [ 'angular-cookies@latest', null ]
+89 verbose cache add name=undefined spec="angular-cookies@latest" args=["angular-cookies@latest",null]
+90 verbose parsed url { protocol: null,
+90 verbose parsed url   slashes: null,
+90 verbose parsed url   auth: null,
+90 verbose parsed url   host: null,
+90 verbose parsed url   port: null,
+90 verbose parsed url   hostname: null,
+90 verbose parsed url   hash: null,
+90 verbose parsed url   search: null,
+90 verbose parsed url   query: null,
+90 verbose parsed url   pathname: 'angular-cookies@latest',
+90 verbose parsed url   path: 'angular-cookies@latest',
+90 verbose parsed url   href: 'angular-cookies@latest' }
+91 verbose cache add name="angular-cookies" spec="latest" args=["angular-cookies","latest"]
+92 verbose parsed url { protocol: null,
+92 verbose parsed url   slashes: null,
+92 verbose parsed url   auth: null,
+92 verbose parsed url   host: null,
+92 verbose parsed url   port: null,
+92 verbose parsed url   hostname: null,
+92 verbose parsed url   hash: null,
+92 verbose parsed url   search: null,
+92 verbose parsed url   query: null,
+92 verbose parsed url   pathname: 'latest',
+92 verbose parsed url   path: 'latest',
+92 verbose parsed url   href: 'latest' }
+93 verbose addNamed [ 'angular-cookies', 'latest' ]
+94 verbose addNamed [ null, null ]
+95 verbose cache add [ 'angular-mocks@latest', null ]
+96 verbose cache add name=undefined spec="angular-mocks@latest" args=["angular-mocks@latest",null]
+97 verbose parsed url { protocol: null,
+97 verbose parsed url   slashes: null,
+97 verbose parsed url   auth: null,
+97 verbose parsed url   host: null,
+97 verbose parsed url   port: null,
+97 verbose parsed url   hostname: null,
+97 verbose parsed url   hash: null,
+97 verbose parsed url   search: null,
+97 verbose parsed url   query: null,
+97 verbose parsed url   pathname: 'angular-mocks@latest',
+97 verbose parsed url   path: 'angular-mocks@latest',
+97 verbose parsed url   href: 'angular-mocks@latest' }
+98 verbose cache add name="angular-mocks" spec="latest" args=["angular-mocks","latest"]
+99 verbose parsed url { protocol: null,
+99 verbose parsed url   slashes: null,
+99 verbose parsed url   auth: null,
+99 verbose parsed url   host: null,
+99 verbose parsed url   port: null,
+99 verbose parsed url   hostname: null,
+99 verbose parsed url   hash: null,
+99 verbose parsed url   search: null,
+99 verbose parsed url   query: null,
+99 verbose parsed url   pathname: 'latest',
+99 verbose parsed url   path: 'latest',
+99 verbose parsed url   href: 'latest' }
+100 verbose addNamed [ 'angular-mocks', 'latest' ]
+101 verbose addNamed [ null, null ]
+102 verbose cache add [ 'angular-route@latest', null ]
+103 verbose cache add name=undefined spec="angular-route@latest" args=["angular-route@latest",null]
+104 verbose parsed url { protocol: null,
+104 verbose parsed url   slashes: null,
+104 verbose parsed url   auth: null,
+104 verbose parsed url   host: null,
+104 verbose parsed url   port: null,
+104 verbose parsed url   hostname: null,
+104 verbose parsed url   hash: null,
+104 verbose parsed url   search: null,
+104 verbose parsed url   query: null,
+104 verbose parsed url   pathname: 'angular-route@latest',
+104 verbose parsed url   path: 'angular-route@latest',
+104 verbose parsed url   href: 'angular-route@latest' }
+105 verbose cache add name="angular-route" spec="latest" args=["angular-route","latest"]
+106 verbose parsed url { protocol: null,
+106 verbose parsed url   slashes: null,
+106 verbose parsed url   auth: null,
+106 verbose parsed url   host: null,
+106 verbose parsed url   port: null,
+106 verbose parsed url   hostname: null,
+106 verbose parsed url   hash: null,
+106 verbose parsed url   search: null,
+106 verbose parsed url   query: null,
+106 verbose parsed url   pathname: 'latest',
+106 verbose parsed url   path: 'latest',
+106 verbose parsed url   href: 'latest' }
+107 verbose addNamed [ 'angular-route', 'latest' ]
+108 verbose addNamed [ null, null ]
+109 verbose cache add [ 'bootstrap@3.0.3', null ]
+110 verbose cache add name=undefined spec="bootstrap@3.0.3" args=["bootstrap@3.0.3",null]
+111 verbose parsed url { protocol: null,
+111 verbose parsed url   slashes: null,
+111 verbose parsed url   auth: null,
+111 verbose parsed url   host: null,
+111 verbose parsed url   port: null,
+111 verbose parsed url   hostname: null,
+111 verbose parsed url   hash: null,
+111 verbose parsed url   search: null,
+111 verbose parsed url   query: null,
+111 verbose parsed url   pathname: 'bootstrap@3.0.3',
+111 verbose parsed url   path: 'bootstrap@3.0.3',
+111 verbose parsed url   href: 'bootstrap@3.0.3' }
+112 verbose cache add name="bootstrap" spec="3.0.3" args=["bootstrap","3.0.3"]
+113 verbose parsed url { protocol: null,
+113 verbose parsed url   slashes: null,
+113 verbose parsed url   auth: null,
+113 verbose parsed url   host: null,
+113 verbose parsed url   port: null,
+113 verbose parsed url   hostname: null,
+113 verbose parsed url   hash: null,
+113 verbose parsed url   search: null,
+113 verbose parsed url   query: null,
+113 verbose parsed url   pathname: '3.0.3',
+113 verbose parsed url   path: '3.0.3',
+113 verbose parsed url   href: '3.0.3' }
+114 verbose addNamed [ 'bootstrap', '3.0.3' ]
+115 verbose addNamed [ '3.0.3', '3.0.3' ]
+116 verbose cache add [ 'angular-bootstrap@0.10.0', null ]
+117 verbose cache add name=undefined spec="angular-bootstrap@0.10.0" args=["angular-bootstrap@0.10.0",null]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: 'angular-bootstrap@0.10.0',
+118 verbose parsed url   path: 'angular-bootstrap@0.10.0',
+118 verbose parsed url   href: 'angular-bootstrap@0.10.0' }
+119 verbose cache add name="angular-bootstrap" spec="0.10.0" args=["angular-bootstrap","0.10.0"]
+120 verbose parsed url { protocol: null,
+120 verbose parsed url   slashes: null,
+120 verbose parsed url   auth: null,
+120 verbose parsed url   host: null,
+120 verbose parsed url   port: null,
+120 verbose parsed url   hostname: null,
+120 verbose parsed url   hash: null,
+120 verbose parsed url   search: null,
+120 verbose parsed url   query: null,
+120 verbose parsed url   pathname: '0.10.0',
+120 verbose parsed url   path: '0.10.0',
+120 verbose parsed url   href: '0.10.0' }
+121 verbose addNamed [ 'angular-bootstrap', '0.10.0' ]
+122 verbose addNamed [ '0.10.0', '0.10.0' ]
+123 verbose cache add [ 'angular-ui-router@#master', null ]
+124 verbose cache add name=undefined spec="angular-ui-router@#master" args=["angular-ui-router@#master",null]
+125 verbose parsed url { protocol: null,
+125 verbose parsed url   slashes: null,
+125 verbose parsed url   auth: null,
+125 verbose parsed url   host: null,
+125 verbose parsed url   port: null,
+125 verbose parsed url   hostname: null,
+125 verbose parsed url   hash: '#master',
+125 verbose parsed url   search: null,
+125 verbose parsed url   query: null,
+125 verbose parsed url   pathname: 'angular-ui-router@',
+125 verbose parsed url   path: 'angular-ui-router@',
+125 verbose parsed url   href: 'angular-ui-router@#master' }
+126 verbose cache add name="angular-ui-router" spec="#master" args=["angular-ui-router","#master"]
+127 verbose parsed url { protocol: null,
+127 verbose parsed url   slashes: null,
+127 verbose parsed url   auth: null,
+127 verbose parsed url   host: null,
+127 verbose parsed url   port: null,
+127 verbose parsed url   hostname: null,
+127 verbose parsed url   hash: '#master',
+127 verbose parsed url   search: null,
+127 verbose parsed url   query: null,
+127 verbose parsed url   pathname: null,
+127 verbose parsed url   path: null,
+127 verbose parsed url   href: '#master' }
+128 verbose addNamed [ 'angular-ui-router', '#master' ]
+129 verbose addNamed [ null, null ]
+130 silly lockFile 50a8c415-grunt-concurrent-latest grunt-concurrent@latest
+131 verbose lock grunt-concurrent@latest /home/grizzle/.npm/50a8c415-grunt-concurrent-latest.lock
+132 silly lockFile 29185e6c-grunt-mocha-test-latest grunt-mocha-test@latest
+133 verbose lock grunt-mocha-test@latest /home/grizzle/.npm/29185e6c-grunt-mocha-test-latest.lock
+134 silly lockFile 23ae4c0c-grunt-contrib-jshint-latest grunt-contrib-jshint@latest
+135 verbose lock grunt-contrib-jshint@latest /home/grizzle/.npm/23ae4c0c-grunt-contrib-jshint-latest.lock
+136 silly lockFile 72016001-grunt-contrib-watch-latest grunt-contrib-watch@latest
+137 verbose lock grunt-contrib-watch@latest /home/grizzle/.npm/72016001-grunt-contrib-watch-latest.lock
+138 silly lockFile 6c758ed7-angular-latest angular@latest
+139 verbose lock angular@latest /home/grizzle/.npm/6c758ed7-angular-latest.lock
+140 silly lockFile 4c4291ac-angular-resource-latest angular-resource@latest
+141 verbose lock angular-resource@latest /home/grizzle/.npm/4c4291ac-angular-resource-latest.lock
+142 silly lockFile c9f8078d-angular-cookies-latest angular-cookies@latest
+143 verbose lock angular-cookies@latest /home/grizzle/.npm/c9f8078d-angular-cookies-latest.lock
+144 silly lockFile a6b4e54e-angular-mocks-latest angular-mocks@latest
+145 verbose lock angular-mocks@latest /home/grizzle/.npm/a6b4e54e-angular-mocks-latest.lock
+146 silly lockFile ff9fc8f3-angular-route-latest angular-route@latest
+147 verbose lock angular-route@latest /home/grizzle/.npm/ff9fc8f3-angular-route-latest.lock
+148 silly lockFile 7f08289e-bootstrap-3-0-3 bootstrap@3.0.3
+149 verbose lock bootstrap@3.0.3 /home/grizzle/.npm/7f08289e-bootstrap-3-0-3.lock
+150 silly lockFile 977965a5-angular-bootstrap-0-10-0 angular-bootstrap@0.10.0
+151 verbose lock angular-bootstrap@0.10.0 /home/grizzle/.npm/977965a5-angular-bootstrap-0-10-0.lock
+152 silly lockFile 12bf1e39-angular-ui-router-master angular-ui-router@#master
+153 verbose lock angular-ui-router@#master /home/grizzle/.npm/12bf1e39-angular-ui-router-master.lock
+154 info addNameTag [ 'grunt-concurrent', 'latest' ]
+155 info addNameTag [ 'grunt-mocha-test', 'latest' ]
+156 info addNameTag [ 'grunt-contrib-jshint', 'latest' ]
+157 info addNameTag [ 'grunt-contrib-watch', 'latest' ]
+158 info addNameTag [ 'angular', 'latest' ]
+159 info addNameTag [ 'angular-resource', 'latest' ]
+160 info addNameTag [ 'angular-cookies', 'latest' ]
+161 info addNameTag [ 'angular-mocks', 'latest' ]
+162 info addNameTag [ 'angular-route', 'latest' ]
+163 info addNameTag [ 'angular-ui-router', '#master' ]
+164 verbose url raw angular
+165 verbose url resolving [ 'http://registry.npmjs.org/', './angular' ]
+166 verbose url resolved http://registry.npmjs.org/angular
+167 info trying registry request attempt 1 at 20:56:16
+168 http GET http://registry.npmjs.org/angular
+169 verbose url raw angular-resource
+170 verbose url resolving [ 'http://registry.npmjs.org/', './angular-resource' ]
+171 verbose url resolved http://registry.npmjs.org/angular-resource
+172 info trying registry request attempt 1 at 20:56:16
+173 http GET http://registry.npmjs.org/angular-resource
+174 verbose url raw angular-cookies
+175 verbose url resolving [ 'http://registry.npmjs.org/', './angular-cookies' ]
+176 verbose url resolved http://registry.npmjs.org/angular-cookies
+177 info trying registry request attempt 1 at 20:56:16
+178 http GET http://registry.npmjs.org/angular-cookies
+179 verbose url raw angular-mocks
+180 verbose url resolving [ 'http://registry.npmjs.org/', './angular-mocks' ]
+181 verbose url resolved http://registry.npmjs.org/angular-mocks
+182 info trying registry request attempt 1 at 20:56:16
+183 http GET http://registry.npmjs.org/angular-mocks
+184 verbose url raw angular-route
+185 verbose url resolving [ 'http://registry.npmjs.org/', './angular-route' ]
+186 verbose url resolved http://registry.npmjs.org/angular-route
+187 info trying registry request attempt 1 at 20:56:16
+188 http GET http://registry.npmjs.org/angular-route
+189 verbose url raw bootstrap/3.0.3
+190 verbose url resolving [ 'http://registry.npmjs.org/', './bootstrap/3.0.3' ]
+191 verbose url resolved http://registry.npmjs.org/bootstrap/3.0.3
+192 info trying registry request attempt 1 at 20:56:16
+193 http GET http://registry.npmjs.org/bootstrap/3.0.3
+194 verbose url raw angular-bootstrap/0.10.0
+195 verbose url resolving [ 'http://registry.npmjs.org/', './angular-bootstrap/0.10.0' ]
+196 verbose url resolved http://registry.npmjs.org/angular-bootstrap/0.10.0
+197 info trying registry request attempt 1 at 20:56:16
+198 http GET http://registry.npmjs.org/angular-bootstrap/0.10.0
+199 verbose url raw angular-ui-router
+200 verbose url resolving [ 'http://registry.npmjs.org/', './angular-ui-router' ]
+201 verbose url resolved http://registry.npmjs.org/angular-ui-router
+202 info trying registry request attempt 1 at 20:56:16
+203 http GET http://registry.npmjs.org/angular-ui-router
+204 verbose url raw grunt-concurrent
+205 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-concurrent' ]
+206 verbose url resolved http://registry.npmjs.org/grunt-concurrent
+207 info trying registry request attempt 1 at 20:56:16
+208 verbose etag "5V06FMF62BQCS89XKFPLMFZIN"
+209 http GET http://registry.npmjs.org/grunt-concurrent
+210 verbose url raw grunt-contrib-jshint
+211 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-contrib-jshint' ]
+212 verbose url resolved http://registry.npmjs.org/grunt-contrib-jshint
+213 info trying registry request attempt 1 at 20:56:16
+214 verbose etag "CITLXW0EFFZL8W21Z6E67WNRQ"
+215 http GET http://registry.npmjs.org/grunt-contrib-jshint
+216 verbose url raw grunt-mocha-test
+217 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-mocha-test' ]
+218 verbose url resolved http://registry.npmjs.org/grunt-mocha-test
+219 info trying registry request attempt 1 at 20:56:16
+220 verbose etag "2BPU90ILJDUGQH5AZYPRXZEFG"
+221 http GET http://registry.npmjs.org/grunt-mocha-test
+222 verbose url raw grunt-contrib-watch
+223 verbose url resolving [ 'http://registry.npmjs.org/', './grunt-contrib-watch' ]
+224 verbose url resolved http://registry.npmjs.org/grunt-contrib-watch
+225 info trying registry request attempt 1 at 20:56:16
+226 verbose etag "2CEFMIYIHEDT2UDCORO4PB9CV"
+227 http GET http://registry.npmjs.org/grunt-contrib-watch
+228 http 404 http://registry.npmjs.org/angular-route
+229 silly registry.get cb [ 404,
+229 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R14B04)',
+229 silly registry.get     'content-type': 'application/json',
+229 silly registry.get     via: '1.1 varnish, 1.1 varnish',
+229 silly registry.get     'cache-control': 'max-age=0',
+229 silly registry.get     'content-length': '52',
+229 silly registry.get     'accept-ranges': 'bytes',
+229 silly registry.get     date: 'Wed, 09 Apr 2014 00:56:16 GMT',
+229 silly registry.get     age: '0',
+229 silly registry.get     connection: 'close',
+229 silly registry.get     'x-served-by': 'cache-v44-ASH, cache-d45-DAL',
+229 silly registry.get     'x-cache': 'MISS, MISS',
+229 silly registry.get     'x-cache-hits': '0, 0',
+229 silly registry.get     'x-timer': 'S1397004976.805896759,VS0,VS16,VE26,VE43' } ]
+230 silly lockFile ff9fc8f3-angular-route-latest angular-route@latest
+231 silly lockFile ff9fc8f3-angular-route-latest angular-route@latest
+232 error 404 'angular-route' is not in the npm registry.
+232 error 404 You should bug the author to publish it
+232 error 404 It was specified as a dependency of 'mean'
+232 error 404
+232 error 404 Note that you can also install from a
+232 error 404 tarball, folder, or http url, or git url.
+233 error System Linux 3.8.0-37-generic
+234 error command "/usr/local/bin/node" "/usr/local/bin/npm" "install"
+235 error cwd /home/grizzle/code/mean-tasks
+236 error node -v v0.11.11-pre
+237 error npm -v 1.3.22
+238 error code E404
+239 verbose exit [ 1, true ]
