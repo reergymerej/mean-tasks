@@ -63,7 +63,36 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         this.find();
     };
 
+    // TODO: Make donuts instead of pies.
+    // http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-donut/
     var makePie = function (tasks) {
+        var pad = function (x, length) {
+            x = x + '';
+            while (x.length < length) {
+                x = '0' + x;
+            }
+            return x;
+        };
+
+        var formatter = function () {
+            var name = this.point.name,
+                y = this.point.y,
+                s, m, h;
+
+            s = Math.round(y / 1000);
+            m = Math.floor(s / 60);
+            if (m) {
+                s = s % 60;
+            }
+            h = Math.floor(m / 60);
+            if (h) {
+                m = m % 60;
+            }
+
+            return h + ':' + pad(m, 2) + ':' + pad(s, 2);
+        };
+
+
         $('#dummy-chart').highcharts({
             chart: {
                 plotBackgroundColor: null,
@@ -84,7 +113,8 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                         enabled: true,
                         color: '#000000',
                         connectorColor: '#000000',
-                        format: '<b>{point.name}</b>: {point.percentage:.1f} %'
+                        // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                        formatter: formatter
                     }
                 }
             },
@@ -96,7 +126,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                         var data = [];
 
                         angular.forEach(tasks, function (task) {
-                            console.log(task);
                             data.push({
                                 name: task.description,
                                 y: task.duration
