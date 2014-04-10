@@ -33,7 +33,7 @@ angular.module('tests.directives').controller('DirectiveCtrl', [
 
         $scope.rando = function (val) {
             $scope[val] = Math.random();
-        }
+        };
 
         $scope.outerScopeA = 111;
     }

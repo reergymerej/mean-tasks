@@ -21,6 +21,8 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         $scope.endDate = end;
     };
 
+    
+
     $scope.startDate = undefined;
     $scope.endDate = undefined;
     $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
@@ -66,6 +68,7 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     // TODO: Make donuts instead of pies.
     // http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-donut/
     var makePie = function (tasks) {
+
         var pad = function (x, length) {
             x = x + '';
             while (x.length < length) {
@@ -74,12 +77,11 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
             return x;
         };
 
-        var formatter = function () {
-            var name = this.point.name,
-                y = this.point.y,
-                s, m, h;
+        var getTimeFromMs = function (ms) {
+            var s, m, h,
+                time = '';
 
-            s = Math.round(y / 1000);
+            s = Math.round(ms / 1000);
             m = Math.floor(s / 60);
             if (m) {
                 s = s % 60;
@@ -89,7 +91,28 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                 m = m % 60;
             }
 
-            return h + ':' + pad(m, 2) + ':' + pad(s, 2);
+            if (s) {
+                s = pad(s, 2);
+                time = s;
+            }
+
+            if (m) {
+                m = pad(m, 2);
+                time = m + ':' + s;
+            }
+
+            if (h) {
+                time = h + ':' + time;
+            }
+
+            return time;
+        };
+
+        var formatter = function () {
+            var name = this.point.name,
+                timeString = getTimeFromMs(this.point.y);
+
+            return name + ' ' + timeString;
         };
 
 
