@@ -227,6 +227,8 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                 y: task.duration
             });
 
+            // TODO: Change the tasks to match the coloring of the category.
+
             // Is this a new category?
             if (!lastCategory || lastCategory.name !== task.category) {
                 categories.push({
