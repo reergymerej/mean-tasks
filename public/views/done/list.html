@@ -13,7 +13,8 @@
             datepicker-popup="M/d/yyyy"
             show-weeks="false"
             show-button-bar="false" />
-
+      </div>
+      <div class="form-group">
         <input 
             placeholder="end"
             data-ng-model="endDate"
@@ -28,7 +29,11 @@
     </form>
 
     <div id="dummy-chart"></div>
-    <ul class="unstyled">
+
+    <button
+        ng-click="showList = !showList"
+        class="btn btn-default">toggle list</button>
+    <ul class="unstyled" ng-show="showList">
         <li data-ng-repeat="task in tasks">
             <span>
                 {{ task.category }}

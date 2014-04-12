@@ -22,7 +22,7 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     };
 
     
-
+    $scope.showList = false;
     $scope.startDate = undefined;
     $scope.endDate = undefined;
     $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
@@ -144,8 +144,7 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                 name: task.description,
                 y: task.duration,
                 color: Highcharts.Color(color).brighten( 
-                    // Math.abs( 0.4 * Math.sin(taskIndex) ) + 0.1
-                    (taskIndex + 1) / 7
+                    (( taskIndex % 3 ) + 1) / 7
                 ).get()
             });
 
