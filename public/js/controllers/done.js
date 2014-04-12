@@ -119,26 +119,35 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         var colors = Highcharts.getOptions().colors; 
     
         var taskData = [],
-            categories = [];
+            categories = [],
+            taskIndex = 0;
 
         angular.forEach(tasks, function (task) {
             var lastCategory = categories.slice(-1)[0],
-                thisCategory = {};
-
-            taskData.push({
-                name: task.description,
-                y: task.duration
-            });
-
-            // TODO: Change the tasks to match the coloring of the category.
+                thisCategory = {},
+                color = colors[categories.length - 1];
 
             // Is this a new category?
             if (!lastCategory || lastCategory.name !== task.category) {
+                color = colors[categories.length];
                 categories.push({
                     name: task.category,
-                    y: 0
+                    y: 0,
+                    color: color
                 });
+                taskIndex = 0;
+            } else {
+                taskIndex++;
             }
+
+            taskData.push({
+                name: task.description,
+                y: task.duration,
+                color: Highcharts.Color(color).brighten( 
+                    // Math.abs( 0.4 * Math.sin(taskIndex) ) + 0.1
+                    (taskIndex + 1) / 7
+                ).get()
+            });
 
             thisCategory = categories.slice(-1)[0];
             thisCategory.y += task.duration;
