@@ -68,101 +68,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
 
     // TODO: Make donuts instead of pies.
     // http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-donut/
-    var makePie = function (tasks) {
-
-        var pad = function (x, length) {
-            x = x + '';
-            while (x.length < length) {
-                x = '0' + x;
-            }
-            return x;
-        };
-
-        var getTimeFromMs = function (ms) {
-            var s, m, h,
-                time = '';
-
-            s = Math.round(ms / 1000);
-            m = Math.floor(s / 60);
-            if (m) {
-                s = s % 60;
-            }
-            h = Math.floor(m / 60);
-            if (h) {
-                m = m % 60;
-            }
-
-            if (s) {
-                s = pad(s, 2);
-                time = s;
-            }
-
-            if (m) {
-                m = pad(m, 2);
-                time = m + ':' + s;
-            }
-
-            if (h) {
-                time = h + ':' + time;
-            }
-
-            return time;
-        };
-
-        var formatter = function () {
-            var name = this.point.name,
-                timeString = getTimeFromMs(this.point.y);
-
-            return name + ' ' + timeString;
-        };
-
-
-        $('#dummy-chart').highcharts({
-            chart: {
-                plotBackgroundColor: null,
-                plotBorderWidth: null,
-                plotShadow: false
-            },
-            title: {
-                text: 'How I Spent My Time'
-            },
-            tooltip: {
-                pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
-            },
-            plotOptions: {
-                pie: {
-                    allowPointSelect: true,
-                    cursor: 'pointer',
-                    dataLabels: {
-                        enabled: true,
-                        color: '#000000',
-                        connectorColor: '#000000',
-                        // format: '<b>{point.name}</b>: {point.percentage:.1f} %',
-                        formatter: formatter
-                    }
-                }
-            },
-            series: [
-                {
-                    type: 'pie',
-                    name: 'time spent',
-                    data: (function () {
-                        var data = [];
-
-                        angular.forEach(tasks, function (task) {
-                            data.push({
-                                name: task.description,
-                                y: task.duration
-                            });
-                        });
-
-                        return data;
-                    }())
-                }
-            ]
-        });
-    };
-
     var makePieDonut = function (tasks) {
 
         var pad = function (x, length) {
@@ -214,11 +119,9 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         var colors = Highcharts.getOptions().colors; 
     
         var taskData = [],
-            categories = [],
-            category = '',
-            total = 0;
+            categories = [];
 
-        angular.forEach(tasks, function (task, index, collection) {
+        angular.forEach(tasks, function (task) {
             var lastCategory = categories.slice(-1)[0],
                 thisCategory = {};
 
@@ -238,7 +141,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
             }
 
             thisCategory = categories.slice(-1)[0];
-
             thisCategory.y += task.duration;
         });
     
