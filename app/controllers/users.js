@@ -122,7 +122,9 @@ exports.create = function(req, res, next) {
         // Log the user in using the Passport middleware.
         // REF: http://passportjs.org/guide/login/
         req.logIn(user, function(err) {
-            if (err) return next(err);
+            if (err) {
+                return next(err);
+            }
 
             // Passport makes the user available through req.user.
             // Now that we're logged in, go to the / path.
@@ -157,8 +159,12 @@ exports.user = function(req, res, next, id) {
             _id: id
         })
         .exec(function(err, user) {
-            if (err) return next(err);
-            if (!user) return next(new Error('Failed to load User ' + id));
+            if (err) {
+                return next(err);
+            }
+            if (!user) {
+                return next(new Error('Failed to load User ' + id));
+            }
             req.profile = user;
             next();
         });
