@@ -92,15 +92,11 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                 m = m % 60;
             }
 
-            if (s) {
-                s = pad(s, 2);
-                time = s;
-            }
-
-            if (m) {
-                m = pad(m, 2);
-                time = m + ':' + s;
-            }
+            s = pad(s, 2);
+            time = s;
+            
+            m = pad(m, 2);
+            time = m + ':' + s;
 
             if (h) {
                 time = h + ':' + time;
