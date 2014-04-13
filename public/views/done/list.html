@@ -32,7 +32,16 @@
 
     <button
         ng-click="showList = !showList"
-        class="btn btn-default">toggle list</button>
+        type="button"
+        class="btn btn-default">
+      <span
+        class="glyphicon" 
+        ng-class="{
+            'glyphicon-chevron-down': !showList,
+            'glyphicon-chevron-up': showList
+        }"></span> {{ showList ? 'hide' : 'show' }} list
+    </button>
+
     <ul class="unstyled" ng-show="showList">
         <li data-ng-repeat="task in tasks">
             <span>
