@@ -86,6 +86,14 @@ angular.module('directives', [])
 .directive('categorySelector', function () {
     return {
         restrict: 'E',
-        templateUrl: 'html/category-selector.html'
+        templateUrl: 'html/category-selector.html',
+        scope: {
+            // link to the outer scopes' categories
+            categories: '=',
+
+            // link the category reference from the outer scope
+            // This is the ng-model used internally.
+            category: '='
+        }
     };
 });

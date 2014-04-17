@@ -202,6 +202,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             console.error('unable to fetch tasks');
         };
 
+        loadCategories();
         DoingTasks.get(params, success, failure);
     };
 }]);

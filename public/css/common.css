@@ -34,3 +34,8 @@ footer p {
 .todo-task.done {
     text-decoration: line-through;
 }
+
+.edit-form {
+    width: 50%;
+    margin: auto;
+}

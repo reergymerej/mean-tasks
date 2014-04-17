@@ -1,30 +1,43 @@
 <section ng-controller="DoingCtrl" ng-init="findOne()">
 
-    <form ng-submit="editTask(task)">
-        <div>
-            <label>Category</label>
-            <input ng-model="task.category" class="form-control" />
-            <category-selector></category-selector>
+    <form ng-submit="editTask(task)" class="edit-form">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Description</label>
+                    <input ng-model="task.description" class="form-control" />
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Category</label>
+                    <category-selector
+                        categories="categories"
+                        category="task.category"></category-selector>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Description</label>
-            <input ng-model="task.description" class="form-control" />
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Start</label>
+                    <timepicker
+                        ng-model="task.start"
+                        meridians="['am', 'pm']"
+                        ></timepicker>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>End</label>
+                    <timepicker
+                        ng-show="task.end"
+                        ng-model="task.end"
+                        meridians="['am', 'pm']"
+                        ></timepicker>
+                </div>
+            </div>
         </div>
-        <div>
-            <label>Start</label>
-            <timepicker
-                ng-model="task.start"
-                meridians="['am', 'pm']"
-                ></timepicker>
-        </div>
-        <div>
-            <label>End</label>
-            <timepicker
-                ng-show="task.end"
-                ng-model="task.end"
-                meridians="['am', 'pm']"
-                ></timepicker>
-        </div>
-        <button class="btn btn-default">Save</button>
+        <button class="btn btn-success pull-right">Save</button>
     </form>
 </section>
