@@ -1,54 +1,86 @@
 <section data-ng-controller="DoneCtrl" data-ng-init="init()">
-    <form
-        class="form-inline"
-        role="form"
-        data-ng-submit="find()">
+    <tabset>
+        <tab heading="Chart">
+            <form
+                class="form-inline"
+                role="form"
+                data-ng-submit="find()">
 
-      <div class="form-group">
-        <input 
-            placeholder="start"
-            data-ng-model="startDate"
-            type="text"
-            class="form-control"
-            datepicker-popup="M/d/yyyy"
-            show-weeks="false"
-            show-button-bar="false" />
-      </div>
-      <div class="form-group">
-        <input 
-            placeholder="end"
-            data-ng-model="endDate"
-            type="text"
-            class="form-control"
-            datepicker-popup="M/d/yyyy"
-            show-weeks="false"
-            show-button-bar="false" />
-      </div>
-            
-      <button type="submit" class="btn btn-default">filter</button>
-    </form>
+              <div class="form-group">
+                <input 
+                    placeholder="start"
+                    data-ng-model="startDate"
+                    type="text"
+                    class="form-control"
+                    datepicker-popup="M/d/yyyy"
+                    show-weeks="false"
+                    show-button-bar="false" />
+              </div>
+              <div class="form-group">
+                <input 
+                    placeholder="end"
+                    data-ng-model="endDate"
+                    type="text"
+                    class="form-control"
+                    datepicker-popup="M/d/yyyy"
+                    show-weeks="false"
+                    show-button-bar="false" />
+              </div>
+                    
+              <button type="submit" class="btn btn-default">filter</button>
+            </form>
 
-    <div id="dummy-chart"></div>
+            <div id="chart-container"></div>
 
-    <button
-        ng-click="showList = !showList"
-        type="button"
-        class="btn btn-default">
-      <span
-        class="glyphicon" 
-        ng-class="{
-            'glyphicon-chevron-down': !showList,
-            'glyphicon-chevron-up': showList
-        }"></span> {{ showList ? 'hide' : 'show' }} list
-    </button>
+            <button
+                ng-click="showList = !showList"
+                type="button"
+                class="btn btn-default">
+              <span
+                class="glyphicon" 
+                ng-class="{
+                    'glyphicon-chevron-down': !showList,
+                    'glyphicon-chevron-up': showList
+                }"></span> {{ showList ? 'hide' : 'show' }} list
+            </button>
 
-    <ul class="unstyled" ng-show="showList">
-        <li data-ng-repeat="task in tasks">
-            <span>
-                {{ task.category }}
-                {{ task.description }}
-                {{ task.duration | timespan }}
-            </span>
-        </li>
-    </ul>
+            <ul ng-show="showList">
+                <li data-ng-repeat="task in tasks">
+                    <span>
+                        {{ task.category }}
+                        {{ task.description }}
+                        {{ task.duration | timespan }}
+                    </span>
+                </li>
+            </ul>
+        </tab>
+        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
+          {{tab.content}}
+        </tab>
+        <tab heading="Review">
+            <form
+                name="reviewForm"
+                class="form-inline"
+                novalidate
+                ng-submit="findWithSubstring()">
+                <div class="form-group">
+                    <input
+                        class="form-control"
+                        placeholder="substring"
+                        ng-model="substring"
+                        required />
+                </div>
+                <button
+                    type="submit"
+                    class="btn btn-default"
+                    ng-disabled="reviewForm.$invalid"
+                    >find</button>
+            </form>
+            <ul>
+                <li ng-repeat="task in tasks">
+                    {{ task | json }}
+                </li>
+            </ul>
+        </tab>
+    </tabset>
 </section>

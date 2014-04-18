@@ -21,52 +21,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         $scope.endDate = end;
     };
 
-    
-    $scope.showList = false;
-    $scope.startDate = undefined;
-    $scope.endDate = undefined;
-    $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
-    $scope.taskCategory = undefined;
-
-    // Give this controller's scope access to the Global values.
-    // $scope.global = Global;
-
-    $scope.tasks = [];
-
-    /**
-    * Find tasks.
-    */
-    $scope.find = function () {
-
-        var params = {},
-            start = $scope.startDate,
-            end = $scope.endDate;
-
-        params = {
-            start: start ? start.getTime() : undefined,
-            end: end ? end.getTime() : undefined,
-            group: 'yeah'
-        };
-
-        var success = function (tasks) {
-            $scope.tasks = tasks;
-            // makePie(tasks);
-            makePieDonut(tasks);
-        };
-
-        var failure = function () {
-            console.error('unable to fetch tasks');
-        };
-
-        DoingTasks.query(params, success, failure);
-    };
-
-    $scope.init = function () {
-        setDefaultDates();
-        this.find();
-    };
-
-    // TODO: Make donuts instead of pies.
     // http://jsfiddle.net/gh/get/jquery/1.9.1/highslide-software/highcharts.com/tree/master/samples/highcharts/demo/pie-donut/
     var makePieDonut = function (tasks) {
 
@@ -149,7 +103,7 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         });
     
         // Create the chart
-        $('#dummy-chart').highcharts({
+        $('#chart-container').highcharts({
             chart: {
                 type: 'pie'
             },
@@ -190,5 +144,70 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
                 }
             ]
         });
+    };
+    
+    $scope.showList = false;
+    $scope.startDate = undefined;
+    $scope.endDate = undefined;
+    $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
+    $scope.taskCategory = undefined;
+    $scope.substring = undefined;
+
+    // Give this controller's scope access to the Global values.
+    // $scope.global = Global;
+
+    $scope.tasks = [];
+
+    /**
+    * Find tasks.
+    */
+    $scope.find = function () {
+
+        var params = {},
+            start = $scope.startDate,
+            end = $scope.endDate;
+
+        params = {
+            start: start ? start.getTime() : undefined,
+            end: end ? end.getTime() : undefined,
+            group: 'yeah'
+        };
+
+        var success = function (tasks) {
+            $scope.tasks = tasks;
+            // makePie(tasks);
+            makePieDonut(tasks);
+        };
+
+        var failure = function () {
+            console.error('unable to fetch tasks');
+        };
+
+        DoingTasks.query(params, success, failure);
+    };
+
+    $scope.findWithSubstring = function () {
+        var params = {
+            substring: $scope.substring
+        };
+
+        debugger;
+
+        var success = function (tasks) {
+            $scope.tasks = tasks;
+            // makePie(tasks);
+            debugger;
+        };
+
+        var failure = function () {
+            console.error('unable to fetch tasks');
+        };
+
+        DoingTasks.query(params, success, failure);
+    };
+
+    $scope.init = function () {
+        setDefaultDates();
+        this.find();
     };
 }]);
