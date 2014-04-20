@@ -188,15 +188,11 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
 
     $scope.findWithSubstring = function () {
         var params = {
-            substring: $scope.substring
+            substring: this.searchString
         };
-
-        debugger;
 
         var success = function (tasks) {
             $scope.tasks = tasks;
-            // makePie(tasks);
-            debugger;
         };
 
         var failure = function () {

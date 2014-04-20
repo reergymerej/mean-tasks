@@ -88,7 +88,8 @@ exports.destroy = function (req, res) {
 };
 
 var buildQuery = function (req) {
-    var query = {};
+    var query = {},
+        regex;
 
     if (req.query.from) {
         query.start = {
@@ -106,6 +107,13 @@ var buildQuery = function (req) {
         query.end = {
             $lte: new Date(parseInt(req.query.end, 10))
         };
+    }
+
+    if (req.query.substring) {
+        regex = new RegExp(decodeURIComponent(req.query.substring), 'gi');
+        query.description = regex;
+        // TODO: This needs to be an OR
+        // query.category = regex;
     }
 
     return query;

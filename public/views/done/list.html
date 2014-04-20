@@ -66,8 +66,8 @@
                 <div class="form-group">
                     <input
                         class="form-control"
-                        placeholder="substring"
-                        ng-model="substring"
+                        placeholder="regex for description"
+                        ng-model="searchString"
                         required />
                 </div>
                 <button
@@ -78,7 +78,7 @@
             </form>
             <ul>
                 <li ng-repeat="task in tasks">
-                    {{ task | json }}
+                    <small>{{ task.start | date : 'M/d HHmm' }}</small> {{ task.category }}: {{ task.description }}
                 </li>
             </ul>
         </tab>
