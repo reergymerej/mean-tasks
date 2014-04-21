@@ -219,6 +219,9 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
             }
         });
 
+        // POST these ids with a flag
+        console.log(this.newDescription);
+
         console.log($scope.checked);
         console.log(ids);
     };

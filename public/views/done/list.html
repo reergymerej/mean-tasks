@@ -76,6 +76,8 @@
                     ng-disabled="reviewForm.$invalid"
                     >find</button>
             </form>
+            <input class="form-control" placeholder="new description" ng-model="newDescription">
+            {{ newDescription }}
             <button ng-click="doBulkAction()" class="btn btn-default">do bulk action</button>
             <ul>
                 <li ng-repeat="task in tasks">
