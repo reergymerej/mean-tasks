@@ -76,9 +76,10 @@
                     ng-disabled="reviewForm.$invalid"
                     >find</button>
             </form>
+            <button ng-click="doBulkAction()" class="btn btn-default">do bulk action</button>
             <ul>
                 <li ng-repeat="task in tasks">
-                    <small>{{ task.start | date : 'M/d HHmm' }}</small> {{ task.category }}: {{ task.description }}
+                    <input type="checkbox" value="{{ task._id }}" ng-model="checked[task._id]" /><small>{{ task.start | date : 'M/d HHmm' }}</small> {{ task.category }}: {{ task.description }}
                 </li>
             </ul>
         </tab>

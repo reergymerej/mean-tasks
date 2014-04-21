@@ -152,6 +152,7 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     $scope.categories = 'dev|other|admin|meeting'.split('|').sort();
     $scope.taskCategory = undefined;
     $scope.substring = undefined;
+    $scope.checked = {};
 
     // Give this controller's scope access to the Global values.
     // $scope.global = Global;
@@ -205,5 +206,20 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     $scope.init = function () {
         setDefaultDates();
         this.find();
+    };
+
+    $scope.doBulkAction = function () {
+        var ids = [];
+        // remove non-true from checked
+        angular.forEach($scope.checked, function (val, key) {
+            if (!val) {
+                delete $scope.checked[key];
+            } else {
+                ids.push(key);
+            }
+        });
+
+        console.log($scope.checked);
+        console.log(ids);
     };
 }]);
