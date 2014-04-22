@@ -1,15 +1,15 @@
-<section data-ng-controller="DoneCtrl" data-ng-init="init()">
+<section ng-controller="DoneCtrl" ng-init="init()">
     <tabset>
         <tab heading="Chart">
             <form
                 class="form-inline"
                 role="form"
-                data-ng-submit="find()">
+                ng-submit="find()">
 
               <div class="form-group">
                 <input 
                     placeholder="start"
-                    data-ng-model="startDate"
+                    ng-model="startDate"
                     type="text"
                     class="form-control"
                     datepicker-popup="M/d/yyyy"
@@ -19,7 +19,7 @@
               <div class="form-group">
                 <input 
                     placeholder="end"
-                    data-ng-model="endDate"
+                    ng-model="endDate"
                     type="text"
                     class="form-control"
                     datepicker-popup="M/d/yyyy"
@@ -45,7 +45,7 @@
             </button>
 
             <ul ng-show="showList">
-                <li data-ng-repeat="task in tasks">
+                <li ng-repeat="task in tasks">
                     <span>
                         {{ task.category }}
                         {{ task.description }}

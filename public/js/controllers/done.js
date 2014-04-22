@@ -165,8 +165,8 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
     $scope.find = function () {
 
         var params = {},
-            start = $scope.startDate,
-            end = $scope.endDate;
+            start = this.startDate,
+            end = this.endDate;
 
         params = {
             start: start ? start.getTime() : undefined,
@@ -176,7 +176,6 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
 
         var success = function (tasks) {
             $scope.tasks = tasks;
-            // makePie(tasks);
             makePieDonut(tasks);
         };
 
