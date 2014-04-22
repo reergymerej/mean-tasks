@@ -13,11 +13,15 @@
   </form>
 
   <ul class="unstyled">
-    <li data-ng-repeat="category in categories">
+    <li
+      ng-repeat="category in categories"
+      ng-style="{backgroundColor: '#{{ category.color }}'}">
         <button
-            class="btn btn-xs btn-danger"
+            class="btn btn-xs btn-default"
             ng-click="delete(category)">delete</button>
         {{ category.name }}
+        <input ng-model="category.color" />
+        <button ng-click="saveCategory(category)">save</button>
     </li>
   </ul>
 </section>

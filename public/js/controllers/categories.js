@@ -40,6 +40,16 @@ angular.module('doing.categories').controller('CategoriesCtrl',
         DoingCategories.query(success, failure);
     };
 
+    $scope.saveCategory = function (category) {
+        var success = function () {};
+
+        var failure = function (http) {
+            console.error('unable to update category', http);
+        };
+        
+        category.$update(success, failure);
+    };
+
     $scope.delete = function (category) {
 
         var success = function () {

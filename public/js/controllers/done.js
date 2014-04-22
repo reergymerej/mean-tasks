@@ -93,9 +93,10 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
             taskData.push({
                 name: task.description,
                 y: task.duration,
-                color: Highcharts.Color(color).brighten( 
-                    (( taskIndex % 3 ) + 1) / 7
-                ).get()
+                color: color
+                // color: Highcharts.Color(color).brighten( 
+                //     (( taskIndex % 3 ) + 1) / 7
+                // ).get()
             });
 
             thisCategory = categories.slice(-1)[0];

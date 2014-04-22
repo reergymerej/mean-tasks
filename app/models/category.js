@@ -8,6 +8,9 @@ var CategorySchema = new Schema({
         type: String,
         required: true,
         unique: true
+    },
+    color: {
+        type: String
     }
 });
 
