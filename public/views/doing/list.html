@@ -50,11 +50,12 @@
         <button type="submit" class="btn btn-default" data-ng-disabled="form.$invalid">create</button>
     </form>
 
-	<ul class="unstyled">
-        <li data-ng-repeat="task in tasks">
+	<ul>
+        <li data-ng-repeat="task in tasks"
+            ng-style="{backgroundColor: '#{{ colors[task.category] }}'}">
+            
+
             <span class="controls">
-
-
                 <div class="btn-group">
                     <button
                         type="button"

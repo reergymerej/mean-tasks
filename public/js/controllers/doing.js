@@ -4,10 +4,12 @@
 // $stateParams This comes from AngularUI Router.
 // $location    http://docs.angularjs.org/guide/dev_guide.services.$location
 // Global       /public/js/services/global.js
-angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$stateParams', '$location', 'Global', 'DoingTasks', 'DoingCategories',
-    function ($scope, $filter, $stateParams, $location, Global, DoingTasks, DoingCategories) {
+angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter',
+        '$stateParams', '$location', 'Global', 'DoingTasks', 'DoingCategories',
+        function ($scope, $filter, $stateParams, $location, Global, DoingTasks, DoingCategories) {
 
     $scope.categories = [];
+    $scope.colors = {};
     $scope.taskCategory = undefined;
     $scope.task = undefined;
 
@@ -41,8 +43,11 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             });
 
             angular.forEach(categories, function (category) {
-                $scope.categories.push(category.name);
+                $scope.categories.push(category);
+                $scope.colors[category.name] = category.color;
             });
+
+            console.log($scope.colors);
         };
 
         var failure = function () {
@@ -86,7 +91,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
 
         doingTask = doingTask || new DoingTasks({
             description: $scope.taskDescription,
-            category: $scope.taskCategory
+            category: $scope.taskCategory.name
         });
 
         doingTask.$save(success, failure);
@@ -137,6 +142,7 @@ angular.module('doing.tasks').controller('DoingCtrl', ['$scope', '$filter', '$st
             console.error('unable to update task', http);
         };
         
+        task.category = task.category && task.category.name;
         task.$update(success, failure);
     };
 
