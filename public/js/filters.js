@@ -64,3 +64,22 @@ angular.module('doing.filters').
             return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds);
         };
     }]);
+
+angular.module('done.tasks').
+    filter('msToTime', [function () {
+        var pad = function (x) {
+            x = x + '';
+            while (x.length < 2) {
+                x = '0' + x;
+            }
+            return x;
+        };
+
+        return function (ms) {
+
+            var d = new Date();
+            d.setHours(0, 0, 0, ms);
+
+            return pad(d.getHours()) + ':' + pad(d.getMinutes());
+        };
+    }]);

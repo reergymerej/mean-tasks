@@ -225,4 +225,41 @@ angular.module('done.tasks').controller('DoneCtrl', ['$scope', '$filter', '$stat
         console.log($scope.checked);
         console.log(ids);
     };
+
+    $scope.days = {};
+
+    // Load a summary of everything.
+    $scope.loadHistory = function () {
+
+        var params = {
+            // This flag will signal to the backend-controller how we want everything grouped.
+            history: true
+        };
+
+        var success = function (tasks) {
+            var days = {};
+
+            angular.forEach(tasks, function (task) {
+                
+                // group by days
+                var dayMS = (new Date(task.start)).setHours(0, 0, 0, 0);
+                days[dayMS] = days[dayMS] || {};
+
+                // group by task category
+                days[dayMS][task.category] = days[dayMS][task.category] || 0;
+                task.duration = parseInt(task.duration, 10);
+                if (!isNaN(task.duration)) {
+                    days[dayMS][task.category] += task.duration;
+                }
+            });
+
+            $scope.days = days;
+        };
+
+        var failure = function () {
+            console.error('unable to fetch tasks');
+        };
+
+        DoingTasks.query(params, success, failure);
+    };
 }]);

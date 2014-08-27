@@ -4,12 +4,16 @@
 		"selected_items":
 		[
 			[
-				"bri",
-				"brighten"
+				"categ",
+				"category"
 			],
 			[
 				"cate",
-				"categories"
+				"category"
+			],
+			[
+				"bri",
+				"brighten"
 			],
 			[
 				"ca",
@@ -18,10 +22,6 @@
 			[
 				"col",
 				"collection"
-			],
-			[
-				"categ",
-				"categories"
 			],
 			[
 				"brow",
@@ -519,30 +519,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "public/views/doing/edit.html",
-			"settings":
-			{
-				"buffer_size": 1534,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/views/doing/list.html",
-			"settings":
-			{
-				"buffer_size": 3337,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "public/js/controllers/doing.js",
-			"settings":
-			{
-				"buffer_size": 5009,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "Packages/JSLint/JSLint.sublime-build",
 	"command_palette":
@@ -769,15 +745,33 @@
 	},
 	"file_history":
 	[
-		"/home/grizzle/code/mean-tasks/app/controllers/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/public/views/categories/manage.html",
+		"/home/grizzle/code/mean-tasks/public/views/doing/list.html",
 		"/home/grizzle/code/mean-tasks/public/js/controllers/doing.js",
-		"/home/grizzle/code/mean-tasks/public/js/directives.js",
+		"/home/grizzle/code/mean-tasks/public/js/services/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/public/views/doing/edit.html",
 		"/home/grizzle/code/mean-tasks/public/html/category-selector.html",
-		"/home/grizzle/code/mean-tasks/public/css/common.css",
-		"/home/grizzle/code/mean-tasks/config/env/production.js",
+		"/home/grizzle/code/mean-tasks/public/js/directives.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/done.js",
+		"/home/grizzle/code/mean-tasks/app/routes/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/doing-categories.js",
+		"/home/grizzle/code/mean-tasks/app/controllers/articles.js",
+		"/home/grizzle/code/mean-tasks/app/models/article.js",
+		"/home/grizzle/code/mean-tasks/app/models/category.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/categories.js",
 		"/home/grizzle/code/mean-tasks/config/env/development.js",
+		"/home/grizzle/code/mean-tasks/config/env/production.js",
+		"/home/grizzle/code/mean-tasks/app/models/doing-task.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/articles.js",
+		"/home/grizzle/code/mean-tasks/public/js/controllers/todo.js",
 		"/home/grizzle/code/mean-tasks/public/views/done/list.html",
+		"/home/grizzle/code/mean-tasks/test/mocha/category/model.js",
+		"/home/grizzle/code/mean-tasks/public/views/header.html",
+		"/home/grizzle/code/mean-tasks/public/js/services/doing-tasks.js",
+		"/home/grizzle/code/mean-tasks/app/routes/doing-tasks.js",
 		"/home/grizzle/code/mean-tasks/.jshintrc",
+		"/home/grizzle/code/mean-tasks/public/css/common.css",
 		"/home/grizzle/code/mean-tasks/public/js/config.js",
 		"/home/grizzle/code/mean-tasks/public/js/app.js",
 		"/home/grizzle/code/mean-tasks/public/lib/jquery/src/ajax/jsonp.js",
@@ -785,58 +779,40 @@
 		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/src/urlRouter.js",
 		"/home/grizzle/code/mean-tasks/public/html/templateUrlWithScope.html",
 		"/home/grizzle/code/mean-tasks/package.json",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/done.js",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/todo.js",
 		"/home/grizzle/code/mean-tasks/public/lib/angular-ui-router/bower.json",
 		"/home/grizzle/code/mean-tasks/public/lib/angular-bootstrap/ui-bootstrap.js",
-		"/home/grizzle/code/mean-tasks/public/views/doing/list.html",
 		"/home/grizzle/code/mean-tasks/node_modules/grunt-env/tasks/env.js",
 		"/home/grizzle/code/mean-tasks/config/express.js",
 		"/home/grizzle/code/mean-tasks/gruntfile.js",
 		"/home/grizzle/code/mean-tasks/app/controllers/users.js",
 		"/home/grizzle/code/mean-tasks/app/models/user.js",
 		"/home/grizzle/code/mean-tasks/public/js/init.js",
-		"/home/grizzle/code/mean-tasks/app/controllers/articles.js",
 		"/home/grizzle/code/mean-tasks/public/js/controllers/directives.js",
 		"/home/grizzle/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
 		"/home/grizzle/code/mean-tasks/notes.md",
 		"/home/grizzle/code/mean-tasks/.gitignore",
 		"/home/grizzle/code/mean-tasks/bower.json",
 		"/home/grizzle/code/mean-tasks/public/views/directives/main.html",
-		"/home/grizzle/code/mean-tasks/public/views/doing/edit.html",
 		"/home/grizzle/code/mean-tasks/notes-directive-controllers.md",
 		"/home/grizzle/code/mean-tasks/public/html/isolate-scope.html",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/articles.js",
 		"/home/grizzle/code/mean-tasks/app/views/includes/foot.html",
-		"/home/grizzle/code/mean-tasks/public/views/categories/manage.html",
-		"/home/grizzle/code/mean-tasks/public/js/controllers/categories.js",
-		"/home/grizzle/code/mean-tasks/public/js/services/doing-tasks.js",
 		"/home/grizzle/code/mean-tasks/public/js/services/articles.js",
-		"/home/grizzle/code/mean-tasks/app/routes/doing-tasks.js",
-		"/home/grizzle/code/mean-tasks/public/views/header.html",
 		"/home/grizzle/code/mean-tasks/app/views/layouts/default.html",
 		"/home/grizzle/code/mean-tasks/public/js/controllers/header.js",
 		"/home/grizzle/code/mean-tasks/.jshintignore",
 		"/home/grizzle/code/mean-tasks/app/views/includes/head.html",
-		"/home/grizzle/code/mean-tasks/public/js/services/doing-categories.js",
-		"/home/grizzle/code/mean-tasks/app/controllers/doing-categories.js",
-		"/home/grizzle/code/mean-tasks/app/models/category.js",
 		"/home/grizzle/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/grizzle/code/mean-tasks/app/models/todo-task.js",
-		"/home/grizzle/code/mean-tasks/test/mocha/category/model.js",
 		"/home/grizzle/code/mean-tasks/test/mocha/doing/model.js",
-		"/home/grizzle/code/mean-tasks/app/routes/doing-categories.js",
 		"/home/grizzle/code/mean-tasks/app/controllers/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/app/routes/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/public/views/todo/list.html",
 		"/home/grizzle/code/mean-tasks/README.md",
 		"/home/grizzle/code/mean-tasks/public/js/filters.js",
 		"/home/grizzle/code/mean-tasks/test/mocha/user/model.js",
-		"/home/grizzle/code/mean-tasks/app/models/doing-task.js",
 		"/home/grizzle/code/mean-tasks/test/mocha/todo-task/model.js",
 		"/home/grizzle/code/mean-tasks/public/js/services/todo-tasks.js",
 		"/home/grizzle/code/mean-tasks/.git/COMMIT_EDITMSG",
-		"/home/grizzle/code/mean-tasks/app/models/article.js",
 		"/home/grizzle/code/mean-tasks/mean-tasks.sublime-project",
 		"/home/grizzle/code/mean-tasks/node_modules/forever/node_modules/pkginfo/examples/all-properties.js",
 		"/home/grizzle/code/mean-tasks/app/views/users/auth.html",
@@ -907,6 +883,7 @@
 		"height": 90.0,
 		"where_history":
 		[
+			"/home/grizzle/code/mean-tasks/",
 			"/home/grizzle/code/mean-tasks/public",
 			"/home/grizzle/code/mean-tasks/app",
 			"/home/grizzle/code/mean-tasks/public",
@@ -949,6 +926,25 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"tasks",
+			"taskCategory",
+			"editTask",
+			"taskCategory",
+			"loadCategories",
+			"DoingCategories",
+			"addCategoryToReq",
+			"category",
+			"makePieDonut",
+			"'",
+			"$scope",
+			"data-ng",
+			"makePie",
+			"fromDate",
+			"newDescription",
+			"buildQuery",
+			"findWithSubstring",
+			" class=\"unstyled\"",
+			"dummy",
 			"loadCategories",
 			"findOne",
 			"loadCategories",
@@ -1057,33 +1053,15 @@
 			"test",
 			"ul>",
 			"I ",
-			"ul",
-			"h1",
-			"    ",
-			"'i'",
-			"k",
-			"x",
-			" VM251:3",
-			"process",
-			"NODE_ENV",
-			"config",
-			"mongoStore",
-			"ArticleSchema",
-			"findOne",
-			"models_path",
-			"nodemon",
-			"concurrent",
-			"jshint",
-			"donkey",
-			"userId",
-			"\\.user"
+			"ul"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": false,
+		"regex": true,
 		"replace_history":
 		[
+			"ng",
 			"  ",
 			"doingCategories",
 			"catchError",
@@ -1210,108 +1188,24 @@
 			"HomeView",
 			"homeTemplate",
 			"/",
-			"TaskCollectionView",
-			"taskCollectionTemplate"
+			"TaskCollectionView"
 		],
 		"reverse": false,
 		"show_context": false,
 		"use_buffer2": true,
-		"whole_word": false,
+		"whole_word": true,
 		"wrap": true
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "public/views/doing/edit.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1534,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								659,
-								659
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "public/views/doing/list.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 3337,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1152,
-								1152
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 234.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "public/js/controllers/doing.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 5009,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2514,
-								2514
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 593.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				}
+			]
+		},
+		{
+			"sheets":
+			[
 			]
 		}
 	],
@@ -1332,11 +1226,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -1366,6 +1267,118 @@
 		"selected_items":
 		[
 			[
+				"pub/view/cate",
+				"public/views/categories/manage.html"
+			],
+			[
+				"view/doing/ed",
+				"public/views/doing/edit.html"
+			],
+			[
+				"html/categ",
+				"public/html/category-selector.html"
+			],
+			[
+				"pub/direc",
+				"public/js/directives.js"
+			],
+			[
+				"pub/js/serdoin",
+				"public/js/services/doing-categories.js"
+			],
+			[
+				"pub/view/doing",
+				"public/views/doing/list.html"
+			],
+			[
+				"pub/js/cont/doing",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"pub/js/doing",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"app/doing",
+				"app/controllers/doing-tasks.js"
+			],
+			[
+				"app/con/don",
+				"app/controllers/doing-tasks.js"
+			],
+			[
+				"app/model/doin",
+				"app/models/doing-task.js"
+			],
+			[
+				"pub/js/cont/done",
+				"public/js/controllers/done.js"
+			],
+			[
+				"env/p",
+				"config/env/production.js"
+			],
+			[
+				"env/",
+				"config/env/development.js"
+			],
+			[
+				"pub/js/cont/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"pub/js/con/a",
+				"public/js/controllers/articles.js"
+			],
+			[
+				"pub/js/con/cate",
+				"public/js/controllers/categories.js"
+			],
+			[
+				"pub/js/cont",
+				"public/js/controllers/todo.js"
+			],
+			[
+				"app/model/ca",
+				"app/models/category.js"
+			],
+			[
+				"env/pro",
+				"config/env/production.js"
+			],
+			[
+				"pub/js/con/done",
+				"public/js/controllers/done.js"
+			],
+			[
+				"header",
+				"public/views/header.html"
+			],
+			[
+				"pub/js/con/doin",
+				"public/js/controllers/doing.js"
+			],
+			[
+				"pub/js/serv/doin",
+				"public/js/services/doing-tasks.js"
+			],
+			[
+				"pub/view/done/",
+				"public/views/doing/edit.html"
+			],
+			[
+				"jshintrc",
+				".jshintrc"
+			],
+			[
+				"pub/view/doin/li",
+				"public/views/doing/list.html"
+			],
+			[
+				"pub/view/done",
+				"public/views/done/list.html"
+			],
+			[
 				"pub/js/con/doing",
 				"public/js/controllers/doing.js"
 			],
@@ -1374,16 +1387,8 @@
 				"app/controllers/doing-tasks.js"
 			],
 			[
-				"pub/view/doin/li",
-				"public/views/doing/list.html"
-			],
-			[
 				"env/de",
 				"config/env/development.js"
-			],
-			[
-				"env/pro",
-				"config/env/production.js"
 			],
 			[
 				"category-selector.html",
@@ -1402,16 +1407,8 @@
 				"config/env/development.js"
 			],
 			[
-				"pub/js/cont/done",
-				"public/js/controllers/done.js"
-			],
-			[
 				"pub/jscont/done",
 				"public/js/controllers/done.js"
-			],
-			[
-				"pub/view/doing",
-				"public/views/doing/list.html"
 			],
 			[
 				"pub/view/done/li",
@@ -1522,10 +1519,6 @@
 				"public/js/app.js"
 			],
 			[
-				"pub/js/con/cate",
-				"public/js/controllers/categories.js"
-			],
-			[
 				"pub/view/cate/m",
 				"public/views/categories/manage.html"
 			],
@@ -1602,10 +1595,6 @@
 				"gruntfile.js"
 			],
 			[
-				"pub/view/done",
-				"public/views/done/list.html"
-			],
-			[
 				"pub/js/don",
 				"public/js/controllers/done.js"
 			],
@@ -1626,10 +1615,6 @@
 				"public/js/controllers/header.js"
 			],
 			[
-				"env/",
-				"config/env/development.js"
-			],
-			[
 				"pub/js/contr/cate",
 				"public/js/controllers/categories.js"
 			],
@@ -1642,16 +1627,8 @@
 				"app/models/category.js"
 			],
 			[
-				"pub/js/cont/doin",
-				"public/js/controllers/doing.js"
-			],
-			[
 				"app/model/todo",
 				"app/models/todo-task.js"
-			],
-			[
-				"app/model/ca",
-				"app/models/category.js"
 			],
 			[
 				"test/moch/cate",
@@ -1714,14 +1691,6 @@
 				"test/mocha/user/model.js"
 			],
 			[
-				"app/model/doin",
-				"app/models/doing-task.js"
-			],
-			[
-				"pub/js/cont/doing",
-				"public/js/controllers/doing.js"
-			],
-			[
 				"test/mocha",
 				"test/mocha/user/model.js"
 			],
@@ -1734,20 +1703,12 @@
 				"public/js/config.js"
 			],
 			[
-				"header",
-				"public/js/controllers/header.js"
-			],
-			[
 				"filter",
 				"public/js/filters.js"
 			],
 			[
 				"test/moch/doin/mo",
 				"test/mocha/doing/model.js"
-			],
-			[
-				"pub/js/con/doin",
-				"public/js/controllers/doing.js"
 			],
 			[
 				"views/doing/list.html",
@@ -1816,66 +1777,6 @@
 			[
 				"app/mode/doing",
 				"app/models/doing-task.js"
-			],
-			[
-				"model/todo",
-				"app/models/todo-task.js"
-			],
-			[
-				"app/cont/to",
-				"app/controllers/todo-tasks.js"
-			],
-			[
-				"app/rout/tod",
-				"app/routes/todo-tasks.js"
-			],
-			[
-				"app/model/tod",
-				"app/models/todo-task.js"
-			],
-			[
-				"test/todo/mod",
-				"test/mocha/todo-task/model.js"
-			],
-			[
-				"app/view/inc/f",
-				"app/views/includes/foot.html"
-			],
-			[
-				"pub/js/ser/to",
-				"public/js/services/todo-tasks.js"
-			],
-			[
-				"app/vie/inc/fo",
-				"app/views/includes/foot.html"
-			],
-			[
-				"pub/js/con/tod",
-				"public/js/controllers/todo.js"
-			],
-			[
-				"views/todo/list.html",
-				"public/views/todo/list.html"
-			],
-			[
-				"pub/con/he",
-				"public/js/controllers/header.js"
-			],
-			[
-				"routes/todo",
-				"app/routes/todo-tasks.js"
-			],
-			[
-				"env/pdo",
-				"config/env/production.js"
-			],
-			[
-				"pub/css",
-				"public/css/common.css"
-			],
-			[
-				"ap/vie/in/fo",
-				"app/views/includes/foot.html"
 			]
 		],
 		"width": 0.0
@@ -1918,7 +1819,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 256.0,
 	"status_bar_visible": true,
 	"template_settings":

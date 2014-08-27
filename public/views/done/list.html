@@ -54,9 +54,6 @@
                 </li>
             </ul>
         </tab>
-        <tab ng-repeat="tab in tabs" heading="{{tab.title}}" active="tab.active" disabled="tab.disabled">
-          {{tab.content}}
-        </tab>
         <tab heading="Review">
             <form
                 name="reviewForm"
@@ -82,6 +79,19 @@
             <ul>
                 <li ng-repeat="task in tasks">
                     <input type="checkbox" value="{{ task._id }}" ng-model="checked[task._id]" /><small>{{ task.start | date : 'M/d HHmm' }}</small> {{ task.category }}: {{ task.description }}
+                </li>
+            </ul>
+        </tab>
+        <tab heading="Over Time">
+            <form ng-submit="loadHistory()">
+                <input type="submit" class="btn btn-default" value="load it up" />
+            </form>
+            <ul>
+                <li ng-repeat="(time, day) in days">
+                    {{ time | date }}<br>
+                    <div ng-repeat="(category, duration) in day">
+                        {{ duration | msToTime }} {{ category }}
+                    </div>
                 </li>
             </ul>
         </tab>

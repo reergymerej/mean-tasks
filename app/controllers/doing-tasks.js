@@ -136,7 +136,15 @@ exports.list = function (req, res) {
         }
     };
 
-    if (req.query.group) {
+    if (req.query.history) {
+        console.log('show the history!');
+
+        DoingTask.find(query)
+        .sort('-start')
+        .populate('user')
+        .exec(callback);
+        
+    } else if (req.query.group) {
 
         // run aggregation
         DoingTask.aggregate(
